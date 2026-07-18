@@ -1,0 +1,32 @@
+{
+  "id": "shot_018_03",
+  "scene": "scene_018",
+  "order": 3,
+  "characters": [
+    "master_valerius_ironhearts_price",
+    "lyra_blade_of_conviction",
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, aged man, long white hair, solemn grey eyes, scarred face, heavy cultivation robes, ancient greatsword, imposing posture, stoic expression, slight hunch, wise, 1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined, 1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, The Scarred Gorge, A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles., Master Valerius steps past Lyra and Kaelen. His heavy iron armor groans under the atmospheric pressure., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Master Valerius steps past Lyra and Kaelen. His heavy iron armor groans under the atmospheric pressure.; tracking shot, following Valerius as he moves forward, then a medium shot on his face",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 3.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}
