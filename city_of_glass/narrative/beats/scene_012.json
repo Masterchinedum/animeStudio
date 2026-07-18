@@ -1,0 +1,23 @@
+{
+  "id": "scene_012",
+  "location": "ironheart_citadel",
+  "time": "Night",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction",
+    "master_valerius_ironhearts_price"
+  ],
+  "goal": "Kaelen to present his 'cunning, high-stakes defense' plan, which demands a 'crucial, heartbreaking sacrifice' to secure victory.",
+  "conflict": "The profound moral and ethical implications of Kaelen's proposed sacrifice against the strategic imperative for survival; Lyra's fierce, impassioned opposition based on her convictions of honor; Valerius's deep-seated wisdom clashing with the brutal reality of their dire situation.",
+  "turn": "Kaelen coldly lays out the undeniable logic of his plan, demonstrating its guaranteed success compared to all other options. Lyra vehemently rejects it, but Valerius, having witnessed countless wars, acknowledges the grim necessity, forcing Lyra into a position of complicity. The sacrifice is reluctantly greenlit, shattering Lyra's initial moral resolve.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Focused, analytical, preparing to present a difficult, amoral truth.",
+    "lyra_blade_of_conviction": "Suspicious, wary, braced for Kaelen's expected ruthlessness, but still clinging to her ideals.",
+    "master_valerius_ironhearts_price": "Somber, contemplative, understanding the immense gravity of the situation and the impending hard choices."
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Implacable, resolute in his decision, prepared to execute the plan without hesitation.",
+    "lyra_blade_of_conviction": "Horrified, torn, her core convictions already beginning to fray under the weight of the proposed sacrifice.",
+    "master_valerius_ironhearts_price": "Profoundly somber, recognizing the tragic wisdom in Kaelen's methods, bearing the heavy burden of the 'ironheart's price' for a choice he must endorse."
+  }
+}

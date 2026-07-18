@@ -1,0 +1,17 @@
+{
+  "id": "scene_009",
+  "location": "the_scarred_gorge",
+  "time": "mid-day",
+  "cast": [
+    "lyra_blade_of_conviction"
+  ],
+  "goal": "Lyra seeks to actively oppose Kaelen's ascent and 'unhonorable' methods by mobilizing traditionalist groups against him, upholding her ideals of conviction.",
+  "conflict": "Traditionalist leaders are hesitant, weighing Kaelen's fearsome reputation and efficiency against Lyra's calls for honor and direct confrontation, fearing the consequences of open resistance.",
+  "turn": "Lyra, through her unwavering conviction and rhetorical skill, successfully galvanizes the traditionalist factions to actively and vocally obstruct Kaelen, making his path forward significantly more complex.",
+  "entry_state": {
+    "lyra_blade_of_conviction": "determined, righteous indignation"
+  },
+  "exit_state": {
+    "lyra_blade_of_conviction": "resolute, having taken a stand against Kaelen"
+  }
+}

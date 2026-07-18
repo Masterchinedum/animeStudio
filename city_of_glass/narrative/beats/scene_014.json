@@ -1,0 +1,23 @@
+{
+  "id": "scene_014",
+  "location": "the_summit_of_scars",
+  "time": "Day, immediately following the brutal offensive",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction",
+    "master_valerius_ironhearts_price"
+  ],
+  "goal": "Kaelen assesses the full, devastating cost of his 'victory' and resolves to uncover the true origins of the sect to prevent future, equally costly conflicts. Lyra struggles with the moral compromises.",
+  "conflict": "The physical and psychological devastation of the scarred landscape and traumatized survivors clashes with Kaelen's pragmatic need for immediate action. Lyra's profound disillusionment and horror clash with the grim necessity acknowledged by Valerius.",
+  "turn": "Kaelen, profoundly affected by the hollow victory, resolves to investigate the puppet master behind the aggressive sect, seeing it as the only way to justify the sacrifice. Lyra, though shattered, finds herself reluctantly following his lead, unable to offer an alternative.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Burdened, resolute, pragmatically assessing the 'victory'.",
+    "lyra_blade_of_conviction": "Deeply traumatized, disillusioned, numb with horror.",
+    "master_valerius_ironhearts_price": "Somber, resigned, carrying the weight of the grim necessity."
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Resolutley committed to uncovering the true power behind the sect, more burdened by the cost but also driven.",
+    "lyra_blade_of_conviction": "Still traumatized, but reluctantly compliant to Kaelen's new direction, her internal conflict escalating.",
+    "master_valerius_ironhearts_price": "Acknowledging Kaelen's new focus, prepared to assist in the deeper investigation."
+  }
+}

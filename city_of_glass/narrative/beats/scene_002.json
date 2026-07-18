@@ -1,0 +1,20 @@
+{
+  "id": "scene_002",
+  "location": "the_ashfall_wastes",
+  "time": "Mid-day",
+  "cast": [
+    "kaelen_scarred_architect",
+    "renna_ashfall_scavenger"
+  ],
+  "goal": "Kaelen needs to acquire initial resources for survival and identify potential local power dynamics, while Renna seeks to endure another day.",
+  "conflict": "Extreme scarcity of usable resources, the harsh environment, and the inherent distrust among scavengers like Renna who see Kaelen as a new, unknown variable.",
+  "turn": "Kaelen uses his intellect to quickly secure a meager but crucial resource, impressing/alarming Renna. He proposes a wary, transactional alliance, offering efficiency/protection in exchange for her local knowledge, which Renna, seeing his ruthlessness and potential, reluctantly accepts.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Resource-seeking, observant, strategic",
+    "renna_ashfall_scavenger": "Suspicious, struggling, cautious"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Strategically resourced, with an initial, wary ally",
+    "renna_ashfall_scavenger": "Guarded, begrudgingly allied, intrigued by Kaelen's methods"
+  }
+}

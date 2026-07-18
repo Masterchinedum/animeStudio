@@ -1,0 +1,22 @@
+{
+  "id": "scene_019",
+  "location": "the_scarred_gorge",
+  "time": "midday",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction"
+  ],
+  "goal": "To exploit Valerius's sacrifice and information to gain a critical advantage against the ancient agent, despite the overwhelming odds and moral cost.",
+  "conflict": "The ancient agent continues its relentless assault, with Kaelen now facing an even more dire, seemingly unwinnable scenario. He must make an unprecedented, morally ambiguous choice based on Valerius's information, either using the corrupted power against itself or sacrificing a massive, innocent population. Lyra, still reeling from Valerius's death, desperately tries to cling to any semblance of honor.",
+  "turn": "Kaelen makes his agonizing, morally ambiguous choice. He either harnesses a part of the corrupted power itself or orchestrates the sacrifice of a distant, massive innocent population, achieving a critical, time-sensitive advantage against the ancient agent, but at a horrifying cost that Lyra witnesses.",
+  "entry_state": {
+    "kaelen_scarred_architect": "grieving for Valerius but intensely focused, driven by desperation and new information",
+    "lyra_blade_of_conviction": "devastated, horrified, pleading for Kaelen to find an honorable path",
+    "master_valerius_ironhearts_price": "deceased"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "hardened, profoundly isolated, victorious but deeply scarred by his choice",
+    "lyra_blade_of_conviction": "utterly devastated, disgusted, her core convictions irrevocably shattered",
+    "master_valerius_ironhearts_price": "deceased"
+  }
+}

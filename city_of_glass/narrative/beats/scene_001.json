@@ -1,0 +1,17 @@
+{
+  "id": "scene_001",
+  "location": "the_ashfall_wastes",
+  "time": "Dawn",
+  "cast": [
+    "kaelen_scarred_architect"
+  ],
+  "goal": "Kaelen must understand his new body, environment, and the 'rules' of this brutal world to ensure immediate survival.",
+  "conflict": "The immediate shock of rebirth, physical weakness, and the overwhelming sensory input of the ash-choked, desolate landscape.",
+  "turn": "Kaelen's perfect memory and analytical mind rapidly catalog the dire situation, shifting him from disoriented to cold, calculating assessment, realizing this is a world of cultivation and raw survival.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Disoriented, confused, physically weak"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Calculating, grimly determined, perfectly aware of his dire new reality"
+  }
+}

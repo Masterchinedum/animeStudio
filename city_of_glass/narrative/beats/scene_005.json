@@ -1,0 +1,20 @@
+{
+  "id": "scene_005",
+  "location": "the_ashfall_wastes",
+  "time": "Evening",
+  "cast": [
+    "kaelen_scarred_architect",
+    "renna_ashfall_scavenger"
+  ],
+  "goal": "Kaelen implements the initial, indirect phases of his plan to undermine the strongman's authority and control.",
+  "conflict": "Kaelen's subtle manipulations and redirection of resources clash with the strongman's entrenched power and network of loyalties.",
+  "turn": "Kaelen successfully sows discord among the strongman's lieutenants and redirects a vital resource flow, creating significant internal instability without exposing himself.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Methodical, focused, executing a complex scheme",
+    "renna_ashfall_scavenger": "Skeptical, nervous about Kaelen's dangerous and unconventional actions, but seeing subtle effects"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Confident, observing the unfolding chaos from a distance, ready for the next phase",
+    "renna_ashfall_scavenger": "Shocked by Kaelen's cunning, a mix of fear and dawning respect for his ruthless efficiency"
+  }
+}

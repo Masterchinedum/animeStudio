@@ -1,0 +1,20 @@
+{
+  "id": "scene_008",
+  "location": "the_ashfall_wastes",
+  "time": "morning",
+  "cast": [
+    "kaelen_scarred_architect",
+    "renna_ashfall_scavenger"
+  ],
+  "goal": "Kaelen aims to further consolidate his control and expand his influence within the district, but now by engaging with established, traditional groups.",
+  "conflict": "A traditionalist faction, wary of Kaelen's brutal reputation and methods, actively obstructs his plans, challenging his attempts to integrate into existing power structures.",
+  "turn": "Kaelen, instead of relying solely on force, employs strategic negotiation and subtle manipulation to overcome the obstruction, realizing that traditional power structures demand more nuanced engagement than sheer efficiency.",
+  "entry_state": {
+    "kaelen_scarred_architect": "calculating, seeking to expand influence",
+    "renna_ashfall_scavenger": "observant, transactional, slightly anxious"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "thoughtful, acknowledging the need for adaptability beyond brute force",
+    "renna_ashfall_scavenger": "intrigued but wary of Kaelen's growing sophistication"
+  }
+}

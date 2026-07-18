@@ -1,0 +1,23 @@
+{
+  "id": "scene_011",
+  "location": "the_scarred_gorge",
+  "time": "Day",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction",
+    "master_valerius_ironhearts_price"
+  ],
+  "goal": "Survive the initial, brutal offensive of the expansionist sect and form a cohesive, desperate defense.",
+  "conflict": "The overwhelming destructive power and chaos unleashed by the aggressive sect; the desperate, uncoordinated resistance of traditional cultivators; Lyra's profound disdain for Kaelen's presence and methods; Valerius's weariness and the futility of current tactics.",
+  "turn": "Kaelen quickly assesses the tactical collapse and proposes an immediate, brutal counter-tactic that, while effective in stemming the tide, underscores his ruthless pragmatism. Valerius, recognizing its grim necessity, reluctantly concedes. Lyra, horrified, sees no immediate alternative but to follow, forging an uneasy alliance born of desperation.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Analytical, observing, assessing the new, overwhelming threat with cold logic.",
+    "lyra_blade_of_conviction": "Disgusted by Kaelen's presence, horrified by the sect's brutality, attempting to rally traditionalists with waning hope.",
+    "master_valerius_ironhearts_price": "Weary, formidable, attempting to hold a crumbling line, recognizing the impending doom of traditional tactics."
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Confident in having secured tactical command, already planning next, difficult moves.",
+    "lyra_blade_of_conviction": "Deeply uncomfortable and resentful of Kaelen's leadership, but begrudgingly accepting the immediate necessity.",
+    "master_valerius_ironhearts_price": "Resigned to Kaelen's brutal efficiency as their only path, despite bearing the familiar 'ironheart's price' of such choices."
+  }
+}

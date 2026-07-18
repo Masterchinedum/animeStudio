@@ -1,0 +1,17 @@
+{
+  "id": "scene_003",
+  "location": "the_ashfall_wastes",
+  "time": "Dusk",
+  "cast": [
+    "kaelen_scarred_architect"
+  ],
+  "goal": "Kaelen must begin the arduous process of cultivation to gain strength and set his sights on expanding his control beyond immediate survival.",
+  "conflict": "The arduous and unfamiliar nature of sword-cultivation, the inherent dangers of the 'lowest depths' even in seclusion, and his current lack of significant power.",
+  "turn": "Kaelen, using his analytical mind, rapidly grasps the initial principles of cultivation, achieving a small but significant breakthrough. This taste of power solidifies his ruthless pragmatism and leads him to identify the local strongman's territory as the next critical step for growth and security, staring at it with predatory intent.",
+  "entry_state": {
+    "kaelen_scarred_architect": "Focused, exploratory, ambitious"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "Minimally empowered, predatory, determined, seeing the strongman's territory as his next conquest"
+  }
+}

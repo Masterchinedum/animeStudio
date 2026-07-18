@@ -1,0 +1,22 @@
+{
+  "id": "scene_020",
+  "location": "the_scarred_gorge",
+  "time": "afternoon",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction"
+  ],
+  "goal": "For Kaelen to process his 'victory' and for Lyra to confront him about his choice.",
+  "conflict": "The unspoken chasm of Kaelen's brutal pragmatism versus Lyra's shattered idealism. Lyra's horror and disgust create an immediate, unbridgeable emotional and moral rift.",
+  "turn": "Lyra stares at Kaelen, her face a mask of utter devastation and disgust, the unspoken word 'monster' hanging in the air. This moment solidifies an unbridgeable rift between them, leaving Kaelen standing alone amidst the terrible consequences of his choice, his isolation complete.",
+  "entry_state": {
+    "kaelen_scarred_architect": "resolute, processing the tactical victory despite its profound cost",
+    "lyra_blade_of_conviction": "numb with shock, horror, and profound moral revulsion",
+    "master_valerius_ironhearts_price": "deceased"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "profoundly isolated, the weight of absolute power heavy upon him",
+    "lyra_blade_of_conviction": "shattered, disgusted, fundamentally broken, viewing Kaelen as an enemy",
+    "master_valerius_ironhearts_price": "deceased"
+  }
+}

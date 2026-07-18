@@ -1,0 +1,23 @@
+{
+  "id": "scene_017",
+  "location": "the_scarred_gorge",
+  "time": "daybreak",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction",
+    "master_valerius_ironhearts_price"
+  ],
+  "goal": "To directly confront the ancient agent of the corrupted power and assess its overwhelming scale.",
+  "conflict": "The ancient agent's terrifying manifestation, its insidious manipulation, and sheer force proves far greater than anticipated, immediately pushing Kaelen's strategic mind to its breaking point and showing that direct, honorable confrontation is suicide.",
+  "turn": "The trio is overwhelmed by the agent's power, forcing Kaelen to abandon any thought of a straightforward assault. Valerius grasps the true hopelessness of their position, confirming the insidious nature of the threat.",
+  "entry_state": {
+    "kaelen_scarred_architect": "grimly resolute, calculating possibilities for confrontation",
+    "lyra_blade_of_conviction": "apprehensive, deeply uneasy about the unknown but committed",
+    "master_valerius_ironhearts_price": "weary, but resolute in facing the ancient evil"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "desperate, rapidly re-evaluating strategy, acknowledging impending defeat",
+    "lyra_blade_of_conviction": "terrified, horrified by the scale of evil, questioning their chances",
+    "master_valerius_ironhearts_price": "resigned to a terrible fate, seeking a way to buy time"
+  }
+}

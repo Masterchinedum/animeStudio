@@ -1,0 +1,23 @@
+{
+  "id": "scene_018",
+  "location": "the_scarred_gorge",
+  "time": "morning",
+  "cast": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction",
+    "master_valerius_ironhearts_price"
+  ],
+  "goal": "To survive the ancient agent's relentless assault and find a crucial weakness or advantage.",
+  "conflict": "The ancient agent's power is absolute, cornering the group and leaving no viable escape or offensive strategy. Valerius recognizes that a sacrifice is the only option to provide Kaelen with time and critical information.",
+  "turn": "Master Valerius, in a desperate, self-sacrificial act, unleashes his full power to buy Kaelen precious moments and imparts a final, vital piece of information about the agent's true nature or a hidden weakness before being consumed by the corrupted power.",
+  "entry_state": {
+    "kaelen_scarred_architect": "desperate, frantically analyzing the impossible situation",
+    "lyra_blade_of_conviction": "overwhelmed, struggling against the agent's force, on the brink of despair",
+    "master_valerius_ironhearts_price": "grimly determined, preparing for his ultimate sacrifice"
+  },
+  "exit_state": {
+    "kaelen_scarred_architect": "shocked, burdened by Valerius's sacrifice, rapidly processing new information",
+    "lyra_blade_of_conviction": "devastated, utterly horrified, witnessing Valerius's demise",
+    "master_valerius_ironhearts_price": "deceased"
+  }
+}
