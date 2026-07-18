@@ -1,0 +1,227 @@
+{
+  "scene": "scene_004",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Flakes of gray ash drift. A brute wrenches a metal canister from Renna's hands, spilling a precious drop of clear water onto the parched earth. Renna stands still.",
+      "expression": {
+        "renna_ashfall_scavenger": "jaw clenched, resigned"
+      },
+      "camera": "Medium close-up on the hands and faces, showing the struggle and the spilled water.",
+      "dialogue": [],
+      "shot": "shot_004_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 8.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "The enforcer tosses the canister onto a cart piled high with scavenged goods. Renna watches it go.",
+      "expression": {
+        "renna_ashfall_scavenger": "bitter, defeated"
+      },
+      "camera": "Medium shot, tracking the canister to the cart, then panning back to Renna.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Don't look too long. They charge extra for staring."
+        }
+      ],
+      "shot": "shot_004_02"
+    },
+    {
+      "t_start": 8.0,
+      "t_end": 13.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen does not look away. His eyes track the departing cart, noting the limping stride of the lead enforcer and the frayed ropes securing the tribute.",
+      "expression": {
+        "kaelen_scarred_architect": "detached, observant"
+      },
+      "camera": "Close-up on Kaelen's eyes, then a quick pan to show his POV on the specific details of the cart and enforcer's limp.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The brute on the left favors his right knee. The cart's axle is dry and ungreased."
+        }
+      ],
+      "shot": "shot_004_03"
+    },
+    {
+      "t_start": 13.0,
+      "t_end": 16.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen continues observing the overloaded cart, noting the arrogant lack of rear guards.",
+      "expression": {
+        "kaelen_scarred_architect": "calculating"
+      },
+      "camera": "Medium close-up on Kaelen, subtle head tilt, then quick cut to POV of the overloaded cart.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "They carry twice what their beasts can safely pull."
+        }
+      ],
+      "shot": "shot_004_04"
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 20.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna turns sharply to Kaelen, exasperated by his observations.",
+      "expression": {
+        "renna_ashfall_scavenger": "sharp, cynical, frustrated"
+      },
+      "camera": "Medium close-up on Renna, slight push in.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Great. You can write a poem about it while we starve. That water was our tribute for the week."
+        }
+      ],
+      "shot": "shot_004_05"
+    },
+    {
+      "t_start": 20.0,
+      "t_end": 24.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen turns his gaze to the distant outcrop where the local strongman's fortress rises like a jagged tooth. A cold, precise focus settles over his features.",
+      "expression": {
+        "kaelen_scarred_architect": "cold, precise, focused"
+      },
+      "camera": "Over-the-shoulder shot from Renna's perspective, showing Kaelen looking towards the fortress, then a quick cut to a wide shot of the fortress.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "To destroy a wall, one does not hammer the stones. One removes the mortar at the base."
+        }
+      ],
+      "shot": "shot_004_06"
+    },
+    {
+      "t_start": 24.0,
+      "t_end": 27.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen holds his gaze on the fortress, his expression unyielding.",
+      "expression": {
+        "kaelen_scarred_architect": "deliberate, determined"
+      },
+      "camera": "Close-up on Kaelen's face, holding the stare.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "They have left their supply lines entirely exposed to the ash-storms."
+        }
+      ],
+      "shot": "shot_004_07"
+    },
+    {
+      "t_start": 27.0,
+      "t_end": 32.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna's eyes widen slightly, watching Kaelen with sudden intensity despite her fear.",
+      "expression": {
+        "renna_ashfall_scavenger": "fearful, intense curiosity"
+      },
+      "camera": "Medium close-up on Renna, slight zoom on her eyes.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "You're talking about picking a fight with the man who owns this entire valley. He has thirty sworn blades."
+        }
+      ],
+      "shot": "shot_004_08"
+    },
+    {
+      "t_start": 32.0,
+      "t_end": 36.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen turns his head slightly, meeting Renna's gaze, completely unmoved by her warning.",
+      "expression": {
+        "kaelen_scarred_architect": "unmoved, resolute"
+      },
+      "camera": "Medium close-up on Kaelen, steady.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Then we shall ensure those thirty blades have nothing to eat, nowhere to sleep, and no reason to remain loyal."
+        }
+      ],
+      "shot": "shot_004_09"
+    },
+    {
+      "t_start": 36.0,
+      "t_end": 39.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen holds his unwavering gaze, confident in his assessment.",
+      "expression": {
+        "kaelen_scarred_architect": "unmoved, confident"
+      },
+      "camera": "Close-up on Kaelen's eyes.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The strength of this district is a fragile illusion."
+        }
+      ],
+      "shot": "shot_004_10"
+    },
+    {
+      "t_start": 39.0,
+      "t_end": 43.0,
+      "location": "the_ashfall_wastes",
+      "time": "Day",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna looks from the departing cart (implied off-screen) to Kaelen's scarred, unreadable face, a sudden, uneasy curiosity masking her resentment.",
+      "expression": {
+        "renna_ashfall_scavenger": "uneasy curiosity, resentment masked"
+      },
+      "camera": "Medium shot, tracking Renna's gaze from where the cart was to Kaelen's face.",
+      "dialogue": [],
+      "shot": "shot_004_11"
+    }
+  ]
+}
