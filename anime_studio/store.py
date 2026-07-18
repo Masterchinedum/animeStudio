@@ -61,6 +61,19 @@ def load_characters(paths: ProjectPaths) -> list[schema.Character]:
             for p in sorted(paths.characters.glob("*.json"))]
 
 
+def load_chapters(paths: ProjectPaths) -> list[schema.Chapter]:
+    return [serde.from_dict(schema.Chapter, load_json(p))
+            for p in sorted(paths.chapters.glob("*.json"))]
+
+
+def load_ledger_safe(paths: ProjectPaths) -> "ContinuityLedger":
+    """Load the ledger if present, else an empty one (lower tiers can always query)."""
+    from .ledger import ContinuityLedger
+    if paths.ledger.exists():
+        return serde.from_dict(ContinuityLedger, load_json(paths.ledger))
+    return ContinuityLedger()
+
+
 def clear_dir(directory) -> None:
     """Remove existing *.json in a multi-file tier dir before writing a fresh set,
     so regeneration (--force) never leaves stale artifacts with orphaned ids."""

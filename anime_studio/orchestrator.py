@@ -107,7 +107,32 @@ def _handle_chapters(ctx: RunContext) -> str:
     return f"{len(chapters)} chapters"
 
 
-# The cascade, in order. Remaining tiers (episodes, scenes, screenplay, timed
+def _handle_ledger(ctx: RunContext) -> str:
+    chapters = store.load_chapters(ctx.paths)
+    if not chapters:
+        raise OrchestratorError("no chapters to build the ledger from")
+    ledger = story.build_ledger(ctx.provider, chapters)   # walks chapters, accumulates canon
+    store.save_json(ctx.paths.ledger, ledger)
+    return f"{len(ledger.facts)} facts, {len(ledger.unresolved)} open threads"
+
+
+def _handle_episodes(ctx: RunContext) -> str:
+    concept = store.load_concept(ctx.paths)
+    arc = store.load_series_arc(ctx.paths)
+    chapters = store.load_chapters(ctx.paths)
+    ledger = store.load_ledger_safe(ctx.paths)
+    episodes = story.generate_episodes(
+        ctx.provider, concept, arc, chapters, ledger.context_block(), ctx.project)
+    episodes = [e for e in episodes if e.id and e.covers_chapters]
+    if not episodes:
+        raise OrchestratorError("no valid episodes generated")
+    store.clear_dir(ctx.paths.episodes)
+    for ep in episodes:
+        store.save_json(ctx.paths.episodes / f"{ep.id}.json", ep)
+    return f"{len(episodes)} episodes"
+
+
+# The cascade, in order. Remaining tiers (scene beats, screenplay, timed
 # transcript) plug in here the same way as they're built.
 PIPELINE: list[Step] = [
     Step("concept", "Concept", _handle_concept),
@@ -115,6 +140,8 @@ PIPELINE: list[Step] = [
     Step("character_bible", "Character bible", _handle_characters),
     Step("series_arc", "Series arc", _handle_arc),
     Step("chapter_breakdown", "Chapter breakdown", _handle_chapters, gate=True),
+    Step("continuity_ledger", "Continuity ledger", _handle_ledger),
+    Step("episode_plan", "Episode plan", _handle_episodes),
 ]
 
 DONE_STATES = {"generated", "approved"}
