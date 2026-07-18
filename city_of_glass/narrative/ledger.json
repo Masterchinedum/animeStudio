@@ -1,8 +1,631 @@
 {
-  "as_of": "",
-  "facts": [],
-  "knowledge": {},
-  "positions": {},
-  "timeline": "",
-  "unresolved": []
+  "as_of": "chapter_08",
+  "facts": [
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen has been reborn into a brutal, sword-cultivation world."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen possesses perfect memory and an analytical mind."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen is currently in the 'lowest depths' of this world."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen has acquired initial resources."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen has formed a wary, transactional alliance with Renna."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Renna is a shrewd scavenger who struggles to survive in the Ashfall."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen has begun the process of cultivation."
+    },
+    {
+      "since": "chapter_01",
+      "fact": "Kaelen is ruthlessly pragmatic, focused on survival and efficiency."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Kaelen has defeated a local strongman who controlled resources in his current district."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Kaelen achieved this victory through brutal, indirect, and underhanded tactics, not direct martial confrontation."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Kaelen's victory was decisive and secured with minimal personal risk."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Kaelen now controls the resources of his current district."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Kaelen's methods have attracted attention."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Lyra is a newly introduced character, a renowned 'Blade of Conviction' who upholds traditional honor."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Lyra has learned of Kaelen's underhanded tactics."
+    },
+    {
+      "since": "chapter_02",
+      "fact": "Lyra profoundly disdains Kaelen's methods, seeing him as a dangerous opportunist."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Kaelen has developed a fearsome reputation."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Kaelen faces complex social and martial obstacles."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Traditionalist groups exist and actively obstruct Kaelen."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "These traditionalist groups are aligned with Lyra's ideals."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Kaelen demonstrates adaptability in his methods."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Kaelen's methods now include strategic negotiation, targeted manipulation, and precise force."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Kaelen has learned that traditional power structures require nuanced engagement."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "A larger, more organized threat is emerging in the world."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "This emerging threat is a powerful, aggressive sect gaining influence."
+    },
+    {
+      "since": "chapter_03",
+      "fact": "Renna possesses a network for gathering information."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "An aggressive, expansionist sect launched a brutal offensive."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "This offensive threatened to destabilize the region and overwhelm traditional cultivators."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Kaelen, Lyra, and Master Valerius formed an uneasy, desperate alliance."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Master Valerius is a newly introduced character, a weary but formidable elder."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Kaelen orchestrated a cunning, high-stakes defense."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Kaelen's plan demanded a crucial, heartbreaking sacrifice."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Kaelen executed this sacrifice without hesitation."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "The sacrifice secured victory against the aggressive sect."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "The sacrifice left a profound scar."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Lyra's core convictions about honor were deeply challenged and fractured."
+    },
+    {
+      "since": "chapter_04",
+      "fact": "Master Valerius acknowledged the grim necessity of Kaelen's brutal methods."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Kaelen begins investigating the aggressive sect's true origins."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "The aggressive sect is being manipulated by an ancient, corrupted power or a puppet master."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Kaelen, Renna, and Valerius uncover clues about this manipulation."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Valerius possesses historical knowledge."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Kaelen's investigations involve forbidden texts or forgotten ruins."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Lyra reluctantly follows Kaelen's lead."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "The true threat is of an overwhelming scale."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Valerius acts as a mentor-like figure to Kaelen."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "Valerius shares ancient warnings about the insidious, pervasive evil."
+    },
+    {
+      "since": "chapter_05",
+      "fact": "The true evil is insidious and pervasive."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Kaelen, Lyra, and Valerius directly confronted a powerful, ancient agent of the corrupted power."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "This ancient agent demonstrated overwhelming scale, insidious manipulation, and sheer force."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Master Valerius sacrificed himself, buying Kaelen crucial time and information."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Kaelen made an unprecedented, morally ambiguous choice to gain a critical advantage."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Kaelen's choice involved either using the corrupted power against itself or sacrificing a massive, innocent population."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Kaelen's decision solidified the profound isolation of absolute power for him and tested his will to its utmost limit."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Lyra is horrified and fundamentally broken by Kaelen's choice."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "Lyra's faith in honor and righteousness is irrevocably shattered."
+    },
+    {
+      "since": "chapter_06",
+      "fact": "An unbridgeable rift has formed between Kaelen and Lyra."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen executed his final, ruthless plan to cripple the ancient power."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen's plan leveraged his accumulated knowledge, information from Valerius's sacrifice, and elements of the corrupted power itself."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen's plan was executed flawlessly."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen struck a decisive blow against the ancient antagonist."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen's victory necessitated a final, irrevocable act of betrayal."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen's final act of betrayal completely severed his last ties, especially with Lyra."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen stands on the precipice of ultimate mastery."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen has devastated his foe."
+    },
+    {
+      "since": "chapter_07",
+      "fact": "Kaelen is profoundly, irrevocably alone."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "The ancient power is crippled."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "The ancient power has potential for distant resurgence."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Kaelen has achieved unparalleled mastery."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Kaelen's victory is stark and devoid of warmth."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "The realm is irrevocably shaped by Kaelen's choices and sacrifices."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Kaelen bears the profound, unending weight of his actions."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Lyra is forged by the crucible of war and Kaelen's ruthlessness."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Lyra is finding her own, more grounded path."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Lyra is independent."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Lyra and Renna are forever marked by Kaelen's ascent."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Lyra and Renna embody the profound loss of human connection and idealism."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Kaelen is consumed by the unending, internal toll of his mastery."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "True mastery is continually borne, not paid off."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Renna continues her life."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Renna has a deeper understanding of power's costs."
+    },
+    {
+      "since": "chapter_08",
+      "fact": "Renna represents the 'normal' world Kaelen has left behind."
+    }
+  ],
+  "knowledge": {
+    "kaelen_scarred_architect": [
+      "He has acquired initial resources.",
+      "He has begun cultivation.",
+      "He has formed a wary, transactional alliance with Renna.",
+      "He is in a brutal, sword-cultivation world.",
+      "He is in the lowest depths of this world.",
+      "He possesses perfect memory and an analytical mind.",
+      "Kaelen bears the profound, unending weight of his actions.",
+      "Kaelen has achieved unparalleled mastery.",
+      "Kaelen is consumed by the unending, internal toll of his mastery.",
+      "Kaelen's victory is stark and devoid of warmth.",
+      "Renna is a shrewd scavenger.",
+      "The ancient power has potential for distant resurgence.",
+      "The ancient power is crippled.",
+      "The realm is irrevocably shaped by Kaelen's choices and sacrifices.",
+      "True mastery is continually borne, not paid off."
+    ],
+    "renna_ashfall_scavenger": [
+      "Kaelen has unique methods and achieves quick gains.",
+      "Lyra and Renna are forever marked by Kaelen's ascent.",
+      "Lyra and Renna embody the profound loss of human connection and idealism.",
+      "Renna continues her life.",
+      "Renna has a deeper understanding of power's costs.",
+      "Renna represents the 'normal' world Kaelen has left behind.",
+      "She has formed a wary, transactional alliance with Kaelen."
+    ],
+    "Kaelen has defeated a local strongman who controlled resources in his current district.": [
+      "kaelen_scarred_architect"
+    ],
+    "Kaelen achieved this victory through brutal, indirect, and underhanded tactics, not direct martial confrontation.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "Kaelen's victory was decisive and secured with minimal personal risk.": [
+      "kaelen_scarred_architect"
+    ],
+    "Kaelen now controls the resources of his current district.": [
+      "kaelen_scarred_architect"
+    ],
+    "Kaelen's methods have attracted attention.": [
+      "kaelen_scarred_architect"
+    ],
+    "Lyra has learned of Kaelen's underhanded tactics.": [
+      "kaelen_scarred_architect"
+    ],
+    "Lyra profoundly disdains Kaelen's methods, seeing him as a dangerous opportunist.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "Kaelen has developed a fearsome reputation.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen faces complex social and martial obstacles.": [
+      "kaelen_scarred_architect"
+    ],
+    "Traditionalist groups exist and actively obstruct Kaelen.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "renna_ashfall_scavenger"
+    ],
+    "These traditionalist groups are aligned with Lyra's ideals.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen demonstrates adaptability in his methods.": [
+      "kaelen_scarred_architect"
+    ],
+    "Kaelen's methods now include strategic negotiation, targeted manipulation, and precise force.": [
+      "kaelen_scarred_architect"
+    ],
+    "Kaelen has learned that traditional power structures require nuanced engagement.": [
+      "kaelen_scarred_architect"
+    ],
+    "A larger, more organized threat is emerging in the world.": [
+      "kaelen_scarred_architect",
+      "renna_ashfall_scavenger"
+    ],
+    "This emerging threat is a powerful, aggressive sect gaining influence.": [
+      "kaelen_scarred_architect",
+      "renna_ashfall_scavenger"
+    ],
+    "Renna possesses a network for gathering information.": [
+      "kaelen_scarred_architect",
+      "renna_ashfall_scavenger"
+    ],
+    "An aggressive, expansionist sect launched a brutal offensive.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "This offensive threatened to destabilize the region and overwhelm traditional cultivators.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen, Lyra, and Master Valerius formed an uneasy, desperate alliance.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Master Valerius is a weary but formidable elder.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen orchestrated a cunning, high-stakes defense.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen's plan demanded a crucial, heartbreaking sacrifice.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen executed this sacrifice without hesitation.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "The sacrifice secured victory against the aggressive sect.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "The sacrifice left a profound scar.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen profoundly understands the brutal cost of even 'victories,' solidifying his path of pragmatic ruthlessness.": [
+      "kaelen_scarred_architect"
+    ],
+    "Lyra's core convictions about honor were deeply challenged and fractured.": [
+      "lyra_blade_of_conviction"
+    ],
+    "Master Valerius acknowledged the grim necessity of Kaelen's brutal methods.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price"
+    ],
+    "Renna is directly affected or deeply shaken by the sacrifice, becoming more guarded and cynical about the price of power.": [
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen begins investigating the aggressive sect's true origins.": [
+      "kaelen_scarred_architect"
+    ],
+    "The aggressive sect is being manipulated by an ancient, corrupted power or a puppet master.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen, Renna, and Valerius uncover clues about this manipulation.": [
+      "kaelen_scarred_architect",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Valerius possesses historical knowledge.": [
+      "kaelen_scarred_architect",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen's investigations involve forbidden texts or forgotten ruins.": [
+      "kaelen_scarred_architect"
+    ],
+    "Lyra reluctantly follows Kaelen's lead.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "The true threat is of an overwhelming scale.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Valerius acts as a mentor-like figure to Kaelen.": [
+      "kaelen_scarred_architect",
+      "master_valerius_ironhearts_price"
+    ],
+    "Valerius shares ancient warnings about the insidious, pervasive evil.": [
+      "kaelen_scarred_architect",
+      "master_valerius_ironhearts_price"
+    ],
+    "The true evil is insidious and pervasive.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price",
+      "renna_ashfall_scavenger"
+    ],
+    "Kaelen, Lyra, and Valerius confronted a powerful, ancient agent of the corrupted power.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price"
+    ],
+    "This ancient agent demonstrated overwhelming scale, insidious manipulation, and sheer force.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "master_valerius_ironhearts_price"
+    ],
+    "Master Valerius sacrificed himself, buying Kaelen crucial time and information.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "Kaelen made an unprecedented, morally ambiguous choice to gain a critical advantage.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "Kaelen's choice involved either using the corrupted power against itself or sacrificing a massive, innocent population.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "Kaelen's decision solidified the profound isolation of absolute power for him and tested his will to its utmost limit.": [
+      "kaelen_scarred_architect"
+    ],
+    "Lyra is horrified and fundamentally broken by Kaelen's choice.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "Lyra's faith in honor and righteousness is irrevocably shattered.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "An unbridgeable rift has formed between Kaelen and Lyra.": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "kaelen_executed_final_plan": [
+      "kaelen_scarred_architect"
+    ],
+    "kaelen_plan_leveraged_knowledge_valerius_corrupted_power": [
+      "kaelen_scarred_architect"
+    ],
+    "kaelen_plan_flawlessly_executed": [
+      "kaelen_scarred_architect"
+    ],
+    "kaelen_struck_decisive_blow_ancient_antagonist": [
+      "kaelen_scarred_architect",
+      "renna_ashfall_scavenger"
+    ],
+    "kaelen_victory_necessitated_final_betrayal": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction"
+    ],
+    "kaelen_betrayal_severed_ties_with_lyra": [
+      "kaelen_scarred_architect",
+      "lyra_blade_of_conviction",
+      "renna_ashfall_scavenger"
+    ],
+    "kaelen_on_precipice_of_ultimate_mastery": [
+      "kaelen_scarred_architect"
+    ],
+    "kaelen_has_devastated_foe": [
+      "kaelen_scarred_architect",
+      "renna_ashfall_scavenger"
+    ],
+    "kaelen_is_profoundly_alone": [
+      "kaelen_scarred_architect",
+      "renna_ashfall_scavenger"
+    ],
+    "lyra_blade_of_conviction": [
+      "Lyra and Renna are forever marked by Kaelen's ascent.",
+      "Lyra and Renna embody the profound loss of human connection and idealism.",
+      "Lyra is finding her own, more grounded path.",
+      "Lyra is forged by the crucible of war and Kaelen's ruthlessness.",
+      "Lyra is independent."
+    ]
+  },
+  "positions": {
+    "kaelen_scarred_architect": "Achieved ultimate mastery, standing at the summit, but eternally isolated and burdened by the unending, internal cost of his choices and sacrifices.",
+    "renna_ashfall_scavenger": "Continuing her life, perhaps with a deeper understanding of power's costs, representing the 'normal' world Kaelen has left behind in his ascent.",
+    "lyra_blade_of_conviction": "Forged by the crucible of war and Kaelen's ruthlessness, finding her own, more grounded path, forever marked but independent.",
+    "master_valerius_ironhearts_price": "Deceased, having sacrificed himself to aid Kaelen."
+  },
+  "timeline": "Months after Kaelen's awakening, plus weeks and more days, plus weeks to months.",
+  "unresolved": [
+    "The full nature and dangers of the sword-cultivation world.",
+    "The specific challenges and characteristics of the 'lowest depths'.",
+    "The specific challenges and characteristics of the 'lowest depths' beyond local strongmen.",
+    "The specific 'unique methods' Kaelen employs in cultivation.",
+    "The nature of Lyra's 'Blade of Conviction' role and her potential future interactions with Kaelen.",
+    "What is the full nature and extent of the powerful, aggressive sect?",
+    "What was the nature of the heartbreaking sacrifice?",
+    "Who or what was sacrificed?",
+    "What are the forbidden texts or forgotten ruins Kaelen investigates?",
+    "What are the ancient warnings Valerius shares about the true nature of the insidious, pervasive evil?",
+    "What was the final, irrevocable act of betrayal Kaelen committed?",
+    "Who were the potential allies sacrificed or betrayed in Kaelen's final act?"
+  ]
 }

@@ -1,0 +1,22 @@
+{
+  "id": "episode_02",
+  "covers_chapters": [
+    "chapter_02"
+  ],
+  "cold_open": "A tense sequence reveals the local strongman's iron grip on the district, showcasing his brutal methods and the fear he inspires, setting the stage for Kaelen's imminent challenge.",
+  "acts": [
+    {
+      "act": 1,
+      "summary": "Kaelen orchestrates the initial phases of his plan, using indirect and underhanded tactics to sow discord among the strongman's allies, avoiding direct martial confrontation but demonstrating his superior intellect."
+    },
+    {
+      "act": 2,
+      "summary": "The strongman's downfall unfolds as Kaelen's meticulously crafted scheme comes to fruition, resulting in a decisive victory secured with minimal personal risk. Lyra, a renowned 'Blade of Conviction,' is introduced, witnessing the aftermath or receiving reports of Kaelen's ruthless efficiency."
+    },
+    {
+      "act": 3,
+      "summary": "Kaelen consolidates control over the district's resources, his methods attracting unwanted attention. Lyra expresses profound disdain for Kaelen's tactics, seeing him as a dangerous opportunist who threatens traditional honor, solidifying their ideological clash."
+    }
+  ],
+  "cliffhanger": "Kaelen, now in control, feels the cold weight of his newfound power and the attention it draws. Elsewhere, Lyra, seething with disapproval, vows to stand against Kaelen's 'dishonorable' rise, her conviction unwavering despite his success."
+}

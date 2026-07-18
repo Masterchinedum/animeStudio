@@ -32,9 +32,10 @@
       "summary": "8 chapters"
     },
     "episode_plan": {
-      "status": "empty",
+      "status": "generated",
       "approved": false,
-      "notion_approval": "Draft"
+      "notion_approval": "Draft",
+      "summary": "8 episodes"
     },
     "scene_beats": {
       "status": "empty",
@@ -50,6 +51,11 @@
       "status": "empty",
       "approved": false,
       "notion_approval": "Draft"
+    },
+    "continuity_ledger": {
+      "status": "generated",
+      "approved": false,
+      "summary": "81 facts, 12 open threads"
     }
   }
 }
