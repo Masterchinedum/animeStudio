@@ -37,6 +37,7 @@ TIER_LABELS = {
     "character_bible": "Character bible",
     "series_arc": "Series arc",
     "chapter_breakdown": "Chapter breakdown",
+    "continuity_ledger": "Continuity ledger",   # review artifact, not an approval gate
     "episode_plan": "Episode plan",
     "scene_beats": "Scene beats",
     "screenplay": "Screenplay",
@@ -191,12 +192,51 @@ def push_all(paths, client: "NotionClient | None" = None) -> int:
 
 def render_tier_blocks(tier: str, content: dict) -> list[dict]:
     """Turn a tier's JSON into readable Notion blocks. Deliberately simple —
-    a bullet per top-level field; nested values are shown as compact JSON."""
-    blocks: list[dict] = []
+    a bullet per top-level field; nested values are shown as compact JSON.
+    The continuity ledger gets a purpose-built, readable layout."""
     if not content:
         return [_para("(empty — not generated yet)")]
+    if tier == "continuity_ledger":
+        return _render_ledger_blocks(content)
+    blocks: list[dict] = []
     for key, val in content.items():
         if isinstance(val, (dict, list)):
             val = json.dumps(val, ensure_ascii=False)
         blocks.append(_bullet(f"{key}: {val}"))
+    return blocks
+
+
+def _render_ledger_blocks(content: dict) -> list[dict]:
+    """Readable ledger view. Caps long lists so a page stays under Notion's
+    100-blocks-per-request limit; the complete record is always in ledger.json."""
+    facts = content.get("facts", []) or []
+    unresolved = content.get("unresolved", []) or []
+    positions = content.get("positions", {}) or {}
+    knowledge = content.get("knowledge", {}) or {}
+
+    blocks: list[dict] = [_para(
+        f"Timeline: {content.get('timeline') or '(unset)'}    |    "
+        f"as of: {content.get('as_of') or '(start)'}"
+    )]
+
+    FACT_CAP = 50
+    blocks.append(_para(f"Established facts ({len(facts)}):"))
+    for f in facts[:FACT_CAP]:
+        if isinstance(f, dict):
+            since, text = f.get("since", ""), f.get("fact", "")
+            blocks.append(_bullet(f"({since}) {text}" if since else text))
+        else:
+            blocks.append(_bullet(str(f)))
+    if len(facts) > FACT_CAP:
+        blocks.append(_para(f"… (+{len(facts) - FACT_CAP} more — full list in narrative/ledger.json)"))
+
+    if unresolved:
+        blocks.append(_para(f"Unresolved threads ({len(unresolved)}):"))
+        for u in unresolved[:20]:
+            blocks.append(_bullet(str(u)))
+
+    if positions:
+        blocks.append(_para("Positions: " + ", ".join(f"{k} @ {v}" for k, v in positions.items())))
+    if knowledge:
+        blocks.append(_para("Knowledge: " + "; ".join(f"{k} → {v}" for k, v in knowledge.items())))
     return blocks

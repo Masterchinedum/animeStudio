@@ -210,6 +210,22 @@ class SceneBeat:
 
 
 @dataclass
+class ScreenplayElement:
+    """One line of the screenplay: an action beat or a spoken line."""
+    kind: str = "action"       # "action" | "dialogue"
+    character: str = ""         # character id (for dialogue)
+    text: str = ""
+    expression: str = ""        # delivery / emotional note
+
+
+@dataclass
+class Screenplay:
+    """Tier 9 — the written scene: action, blocking, in-voice dialogue."""
+    scene: str = ""
+    elements: list[ScreenplayElement] = field(default_factory=list)
+
+
+@dataclass
 class TranscriptBeat:
     """Tier 10 — one timed beat; composes directly into a Shot."""
     t_start: float = 0.0

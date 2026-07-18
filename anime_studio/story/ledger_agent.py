@@ -43,6 +43,26 @@ Return ONLY the JSON object. Empty arrays/objects are fine when nothing changed.
 """
 
 
+def apply_delta_dict(ledger: ContinuityLedger, data: dict, since: str) -> None:
+    """Apply a deltas dict (the shape the prompt above returns) to the ledger.
+    Shared by chapter-level (t6) and scene-level (t8) continuity maintenance."""
+    for fact in data.get("facts", []) or []:
+        if str(fact).strip():
+            ledger.establish(str(fact).strip(), since=since)
+    for key, who in (data.get("knowledge") or {}).items():
+        who_list = who if isinstance(who, list) else [who]
+        ledger.learns(str(key), [str(w) for w in who_list])
+    for char_id, loc in (data.get("positions") or {}).items():
+        ledger.move(str(char_id), str(loc))
+    if str(data.get("timeline", "")).strip():
+        ledger.advance_time(str(data["timeline"]).strip())
+    for t in data.get("open_threads", []) or []:
+        if str(t).strip():
+            ledger.open_thread(str(t).strip())
+    for t in data.get("resolved_threads", []) or []:
+        ledger.resolve_thread(str(t).strip())
+
+
 def apply_chapter(provider: TextProvider, ledger: ContinuityLedger, chapter: Chapter) -> None:
     """Advance the ledger to the end of `chapter` by extracting and applying its deltas."""
     ledger.set_as_of(chapter.id)
@@ -54,22 +74,7 @@ def apply_chapter(provider: TextProvider, ledger: ContinuityLedger, chapter: Cha
         time_span=chapter.time_span,
     )
     data = provider.generate_json(prompt, system=SYSTEM, temperature=0.4)  # low temp: bookkeeping
-
-    for fact in data.get("facts", []):
-        if str(fact).strip():
-            ledger.establish(str(fact).strip(), since=chapter.id)
-    for key, who in (data.get("knowledge") or {}).items():
-        who_list = who if isinstance(who, list) else [who]
-        ledger.learns(str(key), [str(w) for w in who_list])
-    for char_id, loc in (data.get("positions") or {}).items():
-        ledger.move(str(char_id), str(loc))
-    if str(data.get("timeline", "")).strip():
-        ledger.advance_time(str(data["timeline"]).strip())
-    for t in data.get("open_threads", []):
-        if str(t).strip():
-            ledger.open_thread(str(t).strip())
-    for t in data.get("resolved_threads", []):
-        ledger.resolve_thread(str(t).strip())
+    apply_delta_dict(ledger, data, since=chapter.id)
 
 
 def build_ledger(provider: TextProvider, chapters: list[Chapter]) -> ContinuityLedger:

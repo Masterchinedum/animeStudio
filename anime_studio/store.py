@@ -66,6 +66,22 @@ def load_chapters(paths: ProjectPaths) -> list[schema.Chapter]:
             for p in sorted(paths.chapters.glob("*.json"))]
 
 
+def load_episodes(paths: ProjectPaths) -> list[schema.EpisodePlan]:
+    return [serde.from_dict(schema.EpisodePlan, load_json(p))
+            for p in sorted(paths.episodes.glob("*.json"))]
+
+
+def load_scene_beats(paths: ProjectPaths) -> list[schema.SceneBeat]:
+    return [serde.from_dict(schema.SceneBeat, load_json(p))
+            for p in sorted(paths.beats.glob("*.json"))]
+
+
+def load_screenplay(paths: ProjectPaths, scene_id: str) -> schema.Screenplay:
+    p = paths.screenplay / f"{scene_id}.json"
+    return serde.from_dict(schema.Screenplay, load_json(p)) if p.exists() \
+        else schema.Screenplay(scene=scene_id)
+
+
 def load_ledger_safe(paths: ProjectPaths) -> "ContinuityLedger":
     """Load the ledger if present, else an empty one (lower tiers can always query)."""
     from .ledger import ContinuityLedger
@@ -109,9 +125,10 @@ def tier_content(paths: ProjectPaths, tier: str) -> dict:
         "character_bible": lambda: _load_dir(paths.characters),
         "series_arc": lambda: _safe(paths.series_arc),
         "chapter_breakdown": lambda: _load_dir(paths.chapters),
+        "continuity_ledger": lambda: _safe(paths.ledger),
         "episode_plan": lambda: _load_dir(paths.episodes),
         "scene_beats": lambda: _load_dir(paths.beats),
-        "screenplay": lambda: {},          # not scaffolded until the story stage
+        "screenplay": lambda: _load_dir(paths.screenplay),
         "timed_transcript": lambda: _load_dir(paths.transcript),
     }.get(tier, lambda: {})()
 

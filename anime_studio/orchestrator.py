@@ -132,8 +132,77 @@ def _handle_episodes(ctx: RunContext) -> str:
     return f"{len(episodes)} episodes"
 
 
-# The cascade, in order. Remaining tiers (scene beats, screenplay, timed
-# transcript) plug in here the same way as they're built.
+def _handle_scene_beats(ctx: RunContext) -> str:
+    episodes = store.load_episodes(ctx.paths)
+    if not episodes:
+        raise OrchestratorError("no episodes to break into scenes")
+    chapters = store.load_chapters(ctx.paths)
+    cast = store.load_characters(ctx.paths)
+    world = store.load_world(ctx.paths)
+    ledger = store.load_ledger_safe(ctx.paths)      # working copy: read + write
+
+    store.clear_dir(ctx.paths.beats)
+    n = 0
+    for episode in episodes:
+        scenes, ledger_update = story.generate_episode_scenes(
+            ctx.provider, episode, chapters, cast, world, ledger.context_block())
+        for scene in scenes:
+            n += 1
+            scene.id = f"scene_{n:03d}"
+            store.save_json(ctx.paths.beats / f"{scene.id}.json", scene)
+        ledger.set_as_of(episode.id)
+        story.apply_delta_dict(ledger, ledger_update, since=episode.id)
+    if n == 0:
+        raise OrchestratorError("no scenes generated")
+    store.save_json(ctx.paths.ledger, ledger)        # persist enriched canon
+    return f"{n} scenes across {len(episodes)} episodes"
+
+
+def _handle_screenplay(ctx: RunContext) -> str:
+    beats = store.load_scene_beats(ctx.paths)
+    if not beats:
+        raise OrchestratorError("no scene beats to write")
+    by_id = {c.id: c for c in store.load_characters(ctx.paths)}
+    ledger_ctx = store.load_ledger_safe(ctx.paths).context_block()
+
+    store.clear_dir(ctx.paths.screenplay)
+    n = 0
+    for beat in beats:
+        sp = story.generate_screenplay(ctx.provider, beat, by_id, ledger_ctx)
+        if sp.elements:
+            n += 1
+        store.save_json(ctx.paths.screenplay / f"{beat.id}.json", sp)
+    if n == 0:
+        raise OrchestratorError("screenplay came back empty for every scene")
+    return f"{n} scenes written"
+
+
+def _handle_transcript(ctx: RunContext) -> str:
+    beats = store.load_scene_beats(ctx.paths)
+    if not beats:
+        raise OrchestratorError("no scene beats to storyboard")
+    project = store.load_project(ctx.paths)
+    cast_by_id = {c.id: c for c in store.load_characters(ctx.paths)}
+    loc_by_id = {l.id: l for l in store.load_world(ctx.paths).locations}
+
+    store.clear_dir(ctx.paths.transcript)
+    store.clear_dir(ctx.paths.shots)                 # shots are re-derived from transcript
+    scene_count = shot_count = 0
+    for beat in beats:
+        sp = store.load_screenplay(ctx.paths, beat.id)
+        transcript = story.generate_transcript(ctx.provider, beat, sp)
+        shots = story.compose_shots(transcript, cast_by_id, loc_by_id, project.style_guide)
+        store.save_json(ctx.paths.transcript / f"{beat.id}.json", transcript)
+        for shot in shots:
+            store.save_json(ctx.paths.shots / f"{shot.id}.json", shot)
+        scene_count += 1
+        shot_count += len(shots)
+    if shot_count == 0:
+        raise OrchestratorError("no shots composed from transcript")
+    return f"{shot_count} shots across {scene_count} scenes → ready for the art stage"
+
+
+# The full narrative cascade — Concept down to the render spec (shots).
 PIPELINE: list[Step] = [
     Step("concept", "Concept", _handle_concept),
     Step("world_bible", "World bible", _handle_world),
@@ -142,6 +211,9 @@ PIPELINE: list[Step] = [
     Step("chapter_breakdown", "Chapter breakdown", _handle_chapters, gate=True),
     Step("continuity_ledger", "Continuity ledger", _handle_ledger),
     Step("episode_plan", "Episode plan", _handle_episodes),
+    Step("scene_beats", "Scene beats", _handle_scene_beats, gate=True),
+    Step("screenplay", "Screenplay", _handle_screenplay),
+    Step("timed_transcript", "Timed transcript", _handle_transcript, gate=True),
 ]
 
 DONE_STATES = {"generated", "approved"}

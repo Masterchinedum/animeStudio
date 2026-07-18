@@ -68,6 +68,8 @@ class ProjectPaths:
     @property
     def beats(self) -> Path: return self.narrative / "beats"
     @property
+    def screenplay(self) -> Path: return self.narrative / "screenplay"
+    @property
     def transcript(self) -> Path: return self.narrative / "transcript"
     @property
     def ledger(self) -> Path: return self.narrative / "ledger.json"
@@ -97,7 +99,8 @@ class ProjectPaths:
     def all_dirs(self) -> list[Path]:
         return [
             self.root, self.bible, self.characters,
-            self.narrative, self.chapters, self.episodes, self.beats, self.transcript,
+            self.narrative, self.chapters, self.episodes, self.beats,
+            self.screenplay, self.transcript,
             self.script, self.scenes,
             self.shots, self.assets, self.keyframes, self.refs, self.clips, self.audio,
         ]
