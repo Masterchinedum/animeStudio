@@ -1,0 +1,131 @@
+{
+  "scene": "scene_012",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Inside the damp, shadowed war room of the Ironheart Citadel, a single flickering lantern illuminates a map of the valley carved directly into a stone slab. Kaelen slides a black obsidian marker into the narrowest point of the pass.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The sect's vanguard is three hours from the outer gates. Their momentum is absolute. Standard defensive formations will fail within the hour.",
+      "expression": "flat, analytical"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Lyra leans over the table, her hand resting heavily on the hilt of her sword. Her knuckles are white.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "Then we meet them at the ridge. We draw our steel and hold the line. That is what we are trained for, Kaelen. Honor demands we stand.",
+      "expression": "fierce, defensive"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Honor will keep you warm in a mass grave. If we engage them directly, we have a zero percent probability of survival. The math does not support your conviction.",
+      "expression": "coldly dismissive"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Master Valerius stands in the deeper shadows of the chamber, his hands clasped behind his back, watching the dust settle on the stone map.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "Speak the alternative, Kaelen. But do not dress it in soft words. We have no time for illusions.",
+      "expression": "grave, world-weary"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "We collapse the reservoir above the eastern basin. The resulting torrent will sweep their entire main host into the lower gorge, sealing them in a tomb of rock and water.",
+      "expression": "precise, calculated"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Lyra frowns, tracing the line of the reservoir down to the basin, her eyes widening as realization hits her.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "The third garrison is stationed in that basin. They are holding the secondary bottleneck. You're talking about drowning three hundred of our own men.",
+      "expression": "horrified, breathless"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "If we warn them to evacuate, the enemy will detect the retreat and pivot. The garrison must remain in place to anchor the enemy's attention. They must fight, and they must die, so the trap can succeed.",
+      "expression": "implacable"
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "That is betrayal! It is murder! How can you look at a map and trade lives like pebbles on a path?",
+      "expression": "vehement, trembling with anger"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Because three hundred lives buy the survival of three thousand. It is a simple equation, Lyra. Your outrage does not alter the arithmetic of war.",
+      "expression": "undeterred"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Lyra turns away from Kaelen, looking pleadingly at the old master standing in the gloom.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "Master Valerius, please. Tell him this is madness. We cannot build our victory on the silent slaughter of our brothers. Command us to ride out instead.",
+      "expression": "desperate, pleading"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Valerius closes his eyes. A profound, heavy silence fills the chamber. He looks down at his worn, scarred hands, bearing the invisible weight of centuries.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "There are no good paths left to us, Lyra. Only those who die for nothing, and those who die to keep the light burning. Kaelen's logic is cruel... but it is correct.",
+      "expression": "somber, deeply pained"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Lyra steps back, her hand falling limply away from her sword hilt. Her face drains of color as the reality of her complicity sinks in.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "We are no better than the monsters at our gates.",
+      "expression": "whispering, devastated"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "We are survivors. That is the only distinction that matters.",
+      "expression": "resolute"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen reaches down and firmly presses the black obsidian marker into the center of the basin, crushing the small wooden token representing the third garrison beneath it.",
+      "expression": ""
+    }
+  ]
+}

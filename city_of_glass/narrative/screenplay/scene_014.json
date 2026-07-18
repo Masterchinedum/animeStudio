@@ -1,0 +1,83 @@
+{
+  "scene": "scene_014",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Acrid smoke drifts across the shattered stone of the Summit. Below, the quiet is broken only by the low groans of the dying. Kaelen stands at the cliff's edge, his gaze scanning the ash-choked valley, his expression entirely unreadable.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "We let them march into the bottleneck. We knew they would be slaughtered, and we did nothing.",
+      "expression": "numb, staring at her blood-flecked hands"
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "We did what was required to preserve the lineage, Lyra. A bitter truth, but the only one that keeps us breathing.",
+      "expression": "slow and heavy, leaning on his chipped blade"
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "Is this what the Grand Way teaches? To sacrifice the innocent to buy ourselves another day in the dirt?",
+      "expression": "with rising, desperate anger"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The defensive line held because the variable of their lives was spent at the optimal moment. However, the victory is mathematically incomplete.",
+      "expression": "cool, precise, turning to face them"
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "Incomplete? Look around you, Kaelen! The valley is a grave!",
+      "expression": "disbelieving, gesturing wildly to the smoking ruins"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The sect's tactical formations were too disciplined for a mere regional uprising. Their replenishment rates suggest a centralized, highly organized source of energy and command. We have severed a finger, but the hand remains active.",
+      "expression": "analytical, dismissing her outburst with a slight wave"
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "You suggest a puppet master. A power deeper than the eastern borders.",
+      "expression": "eyes narrowing, a grim understanding dawning"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Correct. If we remain defensive, the next calculation will not favor us. To prevent a recurrence of this resource drain, we must locate and eliminate the origin of the sect.",
+      "expression": "resolute, his tone carrying a chilling certainty"
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "And how many more lives will you balance on your ledger to get to this... this master?",
+      "expression": "quiet, her voice cracking with exhaustion"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "As many as are required to ensure our survival. But if we find the source, it will be the last time we are forced to make this specific trade.",
+      "expression": "flatly, looking directly into her eyes"
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "I despise your coldness. I despise what we did today. But... I cannot let their deaths be for nothing. I will go.",
+      "expression": "averting her gaze, her shoulders slumping in bitter defeat"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Master Valerius nods slowly, a somber acceptance in his eyes, as Kaelen turns back toward the horizon, his perfect memory already cataloging the paths forward.",
+      "expression": ""
+    }
+  ]
+}

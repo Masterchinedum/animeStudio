@@ -1,0 +1,119 @@
+{
+  "scene": "scene_002",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Mid-day sun hangs like a dull copper coin behind a shroud of falling grey soot. Kaelen kneels in the warm ash, his fingers tracing the patterns of a thermal vent beneath a cracked shale shelf.",
+      "expression": ""
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "A few paces away, Renna crouches behind a rusted iron rib, her hand resting on the hilt of a jagged bone-shiv. Her eyes are narrowed, tracking his every movement.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The condensation rate of the sulfur-spring beneath this shale suggests a pocket of potable water every twelve hours. Exactly three inches below the frost-line.",
+      "expression": "calm, analytical"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen thrusts a thin metal spike into the grey crust, twisting it with calculated pressure. A soft hiss escapes, followed by a steady, thin trickle of clear, filtered moisture into a hollow reed.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You're digging in a dead zone, stranger. That water belongs to anyone with the teeth to keep it.",
+      "expression": "cold, warning"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna steps out from the shadow of the rusted rib. She keeps her center of gravity low, her eyes darting between the trickle of water and Kaelen's throat.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "It belongs to the one who understands the fluid dynamics of the shelf. Currently, that is me. I estimate you have three hours of hydration left before your motor skills begin to degrade.",
+      "expression": "detached"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "I've lasted three years out here without a lecture on my kidney function. Give me the reed.",
+      "expression": "sharp, dry"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen does not pull back. He holds the reed steady, capping it with a wax-plug he scraped from a nearby ruin.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "An inefficient exchange. If you kill me, you obtain half a liter of water and no knowledge of how to find the next deposit. If we cooperate, my calculations will increase your daily yield by forty percent.",
+      "expression": "precise"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Cooperate. Right. That's a word people use just before they slit your throat in your sleep.",
+      "expression": "cynical"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "I have no emotional investment in your demise. It would simply decrease my own survival probability. I require local geography, faction boundaries, and resource distribution. You require sustenance and a partner who does not rely on luck.",
+      "expression": "indifferent"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna stares at him, her gaze scanning his scarred face and the absolute stillness of his posture. She slowly relaxes her grip on the bone-shiv, though her stance remains defensive.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You speak like a machine. Or a corpse.",
+      "expression": "grudgingly intrigued"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "I am alive. And I intend to remain so.",
+      "expression": "flat"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen extends the reed flask toward her. She hesitates, then snatches it, taking a small, disciplined sip before pocketing it.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "There's a camp two miles east. The Scrappers there don't negotiate. If you're as smart as you think you are, you'll help me avoid them.",
+      "expression": "cautious but decisive"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Show me the path. I will calculate the safest route.",
+      "expression": "calm"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen rises, brushing the grey ash from his knees, his eyes already scanning the horizon for the next variable.",
+      "expression": ""
+    }
+  ]
+}

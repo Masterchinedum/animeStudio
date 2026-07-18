@@ -1,0 +1,71 @@
+{
+  "scene": "scene_005",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Ash flakes drift through the twilight, coating the jagged iron ribs of the scrap-heap overlook. Below, the flickering torches of the strongman's supply depot illuminate crates of purified well-water.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You altered the delivery markers. If Griss's crew finds their ration-cases in Vane's tents, they won't ask questions. They'll just draw steel.",
+      "expression": "huddled against the wind, eyes darting to the valley below"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen does not look up from the small, grease-stained logbook he is systematically rewriting. His movements are precise, his handwriting mimicking the head scribe's crude hand.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "A predictable reaction. Griss is territorial; Vane is prideful. If the resources are misallocated, the friction is mathematically certain to escalate.",
+      "expression": "flat, analytical"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "They're the strongman's best lieutenants. If they tear each other apart, the whole district's defense falls apart. You're playing with a spark next to dry powder.",
+      "expression": "hissing under her breath"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "A sudden shout echoes from the depot below. Two groups of armed guards converge near the water carts, hands resting on the hilts of their rusted scrap-blades.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Entrenched power relies entirely on the illusion of absolute distribution. Once the lieutenants believe the strongman is favoring one over the other, the structure collapses from within. My presence is unnecessary for their destruction.",
+      "expression": "closing the logbook with a soft snap"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Below, a blow is struck. A torch falls, igniting a stack of dry canvas. Shouts of betrayal rise into the ash-choked air as the two factions clash in earnest.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You didn't even have to draw a blade. They're killing each other for water you never even touched.",
+      "expression": "staring down, her jaw tightening as she takes a step back from him"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The flow of resources is the only true authority here. I merely redirected the current. Come. We must secure the secondary cisterns while they are occupied.",
+      "expression": "turning his back to the rising flames, his face expressionless in the orange glow"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna looks from the burning depot to Kaelen's retreating figure. A cold shiver runs through her, but she quickens her pace to follow.",
+      "expression": ""
+    }
+  ]
+}

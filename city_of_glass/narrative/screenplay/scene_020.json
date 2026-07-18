@@ -1,0 +1,71 @@
+{
+  "scene": "scene_020",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "The wind howling through the Scarred Gorge carries the bitter scent of ozone and ash. Kaelen stands at the edge of the smoking fissure, his posture steady, eyes scanning the quiet desolation below. His expression is entirely empty of triumph.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The containment is absolute. The corrupted energy has been redirected and neutralized. The sector is secure.",
+      "expression": "flat, measured"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Behind him, Lyra stands frozen. Her knuckles are white around the hilt of her sheathed blade. Her face is a pale mask, smudged with soot and the dried blood of their allies.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "Secure. Is that what we call this? After what you did to Master Valerius? After what you did to everyone who stood in that valley?",
+      "expression": "hollow, her voice trembling with rising horror"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Their positioning was the only viable catalyst to trigger the collapse. Had I hesitated, the corruption would have expanded exponentially. I chose the path of minimum expenditure.",
+      "expression": "turning slowly, his gaze clinical"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Lyra takes a slow step back, her eyes widening as she looks at him, really looks at him, as if seeing a stranger wearing Kaelen's skin.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "You didn't just let them die. You calculated their value as bait. You used their faith in us to line them up for the slaughter.",
+      "expression": "whispering, a profound, gut-wrenching disgust in her tone"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Faith is a variable. It made their movements predictable, which allowed for precise timing. It saved your life, Lyra.",
+      "expression": "unmoved, his voice dropping to a chill whisper"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Lyra stares at him. The word 'monster' is written in the trembling line of her jaw, the utter revulsion in her eyes, though she does not speak it. The silence between them stretches, vast and unbridgeable.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "lyra_blade_of_conviction",
+      "text": "I would rather have died in that valley. At least I would have died human.",
+      "expression": "with cold, irrevocable finality"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "She turns her back on him, walking away into the dust of the gorge, leaving him entirely alone. Kaelen stands on the precipice, the silence of his flawless victory settling over him like lead.",
+      "expression": ""
+    }
+  ]
+}

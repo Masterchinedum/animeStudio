@@ -1,0 +1,77 @@
+{
+  "scene": "scene_010",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Ash drifts through the skeletal remains of an ironwood grove, painting the late evening twilight in shades of bruised grey. Kaelen stands near a jagged outcrop, his eyes scanning the horizon with steady, rhythmic precision.",
+      "expression": ""
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna emerges from the haze, her breath rattling behind her dirt-smudged respirator. She pulls the cloth down, coughing once before dropping a heavy metal scroll-case at his feet.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You wanted whispers, Architect. I brought you a deafening roar.",
+      "expression": "bitterly"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Quantify the findings, Renna. I require scale, not metaphor.",
+      "expression": "calmly"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna crouches, kicking the dust away to reveal a crudely scratched map in the ash. Her fingers trace three distinct trade routes, all ending in jagged, burnt-out crosses.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "The border camps? Gone. The scrap-merchants? Slaughtered or conscripted. It's not a rival gang expanding territory. It's a tide.",
+      "expression": "sharp and hurried"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "An organized sect. Identify their core leadership and tactical doctrine.",
+      "expression": "unmoved"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "They don't negotiate, Kaelen. They march under a single standard, killing anyone who doesn't kneel within ten heartbeats. My best scout barely made it back to the low-depths before his lungs turned to glass. They are moving fast. Faster than you can plan for.",
+      "expression": "fearful, but mocking"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen looks down at the scratched map. His analytical mind processes the coordinates of the destruction, realizing the progression isn't random. It is a systematic, brutal siege of the entire region.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The local traditionalists and their petty squabbles are irrelevant now. We are no longer managing a local equilibrium.",
+      "expression": "with cold clarity"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "We're rats in a collapsing cellar, Kaelen. If that sect reaches the ridge, our little alliance won't even be a speed bump to them.",
+      "expression": "grimly"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen raises his gaze to the dark, soot-choked mountains in the distance, his eyes reflecting the cold, distant stars. The localized chess game has ended; a war of absolute survival has begun.",
+      "expression": ""
+    }
+  ]
+}

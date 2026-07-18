@@ -1,0 +1,95 @@
+{
+  "scene": "scene_015",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Inside a dim, stone-ribbed chamber of the Ironheart Citadel, Kaelen spreads charred iron tokens and scraps of grey parchment across a heavy oak table. Dust from the recent siege still hangs in the shafts of cold morning light.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The metal in these sigils is high-grade. Too pure for a newly formed militia, and too old to be local. They are pulling resources from a deeper well.",
+      "expression": "flatly, pointing a finger at a cracked insignia"
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "Some wells are poisoned at the bottom, Kaelen. We survived the siege. Let the embers die before you stir them.",
+      "expression": "grave and weary, staring out the narrow window"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna steps out of the shadows by the arched doorway, tossing a blood-flecked leather pouch onto the table. It lands with a heavy, metallic thud.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Stirring them is already done. Found those in the low-tier barracks. Fresh recruits, but they had old-world coins sewn into their collars. Not currency. Wards.",
+      "expression": "cynical, crossing her arms"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Which means their organization predates their public offensive. An army doesn't construct a continent-spanning supply line in a single season. Valerius, where did the first iron-cults originate?",
+      "expression": "with precise, chilling focus"
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "In the dark before the Great Cleansing. They were called the Unbroken. The texts detailing their fall were locked in the deep vaults of the high councils—supposedly destroyed to prevent their return.",
+      "expression": "his voice dropping to a somber murmur"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Well, they missed a spot. The slums are humming with their chants. It's like trying to sweep up ash during a volcanic eruption.",
+      "expression": "with a sharp, humorless laugh"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Then we do not sweep. We trace the ash back to the furnace. Valerius, I need those texts. The fragments. The warnings. Every word.",
+      "expression": "unmoved, his gaze locking onto the elder"
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "If you pull that thread, the cost will not be measured in coin or sweat. It demands a sacrifice of peace. Are you truly prepared for what walks in that shadow?",
+      "expression": "searching Kaelen's cold eyes"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Peace is a luxury for those who cannot see the architecture of the threat. Show me the way.",
+      "expression": "with absolute, chilling certainty"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Valerius sighs, the weight of centuries pressing down on his shoulders. He reaches into his robes, retrieving a heavy, tarnished key.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "master_valerius_ironhearts_price",
+      "text": "Under the southern tower. The forbidden archives. Look for the 'Scribings of the Sealed Vault.' But remember, Kaelen... the dark has eyes of its own.",
+      "expression": "placing the key on the table"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Great. More dust and ancient curses. I'll stick to the streets. At least the daggers there are tangible.",
+      "expression": "shaking her head, turning back to the shadows"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen takes the key, his fingers tracing the cold iron. He stares at the map, his mind already calculating the next step.",
+      "expression": ""
+    }
+  ]
+}

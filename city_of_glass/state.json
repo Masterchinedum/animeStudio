@@ -38,14 +38,16 @@
       "summary": "8 episodes"
     },
     "scene_beats": {
-      "status": "empty",
+      "status": "generated",
       "approved": false,
-      "notion_approval": "Draft"
+      "notion_approval": "Draft",
+      "summary": "20 existing scenes preserved (from an earlier run; run `anime run --force` if you want a clean, complete regeneration)"
     },
     "screenplay": {
-      "status": "empty",
+      "status": "generated",
       "approved": false,
-      "notion_approval": "Draft"
+      "notion_approval": "Draft",
+      "summary": "20 written"
     },
     "timed_transcript": {
       "status": "empty",

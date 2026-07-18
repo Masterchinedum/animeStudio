@@ -1,0 +1,89 @@
+{
+  "scene": "scene_008",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Morning light filters through the perpetual shroud of gray soot over the Ashfall Wastes. Kaelen stands before a makeshift stone table, tracing the boundary lines of the district's eastern sectors. Renna watches him from the threshold, her hand resting instinctively near her belt.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "They closed the gates to the upper terrace. The traditionalists. They won't even hear your name without reaching for their hilts.",
+      "expression": "tense, crossing her arms"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "They value their lineage. They think in terms of centuries, not immediate survival. It makes their movements entirely predictable.",
+      "expression": "calm, without looking up"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "They think you're a butcher, Kaelen. You took down the local strongman with poison and shadows. To them, you have no honor. You can't just slide a blade into an entire council.",
+      "expression": "blunt, stepping closer"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen sets down a small, tarnished copper token on the map—the seal of the district's oldest merchant guild.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "I have no intention of killing them. If I destroy the council, the district's trade network collapses, rendering the conquest useless. I require their infrastructure intact.",
+      "expression": "analytical"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Then you're stuck. They'd rather starve than deal with an upstart.",
+      "expression": "skeptical"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "They will deal with me because I have already secured their supply lines. I redirected the morning shipment of spirit-stone ore. It currently sits in our storehouses.",
+      "expression": "measured, looking directly at her"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna stiffens, her eyes widening slightly as she processes the scale of the maneuver.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You hijacked the ore? If they find out—",
+      "expression": "anxious, lowering her voice"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "They will not find out. I will present it to them as a gesture of goodwill—a 'recovery' of lost cargo from bandits. I will ask for nothing in return but an advisory seat.",
+      "expression": "faintly amused, cold"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "An advisory seat. Once you're in the room, you'll start pulling the strings.",
+      "expression": "wary, shaking her head"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Precisely. They keep their pride, and I acquire their network. A hammer only shatters. A lever moves the world.",
+      "expression": "detached, returning his gaze to the map"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna looks at him, a chill running down her spine. The raw brutality she expected has given way to something far more dangerous: patience.",
+      "expression": ""
+    }
+  ]
+}

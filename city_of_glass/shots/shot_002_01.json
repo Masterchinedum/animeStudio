@@ -1,0 +1,30 @@
+{
+  "id": "shot_002_01",
+  "scene": "scene_002",
+  "order": 1,
+  "characters": [
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, The Ashfall Wastes, A desolate, windswept region choked by the perpetual dust and debris of ancient conflicts, marked by skeletal ruins and scarce resources. This harsh frontier serves as the lowest rung of society, a brutal proving ground where only the most determined survive., Kaelen kneels in the warm ash, his fingers tracing the thermal vent patterns beneath a cracked shale shelf., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen kneels in the warm ash, his fingers tracing the thermal vent patterns beneath a cracked shale shelf.; wide shot, slow tilt down to Kaelen's hands on the shale",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

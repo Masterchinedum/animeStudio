@@ -1,0 +1,229 @@
+{
+  "scene": "scene_001",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 3.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Grey ash cascades from Kaelen's raw, trembling hand.",
+      "expression": {
+        "kaelen_scarred_architect": "weak, trembling"
+      },
+      "camera": "extreme close-up, static",
+      "dialogue": [],
+      "shot": "shot_001_01"
+    },
+    {
+      "t_start": 3.0,
+      "t_end": 7.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen rolls onto his back, gasping heavily as the freezing dawn air hits his lungs.",
+      "expression": {
+        "kaelen_scarred_architect": "shocked, pained, gasping"
+      },
+      "camera": "medium shot, high angle looking down",
+      "dialogue": [],
+      "shot": "shot_001_02"
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 10.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [],
+      "action": "The bloated, copper sun struggles to pierce a heavy canopy of shifting soot overhead.",
+      "expression": {},
+      "camera": "wide shot, low angle looking up at the sky",
+      "dialogue": [],
+      "shot": "shot_001_03"
+    },
+    {
+      "t_start": 10.0,
+      "t_end": 16.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen lies on his back, staring upwards as he speaks in a raspy, detached tone.",
+      "expression": {
+        "kaelen_scarred_architect": "detached, analytical"
+      },
+      "camera": "close-up, slow push in",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Atmospheric density is roughly twelve percent higher than baseline. Particulate matter... carbon, sulphur, heavy metals. This body is inadequate, yet it functions."
+        }
+      ],
+      "shot": "shot_001_04"
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 20.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen struggles to a sitting position, his thin limbs shaking beneath his coarse, dirt-caked tunic.",
+      "expression": {
+        "kaelen_scarred_architect": "straining, weak"
+      },
+      "camera": "medium shot, tracking his movement upward",
+      "dialogue": [],
+      "shot": "shot_001_05"
+    },
+    {
+      "t_start": 20.0,
+      "t_end": 24.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "A violent cough racks Kaelen's chest, but his eyes quickly snap open, remaining sharp and intensely focused.",
+      "expression": {
+        "kaelen_scarred_architect": "pained, then instantly sharp and cold"
+      },
+      "camera": "close-up, static",
+      "dialogue": [],
+      "shot": "shot_001_06"
+    },
+    {
+      "t_start": 24.0,
+      "t_end": 30.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen scans the desolate horizon, whispering his analytical observations to himself.",
+      "expression": {
+        "kaelen_scarred_architect": "intensely focused, calculating"
+      },
+      "camera": "medium close-up, panning slightly with his gaze",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Pulse is ninety-two. Muscular mass is depleted by approximately thirty percent. Yet, there is a secondary current... an ambient energy trying to occupy the cellular void."
+        }
+      ],
+      "shot": "shot_001_07"
+    },
+    {
+      "t_start": 30.0,
+      "t_end": 33.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen reaches down, his fingers brushing a jagged shard of obsidian half-buried in the ash.",
+      "expression": {
+        "kaelen_scarred_architect": "curious, deliberate"
+      },
+      "camera": "close-up on his hand and the obsidian shard",
+      "dialogue": [],
+      "shot": "shot_001_08"
+    },
+    {
+      "t_start": 33.0,
+      "t_end": 37.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen reacts to a faint, razor-sharp residue of energy humming against his skin from the shard.",
+      "expression": {
+        "kaelen_scarred_architect": "intrigued, analytical"
+      },
+      "camera": "medium close-up, low angle",
+      "dialogue": [],
+      "shot": "shot_001_09"
+    },
+    {
+      "t_start": 37.0,
+      "t_end": 43.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen looks up from the shard, his expression calm and grim as he catalogs the sensation.",
+      "expression": {
+        "kaelen_scarred_architect": "calm, grim, resolute"
+      },
+      "camera": "close-up, static",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "An efficient mechanism of self-directed evolution, hidden beneath a layer of barbaric mysticism. There are no safety margins here. No structural redundancy."
+        }
+      ],
+      "shot": "shot_001_10"
+    },
+    {
+      "t_start": 43.0,
+      "t_end": 48.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen forces himself to stand, swaying momentarily before locking his knees and hardening his posture.",
+      "expression": {
+        "kaelen_scarred_architect": "determined, straining, resolute"
+      },
+      "camera": "medium wide shot, tilting up with his rise",
+      "dialogue": [],
+      "shot": "shot_001_11"
+    },
+    {
+      "t_start": 48.0,
+      "t_end": 51.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen wipes the black soot from his lips with the back of his hand, staring into the ash-choked wastes.",
+      "expression": {
+        "kaelen_scarred_architect": "cold, unyielding"
+      },
+      "camera": "close-up, static",
+      "dialogue": [],
+      "shot": "shot_001_12"
+    },
+    {
+      "t_start": 51.0,
+      "t_end": 56.0,
+      "location": "the_ashfall_wastes",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen stands tall against the desolate landscape, delivering his final, chillingly cold assessment.",
+      "expression": {
+        "kaelen_scarred_architect": "chillingly cold, dominant"
+      },
+      "camera": "medium shot, slow pull out to reveal the wider desolate waste",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The rules of this system are rudimentary. I will master them."
+        }
+      ],
+      "shot": "shot_001_13"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "scene": "scene_002",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen kneels in the warm ash, his fingers tracing the thermal vent patterns beneath a cracked shale shelf.",
+      "expression": {
+        "kaelen_scarred_architect": "focused, analytical"
+      },
+      "camera": "wide shot, slow tilt down to Kaelen's hands on the shale",
+      "dialogue": [],
+      "shot": "shot_002_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 7.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna crouches behind a rusted iron rib, her hand resting tightly on her bone-shiv as she watches him.",
+      "expression": {
+        "renna_ashfall_scavenger": "narrowed eyes, suspicious"
+      },
+      "camera": "medium shot, over-the-shoulder looking past Renna toward Kaelen",
+      "dialogue": [],
+      "shot": "shot_002_02"
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 12.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen speaks calmly, then thrusts a thin metal spike into the grey crust and twists it with calculated pressure.",
+      "expression": {
+        "kaelen_scarred_architect": "calm, detached"
+      },
+      "camera": "close-up on Kaelen's face, then panning down to his hands twisting the spike",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The condensation rate of the sulfur-spring beneath this shale suggests a pocket of potable water every twelve hours. Exactly three inches below the frost-line."
+        }
+      ],
+      "shot": "shot_002_03"
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 16.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "A soft hiss escapes as water trickles into a hollow reed. Renna steps out from the shadow of the rusted rib, keeping her center of gravity low.",
+      "expression": {
+        "renna_ashfall_scavenger": "cold, threatening",
+        "kaelen_scarred_architect": "unmoved"
+      },
+      "camera": "medium two-shot, Renna in foreground tracking Kaelen's throat",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "You're digging in a dead zone, stranger. That water belongs to anyone with the teeth to keep it."
+        }
+      ],
+      "shot": "shot_002_04"
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 21.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Kaelen looks up slightly, completely detached, analyzing Renna as the water continues to trickle.",
+      "expression": {
+        "kaelen_scarred_architect": "detached, analytical",
+        "renna_ashfall_scavenger": "tense, guarded"
+      },
+      "camera": "medium close-up on Kaelen",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "It belongs to the one who understands the fluid dynamics of the shelf. Currently, that is me. I estimate you have three hours of hydration left before your motor skills begin to degrade."
+        }
+      ],
+      "shot": "shot_002_05"
+    },
+    {
+      "t_start": 21.0,
+      "t_end": 25.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna demands the water. Kaelen holds the reed steady and caps it with a scraped wax-plug, refusing to pull back.",
+      "expression": {
+        "renna_ashfall_scavenger": "sharp, impatient",
+        "kaelen_scarred_architect": "precise, steady"
+      },
+      "camera": "medium shot, low angle looking up at the two characters",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "I've lasted three years out here without a lecture on my kidney function. Give me the reed."
+        }
+      ],
+      "shot": "shot_002_06"
+    },
+    {
+      "t_start": 25.0,
+      "t_end": 30.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen keeps the reed secure, looking directly at Renna to present his logical proposal.",
+      "expression": {
+        "kaelen_scarred_architect": "calm, calculating"
+      },
+      "camera": "close-up on Kaelen",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "An inefficient exchange. If you kill me, you obtain half a liter of water and no knowledge of how to find the next deposit. If we cooperate, my calculations will increase your daily yield by forty percent."
+        }
+      ],
+      "shot": "shot_002_07"
+    },
+    {
+      "t_start": 30.0,
+      "t_end": 34.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna scoffs, her defensive posture remaining tight but her expression showing deep skepticism.",
+      "expression": {
+        "renna_ashfall_scavenger": "cynical, mocking"
+      },
+      "camera": "medium close-up on Renna",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Cooperate. Right. That's a word people use just before they slit your throat in your sleep."
+        }
+      ],
+      "shot": "shot_002_08"
+    },
+    {
+      "t_start": 34.0,
+      "t_end": 40.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Kaelen states his terms indifferently, matching her gaze with absolute stillness.",
+      "expression": {
+        "kaelen_scarred_architect": "indifferent, flat",
+        "renna_ashfall_scavenger": "evaluating, listening intently"
+      },
+      "camera": "medium two-shot, slow push in",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "I have no emotional investment in your demise. It would simply decrease my own survival probability. I require local geography, faction boundaries, and resource distribution. You require sustenance and a partner who does not rely on luck."
+        }
+      ],
+      "shot": "shot_002_09"
+    },
+    {
+      "t_start": 40.0,
+      "t_end": 45.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna stares at his scarred face, then slowly and deliberately relaxes her grip on the bone-shiv.",
+      "expression": {
+        "renna_ashfall_scavenger": "grudgingly intrigued, cautious",
+        "kaelen_scarred_architect": "impassive"
+      },
+      "camera": "medium shot, panning down to her hand loosening on her weapon",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "You speak like a machine. Or a corpse."
+        }
+      ],
+      "shot": "shot_002_10"
+    },
+    {
+      "t_start": 45.0,
+      "t_end": 50.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Kaelen extends the reed flask. Renna hesitates, then quickly snatches it and takes a small, disciplined sip.",
+      "expression": {
+        "kaelen_scarred_architect": "flat",
+        "renna_ashfall_scavenger": "cautious, evaluating"
+      },
+      "camera": "close-up on the exchange of the reed flask",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "I am alive. And I intend to remain so."
+        }
+      ],
+      "shot": "shot_002_11"
+    },
+    {
+      "t_start": 50.0,
+      "t_end": 55.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna pockets the reed and gestures toward the eastern horizon with a wary look.",
+      "expression": {
+        "renna_ashfall_scavenger": "cautious but decisive",
+        "kaelen_scarred_architect": "attentive"
+      },
+      "camera": "medium shot",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "There's a camp two miles east. The Scrappers there don't negotiate. If you're as smart as you think you are, you'll help me avoid them."
+        }
+      ],
+      "shot": "shot_002_12"
+    },
+    {
+      "t_start": 55.0,
+      "t_end": 59.0,
+      "location": "the_ashfall_wastes",
+      "time": "Mid-day",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Kaelen rises and brushes the grey ash from his knees, his eyes already scanning the empty horizon.",
+      "expression": {
+        "kaelen_scarred_architect": "calm, calculating",
+        "renna_ashfall_scavenger": "watchful"
+      },
+      "camera": "wide shot, tracking Kaelen as he stands, establishing the vast, ash-covered wastes around them",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Show me the path. I will calculate the safest route."
+        }
+      ],
+      "shot": "shot_002_13"
+    }
+  ]
+}

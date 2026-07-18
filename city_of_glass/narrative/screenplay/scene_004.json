@@ -1,0 +1,65 @@
+{
+  "scene": "scene_004",
+  "elements": [
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Flakes of gray ash drift through the stagnant air of the wastes. A brute in mismatched leather plates wrenches a metal canister from Renna's hands, spilling a precious drop of clear water onto the parched earth. Renna stands still, her jaw clenched, offering no resistance as the enforcer tosses the canister onto a cart piled high with scavenged goods.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Don't look too long. They charge extra for staring.",
+      "expression": "bitter, her voice barely a whisper"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen does not look away. His eyes track the cart, noting the limping stride of the lead enforcer, the frayed ropes securing the tribute, and the arrogant lack of rear guards.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "The brute on the left favors his right knee. The cart's axle is dry and ungreased. They carry twice what their beasts can safely pull.",
+      "expression": "detached, calculating"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "Great. You can write a poem about it while we starve. That water was our tribute for the week.",
+      "expression": "sharp, cynical"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Kaelen turns his gaze to the distant outcrop where the local strongman's fortress rises like a jagged tooth. A cold, precise focus settles over his features.",
+      "expression": ""
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "To destroy a wall, one does not hammer the stones. One removes the mortar at the base. They have left their supply lines entirely exposed to the ash-storms.",
+      "expression": "quiet, deliberate"
+    },
+    {
+      "kind": "dialogue",
+      "character": "renna_ashfall_scavenger",
+      "text": "You're talking about picking a fight with the man who owns this entire valley. He has thirty sworn blades.",
+      "expression": "fearful, but watching him with sudden intensity"
+    },
+    {
+      "kind": "dialogue",
+      "character": "kaelen_scarred_architect",
+      "text": "Then we shall ensure those thirty blades have nothing to eat, nowhere to sleep, and no reason to remain loyal. The strength of this district is a fragile illusion.",
+      "expression": "unmoved"
+    },
+    {
+      "kind": "action",
+      "character": "",
+      "text": "Renna looks from the departing cart to Kaelen's scarred, unreadable face, a sudden, uneasy curiosity masking her resentment.",
+      "expression": ""
+    }
+  ]
+}
