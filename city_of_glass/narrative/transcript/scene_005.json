@@ -1,0 +1,201 @@
+{
+  "scene": "scene_005",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [],
+      "action": "Ash flakes drift through twilight, coating the jagged iron ribs of a scrap-heap overlook. Below, flickering torches illuminate crates of purified well-water in a supply depot.",
+      "expression": {},
+      "camera": "wide shot, slow pan across the ash-choked landscape to the depot below",
+      "dialogue": [],
+      "shot": "shot_005_01"
+    },
+    {
+      "t_start": 5.0,
+      "t_end": 10.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna huddles against the wind, her eyes darting nervously to the valley below.",
+      "expression": {
+        "renna_ashfall_scavenger": "anxious, wary"
+      },
+      "camera": "medium close-up on Renna, looking down",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "You altered the delivery markers. If Griss's crew finds their ration-cases in Vane's tents, they won't ask questions. They'll just draw steel."
+        }
+      ],
+      "shot": "shot_005_02"
+    },
+    {
+      "t_start": 10.0,
+      "t_end": 13.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen does not look up, systematically rewriting a small, grease-stained logbook. His movements are precise, mimicking the head scribe's crude hand.",
+      "expression": {
+        "kaelen_scarred_architect": "focused, unconcerned"
+      },
+      "camera": "close-up on Kaelen's hands and the logbook",
+      "dialogue": [],
+      "shot": "shot_005_03"
+    },
+    {
+      "t_start": 13.0,
+      "t_end": 17.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen continues writing, his gaze fixed on the logbook.",
+      "expression": {
+        "kaelen_scarred_architect": "flat, analytical"
+      },
+      "camera": "medium close-up on Kaelen, slight low angle",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "A predictable reaction. Griss is territorial; Vane is prideful. If the resources are misallocated, the friction is mathematically certain to escalate."
+        }
+      ],
+      "shot": "shot_005_04"
+    },
+    {
+      "t_start": 17.0,
+      "t_end": 22.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna hisses under her breath, glancing between Kaelen and the depot below.",
+      "expression": {
+        "renna_ashfall_scavenger": "frustrated, fearful"
+      },
+      "camera": "medium shot on Renna, slight push in",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "They're the strongman's best lieutenants. If they tear each other apart, the whole district's defense falls apart. You're playing with a spark next to dry powder."
+        }
+      ],
+      "shot": "shot_005_05"
+    },
+    {
+      "t_start": 22.0,
+      "t_end": 26.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [],
+      "action": "A sudden shout echoes from the depot below. Two groups of armed guards converge near the water carts, hands resting on the hilts of their rusted scrap-blades.",
+      "expression": {},
+      "camera": "medium shot, looking down into the depot, quick zoom on converging guards",
+      "dialogue": [],
+      "shot": "shot_005_06"
+    },
+    {
+      "t_start": 26.0,
+      "t_end": 31.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen closes the logbook with a soft snap, finally looking up, his eyes scanning the scene below.",
+      "expression": {
+        "kaelen_scarred_architect": "calm, observant"
+      },
+      "camera": "medium close-up on Kaelen, then a slight pan to show his gaze towards the depot",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Entrenched power relies entirely on the illusion of absolute distribution. Once the lieutenants believe the strongman is favoring one over the other, the structure collapses from within. My presence is unnecessary for their destruction."
+        }
+      ],
+      "shot": "shot_005_07"
+    },
+    {
+      "t_start": 31.0,
+      "t_end": 35.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [],
+      "action": "Below, a blow is struck. A torch falls, igniting a stack of dry canvas. Shouts of betrayal rise into the ash-choked air as the two factions clash in earnest.",
+      "expression": {},
+      "camera": "dynamic medium shot of the depot, showing the skirmish, fire igniting, quick cuts between fighting groups",
+      "dialogue": [],
+      "shot": "shot_005_08"
+    },
+    {
+      "t_start": 35.0,
+      "t_end": 40.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna stares down at the burning depot, her jaw tightening. She takes a step back from Kaelen, looking at him with disbelief.",
+      "expression": {
+        "renna_ashfall_scavenger": "shocked, horrified, a hint of fear towards Kaelen"
+      },
+      "camera": "medium shot, Renna in foreground, Kaelen slightly out of focus behind her",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "You didn't even have to draw a blade. They're killing each other for water you never even touched."
+        }
+      ],
+      "shot": "shot_005_09"
+    },
+    {
+      "t_start": 40.0,
+      "t_end": 45.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen turns his back to the rising flames, his face expressionless in the orange glow.",
+      "expression": {
+        "kaelen_scarred_architect": "unreadable, cold"
+      },
+      "camera": "medium close-up on Kaelen's face, bathed in the orange light of the fire, slow push in",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The flow of resources is the only true authority here. I merely redirected the current. Come. We must secure the secondary cisterns while they are occupied."
+        }
+      ],
+      "shot": "shot_005_10"
+    },
+    {
+      "t_start": 45.0,
+      "t_end": 49.0,
+      "location": "the_ashfall_wastes",
+      "time": "Evening",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna looks from the burning depot to Kaelen's retreating figure. A cold shiver runs through her, but she quickens her pace to follow.",
+      "expression": {
+        "renna_ashfall_scavenger": "resolute, but with lingering unease"
+      },
+      "camera": "tracking shot, Renna looking back once at the depot, then following Kaelen as he walks away",
+      "dialogue": [],
+      "shot": "shot_005_11"
+    }
+  ]
+}

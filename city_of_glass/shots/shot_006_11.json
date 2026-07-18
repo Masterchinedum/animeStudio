@@ -1,0 +1,32 @@
+{
+  "id": "shot_006_11",
+  "scene": "scene_006",
+  "order": 11,
+  "characters": [
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, The Ashfall Wastes, A desolate, windswept region choked by the perpetual dust and debris of ancient conflicts, marked by skeletal ruins and scarce resources. This harsh frontier serves as the lowest rung of society, a brutal proving ground where only the most determined survive., Kaelen's face remains flat and absolute as he issues his final orders., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen's face remains flat and absolute as he issues his final orders.; Close-up on Kaelen's unmoving face.",
+  "dialogue": [
+    "kaelen_scarred_architect: Let them look. Attention is merely another variable to be managed. Gather the keyholders who survived. They report to me now."
+  ],
+  "seed": null,
+  "duration_s": 6.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

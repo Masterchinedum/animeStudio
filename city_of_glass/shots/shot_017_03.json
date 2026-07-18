@@ -1,0 +1,32 @@
+{
+  "id": "shot_017_03",
+  "scene": "scene_017",
+  "order": 3,
+  "characters": [
+    "lyra_blade_of_conviction"
+  ],
+  "image_prompt": "1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined, The Scarred Gorge, A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles., Lyra's hand rests on the pommel of her blade, knuckles white. She stares down into the roiling dark of the gorge, her chest rising and falling in shallow breaths., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Lyra's hand rests on the pommel of her blade, knuckles white. She stares down into the roiling dark of the gorge, her chest rising and falling in shallow breaths.; Close-up on Lyra's face, then her white-knuckled hand on the pommel.",
+  "dialogue": [
+    "lyra_blade_of_conviction: You talk of angles as if we are fighting a siege engine, Kaelen. The air itself... it feels wrong. It feels hungry."
+  ],
+  "seed": null,
+  "duration_s": 5.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

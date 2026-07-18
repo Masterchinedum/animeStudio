@@ -1,0 +1,31 @@
+{
+  "id": "shot_011_15",
+  "scene": "scene_011",
+  "order": 15,
+  "characters": [
+    "lyra_blade_of_conviction",
+    "master_valerius_ironhearts_price"
+  ],
+  "image_prompt": "1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined, 1boy, aged man, long white hair, solemn grey eyes, scarred face, heavy cultivation robes, ancient greatsword, imposing posture, stoic expression, slight hunch, wise, The Scarred Gorge, A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles., Lyra turns sharply to Valerius, searching for a reprimand, but he looks down at his blood-stained hands., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Lyra turns sharply to Valerius, searching for a reprimand, but he looks down at his blood-stained hands.; medium two-shot, Lyra's pleading face, Valerius's downcast gaze",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

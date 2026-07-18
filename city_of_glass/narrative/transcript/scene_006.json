@@ -1,0 +1,258 @@
+{
+  "scene": "scene_006",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [],
+      "action": "Black ash falls like snow. Below, the iron gate of the strongman's compound hangs from a single hinge, surrounded by motionless bodies.",
+      "expression": {},
+      "camera": "Wide shot, slow pan across the destroyed gate and bodies.",
+      "dialogue": [],
+      "shot": "shot_006_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 7.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna stands on the ridge, looking down at the compound, whispering tensely.",
+      "expression": {
+        "renna_ashfall_scavenger": "tense, whispering"
+      },
+      "camera": "Medium close-up on Renna, looking down.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "They're tearing themselves to pieces down there. You didn't even have to lift a finger."
+        }
+      ],
+      "shot": "shot_006_02"
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 11.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen stands on the ridge, his gaze fixed on the burning warehouses below. Firelight flickers across his face.",
+      "expression": {
+        "kaelen_scarred_architect": "analytical, emotionless"
+      },
+      "camera": "Medium close-up on Kaelen, firelight flickering on his face.",
+      "dialogue": [],
+      "shot": "shot_006_03"
+    },
+    {
+      "t_start": 11.0,
+      "t_end": 16.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen speaks, his voice measured and cold, still watching the fires below.",
+      "expression": {
+        "kaelen_scarred_architect": "analytical, cold"
+      },
+      "camera": "Close-up on Kaelen's face, firelight still flickering.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "A hierarchy built on leverage collapses the moment the leverage is redistributed. I merely altered their calculations."
+        }
+      ],
+      "shot": "shot_006_04"
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 20.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna turns slightly towards Kaelen, a bitter, sarcastic expression on her face.",
+      "expression": {
+        "renna_ashfall_scavenger": "bitterly sarcastic"
+      },
+      "camera": "Medium close-up on Renna, slight shift in her gaze.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Right. By convincing his lieutenants he was going to purge them. They did your dirty work for you."
+        }
+      ],
+      "shot": "shot_006_05"
+    },
+    {
+      "t_start": 20.0,
+      "t_end": 24.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "the_strongman"
+      ],
+      "action": "In the courtyard below, the strongman stumbles out of his quarters, clutching a bleeding chest wound.",
+      "expression": {
+        "the_strongman": "desperate, wounded"
+      },
+      "camera": "Medium shot, low angle, showing the strongman emerging from his quarters.",
+      "dialogue": [],
+      "shot": "shot_006_06"
+    },
+    {
+      "t_start": 24.0,
+      "t_end": 28.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "the_strongman"
+      ],
+      "action": "The strongman looks up towards the ridge, screaming curses into the dark.",
+      "expression": {
+        "the_strongman": "enraged, defeated"
+      },
+      "camera": "Close-up on the strongman's face, screaming upwards.",
+      "dialogue": [],
+      "shot": "shot_006_07"
+    },
+    {
+      "t_start": 28.0,
+      "t_end": 31.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "the_strongman"
+      ],
+      "action": "The strongman collapses into the ash, motionless.",
+      "expression": {
+        "the_strongman": "lifeless"
+      },
+      "camera": "Medium shot, overhead, showing the strongman falling into the ash.",
+      "dialogue": [],
+      "shot": "shot_006_08"
+    },
+    {
+      "t_start": 31.0,
+      "t_end": 36.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen turns slightly, his expression precise and focused, giving instructions.",
+      "expression": {
+        "kaelen_scarred_architect": "precise, focused"
+      },
+      "camera": "Medium close-up on Kaelen, slight turn towards Renna.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The vacuum is temporary. We must secure the distribution vaults before the neighboring districts realize the seat is empty."
+        }
+      ],
+      "shot": "shot_006_09"
+    },
+    {
+      "t_start": 36.0,
+      "t_end": 41.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna looks at Kaelen with apprehension, searching his eyes for a reaction.",
+      "expression": {
+        "renna_ashfall_scavenger": "apprehensive, searching"
+      },
+      "camera": "Close-up on Renna's face, eyes darting to Kaelen's.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "And once we do? You think the others are just going to let you keep it? You've put a target on both our backs."
+        }
+      ],
+      "shot": "shot_006_10"
+    },
+    {
+      "t_start": 41.0,
+      "t_end": 47.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen's face remains flat and absolute as he issues his final orders.",
+      "expression": {
+        "kaelen_scarred_architect": "flat, absolute"
+      },
+      "camera": "Close-up on Kaelen's unmoving face.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Let them look. Attention is merely another variable to be managed. Gather the keyholders who survived. They report to me now."
+        }
+      ],
+      "shot": "shot_006_11"
+    },
+    {
+      "t_start": 47.0,
+      "t_end": 51.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "the_strongman"
+      ],
+      "action": "Renna hesitates, looking down at the dead strongman's body below.",
+      "expression": {
+        "renna_ashfall_scavenger": "conflicted, contemplating"
+      },
+      "camera": "Medium shot, Renna's profile, looking down.",
+      "dialogue": [],
+      "shot": "shot_006_12"
+    },
+    {
+      "t_start": 51.0,
+      "t_end": 55.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna looks from the dead strongman to the silent, imposing figure of Kaelen.",
+      "expression": {
+        "renna_ashfall_scavenger": "resigned, assessing"
+      },
+      "camera": "Medium close-up, Renna's gaze shifts from off-screen (strongman) to Kaelen.",
+      "dialogue": [],
+      "shot": "shot_006_13"
+    },
+    {
+      "t_start": 55.0,
+      "t_end": 59.0,
+      "location": "the_ashfall_wastes",
+      "time": "Night",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna nods slowly, stepping slightly closer, into the metaphorical shadow Kaelen casts over the district.",
+      "expression": {
+        "renna_ashfall_scavenger": "resigned, accepting"
+      },
+      "camera": "Medium shot of Renna nodding, then a slight pull back to emphasize Kaelen's imposing presence.",
+      "dialogue": [],
+      "shot": "shot_006_14"
+    }
+  ]
+}

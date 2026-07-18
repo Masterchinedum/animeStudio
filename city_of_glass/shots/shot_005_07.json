@@ -1,0 +1,32 @@
+{
+  "id": "shot_005_07",
+  "scene": "scene_005",
+  "order": 7,
+  "characters": [
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, The Ashfall Wastes, A desolate, windswept region choked by the perpetual dust and debris of ancient conflicts, marked by skeletal ruins and scarce resources. This harsh frontier serves as the lowest rung of society, a brutal proving ground where only the most determined survive., Kaelen closes the logbook with a soft snap, finally looking up, his eyes scanning the scene below., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen closes the logbook with a soft snap, finally looking up, his eyes scanning the scene below.; medium close-up on Kaelen, then a slight pan to show his gaze towards the depot",
+  "dialogue": [
+    "kaelen_scarred_architect: Entrenched power relies entirely on the illusion of absolute distribution. Once the lieutenants believe the strongman is favoring one over the other, the structure collapses from within. My presence is unnecessary for their destruction."
+  ],
+  "seed": null,
+  "duration_s": 5.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

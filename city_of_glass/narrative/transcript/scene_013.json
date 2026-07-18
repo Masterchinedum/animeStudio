@@ -1,0 +1,269 @@
+{
+  "scene": "scene_013",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [],
+      "action": "Dawn breaks over the jagged peaks of the Summit of Scars, painting rising smoke in bruised purple and gold. Below, the narrow gorge funnels the aggressive sect's vanguard towards a silent perimeter.",
+      "expression": {},
+      "camera": "Wide establishing shot, slow pan across the peaks and down towards the gorge.",
+      "dialogue": [],
+      "shot": "shot_013_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 9.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "lyra_blade_of_conviction",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Lyra turns to Kaelen, breathless, desperately searching his face.",
+      "expression": {
+        "lyra_blade_of_conviction": "breathless, desperate, pleading"
+      },
+      "camera": "Medium close-up on Lyra, Kaelen visible in background.",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "The wind... it has stopped. Kaelen, they have not yet crossed the threshold. We can still draw them out. We can meet them with steel. Honor does not demand this silence."
+        }
+      ],
+      "shot": "shot_013_02"
+    },
+    {
+      "t_start": 9.0,
+      "t_end": 12.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen does not look up from the central array stone. His fingers, smeared with ritual soot, trace the final boundary line.",
+      "expression": {
+        "kaelen_scarred_architect": "impassive, focused, mechanical"
+      },
+      "camera": "Close-up on Kaelen's hands tracing the stone, then slight tilt up to his unmoving face.",
+      "dialogue": [],
+      "shot": "shot_013_03"
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 17.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen speaks, his gaze still fixed on the stone.",
+      "expression": {
+        "kaelen_scarred_architect": "flat, devoid of inflection"
+      },
+      "camera": "Medium close-up on Kaelen, emphasizing his detached focus.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Steel is a variable, Lyra. Variables introduce failure. The math of this gorge is absolute. When the seal breaks, the pressure will ensure zero survivors. Including the rearguard we left to bait them."
+        }
+      ],
+      "shot": "shot_013_04"
+    },
+    {
+      "t_start": 17.0,
+      "t_end": 21.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra's face contorts with rising horror as she processes Kaelen's words.",
+      "expression": {
+        "lyra_blade_of_conviction": "rising horror, voice cracking"
+      },
+      "camera": "Tight close-up on Lyra's face.",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "Those are our people! They trusted us to hold the flank! You promised them a defensive retreat!"
+        }
+      ],
+      "shot": "shot_013_05"
+    },
+    {
+      "t_start": 21.0,
+      "t_end": 26.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Master Valerius looks down at the valley below, his expression grave.",
+      "expression": {
+        "master_valerius_ironhearts_price": "grave, world-weary"
+      },
+      "camera": "Medium shot of Valerius, his heavy gaze fixed on the valley, then turns slightly to Lyra.",
+      "dialogue": [
+        {
+          "character": "master_valerius_ironhearts_price",
+          "text": "There is no retreat from a landslide, child. He told them what they needed to hear to stand their ground. Without their stand, the sect would never have gathered in the throat of the pass."
+        }
+      ],
+      "shot": "shot_013_06"
+    },
+    {
+      "t_start": 26.0,
+      "t_end": 29.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen presses his palm to the center rune. A deep, sub-audible hum vibrates through the solid stone.",
+      "expression": {
+        "kaelen_scarred_architect": "determined, unwavering"
+      },
+      "camera": "Close-up on Kaelen's hand pressing against the rune, with subtle vibrations visible in the stone.",
+      "dialogue": [],
+      "shot": "shot_013_07"
+    },
+    {
+      "t_start": 29.0,
+      "t_end": 33.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [],
+      "action": "The valley below suddenly ignites—not with fire, but with a blinding, crushing vacuum of pure spiritual pressure.",
+      "expression": {},
+      "camera": "Wide shot of the gorge, showing the sudden, violent ignition of spiritual pressure.",
+      "dialogue": [],
+      "shot": "shot_013_08"
+    },
+    {
+      "t_start": 33.0,
+      "t_end": 37.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [],
+      "action": "The silence that follows is absolute. Far below, the flashing steel of the sect and the banner of the rearguard vanish instantly, collapsed into a sickening, crimson-stained dust. A terrible, echoing crack of shifting tectonic plates is heard.",
+      "expression": {},
+      "camera": "Wide shot of the now silent, dust-filled gorge, panning slowly to emphasize the devastation.",
+      "dialogue": [],
+      "shot": "shot_013_09"
+    },
+    {
+      "t_start": 37.0,
+      "t_end": 40.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra drops her sword. The heavy blade clatters uselessly against the stone.",
+      "expression": {
+        "lyra_blade_of_conviction": "shocked, disbelieving"
+      },
+      "camera": "Medium close-up on Lyra's hand as the sword falls and clatters, then pan up to her face.",
+      "dialogue": [],
+      "shot": "shot_013_10"
+    },
+    {
+      "t_start": 40.0,
+      "t_end": 43.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra collapses to her knees, staring into the empty, silent void where an army just existed.",
+      "expression": {
+        "lyra_blade_of_conviction": "horror, utter devastation"
+      },
+      "camera": "Low angle shot, focusing on Lyra collapsing, then her gaze fixed on the gorge.",
+      "dialogue": [],
+      "shot": "shot_013_11"
+    },
+    {
+      "t_start": 43.0,
+      "t_end": 48.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Tears trace clean lines through the ash on Lyra's face as she whispers.",
+      "expression": {
+        "lyra_blade_of_conviction": "whispering, tears, profound disillusionment"
+      },
+      "camera": "Tight close-up on Lyra's ash-streaked face, tears visible.",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "No... this is not a victory. This is a slaughterhouse. We are no better than the monsters we fought. We sold our souls for a graveyard."
+        }
+      ],
+      "shot": "shot_013_12"
+    },
+    {
+      "t_start": 48.0,
+      "t_end": 53.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Master Valerius looks at Lyra, his face etched with a hollow understanding.",
+      "expression": {
+        "master_valerius_ironhearts_price": "hollow, world-weary, resigned"
+      },
+      "camera": "Medium close-up on Valerius, his gaze reflecting the weight of his words.",
+      "dialogue": [
+        {
+          "character": "master_valerius_ironhearts_price",
+          "text": "We bought our survival, Lyra. The cost of an iron heart is always paid in the blood of those who trusted its strength."
+        }
+      ],
+      "shot": "shot_013_13"
+    },
+    {
+      "t_start": 53.0,
+      "t_end": 56.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen slowly stands, his hands clean of the soot now. He looks down at the silent, smoking gorge.",
+      "expression": {
+        "kaelen_scarred_architect": "utterly impassive, analytical"
+      },
+      "camera": "Medium shot of Kaelen slowly rising, then his gaze falling upon the gorge.",
+      "dialogue": [],
+      "shot": "shot_013_14"
+    },
+    {
+      "t_start": 56.0,
+      "t_end": 60.0,
+      "location": "the_summit_of_scars",
+      "time": "Dawn",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen speaks, his eyes reflecting only the cold, dead light of dawn.",
+      "expression": {
+        "kaelen_scarred_architect": "measured, chillingly practical, distant"
+      },
+      "camera": "Medium close-up on Kaelen, his eyes holding the cold reflection of the dawn.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The sect is broken. The region is secure. We proceed to the next phase."
+        }
+      ],
+      "shot": "shot_013_15"
+    }
+  ]
+}

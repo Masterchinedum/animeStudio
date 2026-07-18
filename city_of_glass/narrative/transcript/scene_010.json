@@ -1,0 +1,232 @@
+{
+  "scene": "scene_010",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Ash drifts through skeletal ironwood. Kaelen stands near a jagged outcrop, his eyes scanning the horizon.",
+      "expression": {
+        "kaelen_scarred_architect": "Focused, vigilant"
+      },
+      "camera": "Wide shot, slow pan across the landscape ending on Kaelen's profile.",
+      "dialogue": [],
+      "shot": "shot_010_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 7.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna emerges from the haze, pulling down her dirt-smudged respirator.",
+      "expression": {
+        "renna_ashfall_scavenger": "Weary, grim"
+      },
+      "camera": "Medium shot, tracking Renna as she walks into frame.",
+      "dialogue": [],
+      "shot": "shot_010_02"
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 11.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna coughs once, then drops a heavy metal scroll-case at Kaelen's feet.",
+      "expression": {
+        "renna_ashfall_scavenger": "Bitter, frustrated"
+      },
+      "camera": "Medium close-up on Renna, focusing on her face and the scroll-case hitting the ground.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "You wanted whispers, Architect. I brought you a deafening roar."
+        }
+      ],
+      "shot": "shot_010_03"
+    },
+    {
+      "t_start": 11.0,
+      "t_end": 14.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen looks calmly at Renna, then down at the scroll-case.",
+      "expression": {
+        "kaelen_scarred_architect": "Calm, analytical"
+      },
+      "camera": "Medium close-up on Kaelen, slight low angle.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Quantify the findings, Renna. I require scale, not metaphor."
+        }
+      ],
+      "shot": "shot_010_04"
+    },
+    {
+      "t_start": 14.0,
+      "t_end": 18.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna crouches, kicking dust away to reveal a crudely scratched map in the ash. Her fingers trace three distinct trade routes.",
+      "expression": {
+        "renna_ashfall_scavenger": "Urgent, determined"
+      },
+      "camera": "Close-up on Renna's hands tracing the map in the ash, then pull back slightly to include her face.",
+      "dialogue": [],
+      "shot": "shot_010_05"
+    },
+    {
+      "t_start": 18.0,
+      "t_end": 23.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna's fingers trace jagged, burnt-out crosses on the map in the ash.",
+      "expression": {
+        "renna_ashfall_scavenger": "Sharp, hurried, grave"
+      },
+      "camera": "Extreme close-up on the map in the ash and Renna's tracing fingers.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "The border camps? Gone. The scrap-merchants? Slaughtered or conscripted. It's not a rival gang expanding territory. It's a tide."
+        }
+      ],
+      "shot": "shot_010_06"
+    },
+    {
+      "t_start": 23.0,
+      "t_end": 26.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen stands unmoved, his gaze fixed on Renna.",
+      "expression": {
+        "kaelen_scarred_architect": "Unmoved, analytical, demanding"
+      },
+      "camera": "Medium close-up on Kaelen.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "An organized sect. Identify their core leadership and tactical doctrine."
+        }
+      ],
+      "shot": "shot_010_07"
+    },
+    {
+      "t_start": 26.0,
+      "t_end": 32.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna looks up at Kaelen, her eyes wide with a mix of fear and defiance.",
+      "expression": {
+        "renna_ashfall_scavenger": "Fearful, mocking, desperate"
+      },
+      "camera": "Medium close-up on Renna.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "They don't negotiate, Kaelen. They march under a single standard, killing anyone who doesn't kneel within ten heartbeats. My best scout barely made it back to the low-depths before his lungs turned to glass. They are moving fast. Faster than you can plan for."
+        }
+      ],
+      "shot": "shot_010_08"
+    },
+    {
+      "t_start": 32.0,
+      "t_end": 36.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen looks down at the scratched map in the ash, his analytical mind processing the coordinates of destruction.",
+      "expression": {
+        "kaelen_scarred_architect": "Realizing, calculating, cold"
+      },
+      "camera": "Close-up on Kaelen's eyes, then slowly tilt down to the map.",
+      "dialogue": [],
+      "shot": "shot_010_09"
+    },
+    {
+      "t_start": 36.0,
+      "t_end": 40.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen slowly raises his head, his gaze now distant.",
+      "expression": {
+        "kaelen_scarred_architect": "Cold clarity, grim determination"
+      },
+      "camera": "Medium close-up, slow push in on Kaelen's face.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The local traditionalists and their petty squabbles are irrelevant now. We are no longer managing a local equilibrium."
+        }
+      ],
+      "shot": "shot_010_10"
+    },
+    {
+      "t_start": 40.0,
+      "t_end": 44.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna looks at Kaelen, her expression grim.",
+      "expression": {
+        "renna_ashfall_scavenger": "Grim, desperate, resigned"
+      },
+      "camera": "Medium close-up on Renna.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "We're rats in a collapsing cellar, Kaelen. If that sect reaches the ridge, our little alliance won't even be a speed bump to them."
+        }
+      ],
+      "shot": "shot_010_11"
+    },
+    {
+      "t_start": 44.0,
+      "t_end": 49.0,
+      "location": "the_ashfall_wastes",
+      "time": "late evening",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen raises his gaze to the dark, soot-choked mountains in the distance, his eyes reflecting distant stars.",
+      "expression": {
+        "kaelen_scarred_architect": "Grave, resolute, burdened by new understanding"
+      },
+      "camera": "Wide shot, focusing on Kaelen looking towards the mountains, slight pull back to emphasize his isolation against the vast threat.",
+      "dialogue": [],
+      "shot": "shot_010_12"
+    }
+  ]
+}

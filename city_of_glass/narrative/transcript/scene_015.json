@@ -1,0 +1,305 @@
+{
+  "scene": "scene_015",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen spreads charred iron tokens and scraps of grey parchment across a heavy oak table. Dust motes visible in shafts of cold morning light.",
+      "expression": {
+        "kaelen_scarred_architect": "focused, methodical"
+      },
+      "camera": "Wide shot, slowly panning across the table and Kaelen's hands.",
+      "dialogue": [],
+      "shot": "shot_015_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 7.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen points a finger at a cracked insignia on one of the tokens.",
+      "expression": {
+        "kaelen_scarred_architect": "flat, analytical"
+      },
+      "camera": "Medium close-up on Kaelen's hand and the insignia, then pushes slightly to Kaelen's face.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The metal in these sigils is high-grade. Too pure for a newly formed militia, and too old to be local. They are pulling resources from a deeper well."
+        }
+      ],
+      "shot": "shot_015_02"
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 11.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Valerius stands by a narrow window, staring out, his back mostly to the table.",
+      "expression": {
+        "master_valerius_ironhearts_price": "grave, weary, distant"
+      },
+      "camera": "Medium shot from behind Valerius, looking out the window with him, then slowly pulls back to show his weary posture.",
+      "dialogue": [
+        {
+          "character": "master_valerius_ironhearts_price",
+          "text": "Some wells are poisoned at the bottom, Kaelen. We survived the siege. Let the embers die before you stir them."
+        }
+      ],
+      "shot": "shot_015_03"
+    },
+    {
+      "t_start": 11.0,
+      "t_end": 14.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna steps out of the shadows by an arched doorway into the chamber's light.",
+      "expression": {
+        "renna_ashfall_scavenger": "neutral, observant"
+      },
+      "camera": "Medium shot, tracking Renna as she emerges from the dark.",
+      "dialogue": [],
+      "shot": "shot_015_04"
+    },
+    {
+      "t_start": 14.0,
+      "t_end": 18.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "renna_ashfall_scavenger",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Renna tosses a blood-flecked leather pouch onto the table with a heavy thud. She crosses her arms.",
+      "expression": {
+        "renna_ashfall_scavenger": "cynical, resigned"
+      },
+      "camera": "Medium shot, focused on Renna's action, then her crossing arms. Pouch landing is a close-up insert.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Stirring them is already done. Found those in the low-tier barracks. Fresh recruits, but they had old-world coins sewn into their collars. Not currency. Wards."
+        }
+      ],
+      "shot": "shot_015_05"
+    },
+    {
+      "t_start": 18.0,
+      "t_end": 22.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Kaelen looks at the pouch, then turns his intense gaze towards Valerius, demanding information.",
+      "expression": {
+        "kaelen_scarred_architect": "precise, chilling focus"
+      },
+      "camera": "Close-up on Kaelen's face, a slight push in emphasizing his intensity.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Which means their organization predates their public offensive. An army doesn't construct a continent-spanning supply line in a single season. Valerius, where did the first iron-cults originate?"
+        }
+      ],
+      "shot": "shot_015_06"
+    },
+    {
+      "t_start": 22.0,
+      "t_end": 26.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Valerius slowly turns from the window to face Kaelen, his voice dropping to a somber murmur.",
+      "expression": {
+        "master_valerius_ironhearts_price": "somber, burdened by memory"
+      },
+      "camera": "Medium close-up on Valerius's face as he speaks, a slight downward angle.",
+      "dialogue": [
+        {
+          "character": "master_valerius_ironhearts_price",
+          "text": "In the dark before the Great Cleansing. They were called the Unbroken. The texts detailing their fall were locked in the deep vaults of the high councils—supposedly destroyed to prevent their return."
+        }
+      ],
+      "shot": "shot_015_07"
+    },
+    {
+      "t_start": 26.0,
+      "t_end": 29.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna lets out a sharp, humorless laugh, shaking her head slightly.",
+      "expression": {
+        "renna_ashfall_scavenger": "cynical, exasperated"
+      },
+      "camera": "Close-up on Renna's face, capturing her laugh and head shake.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Well, they missed a spot. The slums are humming with their chants. It's like trying to sweep up ash during a volcanic eruption."
+        }
+      ],
+      "shot": "shot_015_08"
+    },
+    {
+      "t_start": 29.0,
+      "t_end": 33.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Kaelen holds Valerius's gaze, unmoved by Renna's cynicism, pressing his demand.",
+      "expression": {
+        "kaelen_scarred_architect": "absolute resolve, unyielding"
+      },
+      "camera": "Medium close-up, two-shot of Kaelen and Valerius, focusing on Kaelen's intense gaze.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Then we do not sweep. We trace the ash back to the furnace. Valerius, I need those texts. The fragments. The warnings. Every word."
+        }
+      ],
+      "shot": "shot_015_09"
+    },
+    {
+      "t_start": 33.0,
+      "t_end": 37.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "master_valerius_ironhearts_price",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Valerius searches Kaelen's cold eyes, conveying the gravity of the request.",
+      "expression": {
+        "master_valerius_ironhearts_price": "serious, probing, concerned"
+      },
+      "camera": "Close-up, reverse shot on Valerius, looking at Kaelen intently.",
+      "dialogue": [
+        {
+          "character": "master_valerius_ironhearts_price",
+          "text": "If you pull that thread, the cost will not be measured in coin or sweat. It demands a sacrifice of peace. Are you truly prepared for what walks in that shadow?"
+        }
+      ],
+      "shot": "shot_015_10"
+    },
+    {
+      "t_start": 37.0,
+      "t_end": 40.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen holds Valerius's gaze, unwavering.",
+      "expression": {
+        "kaelen_scarred_architect": "absolute, chilling certainty"
+      },
+      "camera": "Close-up on Kaelen's face, firm and resolute.",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Peace is a luxury for those who cannot see the architecture of the threat. Show me the way."
+        }
+      ],
+      "shot": "shot_015_11"
+    },
+    {
+      "t_start": 40.0,
+      "t_end": 43.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "master_valerius_ironhearts_price"
+      ],
+      "action": "Valerius sighs heavily, the weight of centuries pressing down on his shoulders. He reaches into his robes.",
+      "expression": {
+        "master_valerius_ironhearts_price": "resigned, burdened, a deep sigh"
+      },
+      "camera": "Medium close-up on Valerius, focusing on his sigh and the action of retrieving the key.",
+      "dialogue": [],
+      "shot": "shot_015_12"
+    },
+    {
+      "t_start": 43.0,
+      "t_end": 47.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "master_valerius_ironhearts_price",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Valerius places a heavy, tarnished key on the table.",
+      "expression": {
+        "master_valerius_ironhearts_price": "grim, warning"
+      },
+      "camera": "Close-up on the key as it's placed on the table, then pushes slightly to Valerius's hand.",
+      "dialogue": [
+        {
+          "character": "master_valerius_ironhearts_price",
+          "text": "Under the southern tower. The forbidden archives. Look for the 'Scribings of the Sealed Vault.' But remember, Kaelen... the dark has eyes of its own."
+        }
+      ],
+      "shot": "shot_015_13"
+    },
+    {
+      "t_start": 47.0,
+      "t_end": 51.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "renna_ashfall_scavenger"
+      ],
+      "action": "Renna shakes her head, turning back towards the shadows from where she emerged.",
+      "expression": {
+        "renna_ashfall_scavenger": "dismissive, weary, cynical"
+      },
+      "camera": "Medium shot on Renna, tracking her turning away.",
+      "dialogue": [
+        {
+          "character": "renna_ashfall_scavenger",
+          "text": "Great. More dust and ancient curses. I'll stick to the streets. At least the daggers there are tangible."
+        }
+      ],
+      "shot": "shot_015_14"
+    },
+    {
+      "t_start": 51.0,
+      "t_end": 55.0,
+      "location": "ironheart_citadel",
+      "time": "A few days after the battle",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen takes the key, his fingers tracing the cold iron. He stares at the table, his mind already calculating the next step.",
+      "expression": {
+        "kaelen_scarred_architect": "determined, calculating, absorbed"
+      },
+      "camera": "Close-up on Kaelen's hand taking the key, then a slow push in on his face, eyes distant and thoughtful.",
+      "dialogue": [],
+      "shot": "shot_015_15"
+    }
+  ]
+}

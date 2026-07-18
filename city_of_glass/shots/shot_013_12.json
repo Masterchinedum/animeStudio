@@ -1,0 +1,32 @@
+{
+  "id": "shot_013_12",
+  "scene": "scene_013",
+  "order": 12,
+  "characters": [
+    "lyra_blade_of_conviction"
+  ],
+  "image_prompt": "1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined, The Summit of Scars, The highest, most perilous peak in the known world, perpetually shrouded in swirling storms and rumored to be the source of immense cultivation power. It is the ultimate, almost mythical destination for those seeking true mastery, its slopes littered with the relics and fallen warriors of countless failed ascensions., Tears trace clean lines through the ash on Lyra's face as she whispers., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Tears trace clean lines through the ash on Lyra's face as she whispers.; Tight close-up on Lyra's ash-streaked face, tears visible.",
+  "dialogue": [
+    "lyra_blade_of_conviction: No... this is not a victory. This is a slaughterhouse. We are no better than the monsters we fought. We sold our souls for a graveyard."
+  ],
+  "seed": null,
+  "duration_s": 5.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

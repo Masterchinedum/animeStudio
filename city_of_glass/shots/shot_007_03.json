@@ -1,0 +1,28 @@
+{
+  "id": "shot_007_03",
+  "scene": "scene_007",
+  "order": 3,
+  "characters": [],
+  "image_prompt": "The Scarred Gorge, A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles., The qi arc shears a massive stone pillar cleanly in two. The severed rock slides into the abyss with a dull roar., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "The qi arc shears a massive stone pillar cleanly in two. The severed rock slides into the abyss with a dull roar.; Close-up on the pillar splitting, then tilt down following the falling rock",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

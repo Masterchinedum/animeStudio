@@ -1,0 +1,33 @@
+{
+  "id": "shot_015_05",
+  "scene": "scene_015",
+  "order": 5,
+  "characters": [
+    "renna_ashfall_scavenger",
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1girl, short messy brown hair, wary amber eyes, wiry build, ragged cloak, fingerless gloves, leather bracers, multiple utility pouches, scavenging tools, dirt on face, survivalist, 1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, Ironheart Citadel, A monolithic fortress city carved into a sheer mountain face, its walls layered with millennia of repairs and battle scars. It is the stronghold of one of the realm's dominant cultivation sects, a beacon of power and a harsh reminder of the hierarchy to those seeking advancement., Renna tosses a blood-flecked leather pouch onto the table with a heavy thud. She crosses her arms., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Renna tosses a blood-flecked leather pouch onto the table with a heavy thud. She crosses her arms.; Medium shot, focused on Renna's action, then her crossing arms. Pouch landing is a close-up insert.",
+  "dialogue": [
+    "renna_ashfall_scavenger: Stirring them is already done. Found those in the low-tier barracks. Fresh recruits, but they had old-world coins sewn into their collars. Not currency. Wards."
+  ],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

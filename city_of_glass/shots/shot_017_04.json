@@ -1,0 +1,32 @@
+{
+  "id": "shot_017_04",
+  "scene": "scene_017",
+  "order": 4,
+  "characters": [
+    "master_valerius_ironhearts_price"
+  ],
+  "image_prompt": "1boy, aged man, long white hair, solemn grey eyes, scarred face, heavy cultivation robes, ancient greatsword, imposing posture, stoic expression, slight hunch, wise, The Scarred Gorge, A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles., Master Valerius steps forward, his heavy boots grinding grit. He raises his chin, his weathered face catching the gray morning light., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Master Valerius steps forward, his heavy boots grinding grit. He raises his chin, his weathered face catching the gray morning light.; Medium shot of Valerius, slight low angle.",
+  "dialogue": [
+    "master_valerius_ironhearts_price: She has the right of it. The mountain is not breathing. Something else is using its lungs."
+  ],
+  "seed": null,
+  "duration_s": 5.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

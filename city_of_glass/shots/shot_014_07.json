@@ -1,0 +1,33 @@
+{
+  "id": "shot_014_07",
+  "scene": "scene_014",
+  "order": 7,
+  "characters": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, 1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined, The Summit of Scars, The highest, most perilous peak in the known world, perpetually shrouded in swirling storms and rumored to be the source of immense cultivation power. It is the ultimate, almost mythical destination for those seeking true mastery, its slopes littered with the relics and fallen warriors of countless failed ascensions., Kaelen makes a slight, dismissive wave of his hand, maintaining eye contact with Lyra., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen makes a slight, dismissive wave of his hand, maintaining eye contact with Lyra.; Medium close-up on Kaelen, Lyra slightly out of focus in the background.",
+  "dialogue": [
+    "kaelen_scarred_architect: The sect's tactical formations were too disciplined for a mere regional uprising. Their replenishment rates suggest a centralized, highly organized source of energy and command. We have severed a finger, but the hand remains active."
+  ],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

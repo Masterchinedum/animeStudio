@@ -1,0 +1,28 @@
+{
+  "id": "shot_016_01",
+  "scene": "scene_016",
+  "order": 1,
+  "characters": [],
+  "image_prompt": "Ironheart Citadel, A monolithic fortress city carved into a sheer mountain face, its walls layered with millennia of repairs and battle scars. It is the stronghold of one of the realm's dominant cultivation sects, a beacon of power and a harsh reminder of the hierarchy to those seeking advancement., Dust motes drift through high, narrow windows. On a massive stone table, ancient scrolls and charcoal-rubbed ciphers are visible, alongside Renna's oiled parchment reports., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Dust motes drift through high, narrow windows. On a massive stone table, ancient scrolls and charcoal-rubbed ciphers are visible, alongside Renna's oiled parchment reports.; wide shot, establishing the vault and the research materials",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

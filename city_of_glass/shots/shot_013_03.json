@@ -1,0 +1,30 @@
+{
+  "id": "shot_013_03",
+  "scene": "scene_013",
+  "order": 3,
+  "characters": [
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, The Summit of Scars, The highest, most perilous peak in the known world, perpetually shrouded in swirling storms and rumored to be the source of immense cultivation power. It is the ultimate, almost mythical destination for those seeking true mastery, its slopes littered with the relics and fallen warriors of countless failed ascensions., Kaelen does not look up from the central array stone. His fingers, smeared with ritual soot, trace the final boundary line., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen does not look up from the central array stone. His fingers, smeared with ritual soot, trace the final boundary line.; Close-up on Kaelen's hands tracing the stone, then slight tilt up to his unmoving face.",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 3.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

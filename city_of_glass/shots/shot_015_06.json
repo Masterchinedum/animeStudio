@@ -1,0 +1,33 @@
+{
+  "id": "shot_015_06",
+  "scene": "scene_015",
+  "order": 6,
+  "characters": [
+    "kaelen_scarred_architect",
+    "master_valerius_ironhearts_price"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, 1boy, aged man, long white hair, solemn grey eyes, scarred face, heavy cultivation robes, ancient greatsword, imposing posture, stoic expression, slight hunch, wise, Ironheart Citadel, A monolithic fortress city carved into a sheer mountain face, its walls layered with millennia of repairs and battle scars. It is the stronghold of one of the realm's dominant cultivation sects, a beacon of power and a harsh reminder of the hierarchy to those seeking advancement., Kaelen looks at the pouch, then turns his intense gaze towards Valerius, demanding information., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen looks at the pouch, then turns his intense gaze towards Valerius, demanding information.; Close-up on Kaelen's face, a slight push in emphasizing his intensity.",
+  "dialogue": [
+    "kaelen_scarred_architect: Which means their organization predates their public offensive. An army doesn't construct a continent-spanning supply line in a single season. Valerius, where did the first iron-cults originate?"
+  ],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

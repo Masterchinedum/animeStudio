@@ -1,0 +1,198 @@
+{
+  "scene": "scene_007",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Dust rises from the jagged lip of the Scarred Gorge. Lyra stands poised on a narrow precipice, her white robes snapping in the howling wind. She holds her steel blade perfectly level.",
+      "expression": {
+        "lyra_blade_of_conviction": "focused, meditative"
+      },
+      "camera": "Wide shot, showing Lyra against the gorge, wind effects",
+      "dialogue": [],
+      "shot": "shot_007_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 7.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "With an explosive burst of movement, Lyra lunges. Her blade cleaves the air, leaving a shimmering arc of pure qi.",
+      "expression": {
+        "lyra_blade_of_conviction": "intense focus, powerful"
+      },
+      "camera": "Medium shot, tracking Lyra's movement, emphasizing the qi arc",
+      "dialogue": [],
+      "shot": "shot_007_02"
+    },
+    {
+      "t_start": 7.0,
+      "t_end": 11.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [],
+      "action": "The qi arc shears a massive stone pillar cleanly in two. The severed rock slides into the abyss with a dull roar.",
+      "expression": {},
+      "camera": "Close-up on the pillar splitting, then tilt down following the falling rock",
+      "dialogue": [],
+      "shot": "shot_007_03"
+    },
+    {
+      "t_start": 11.0,
+      "t_end": 16.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra sheathes her weapon with a sharp, metallic click. Her expression hardens slightly.",
+      "expression": {
+        "lyra_blade_of_conviction": "calm, then disgusted"
+      },
+      "camera": "Medium close-up on Lyra's hand and waist as she sheathes the blade, then push in on her face",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "A shadow crawls through the lower depths. Not with the roar of a true cultivator, but the quiet, filthy hiss of venom."
+        }
+      ],
+      "shot": "shot_007_04"
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 19.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra pulls a crumpled missive from her sash.",
+      "expression": {
+        "lyra_blade_of_conviction": "contemplative, slightly grim"
+      },
+      "camera": "Close-up on Lyra's hands as she retrieves the missive",
+      "dialogue": [],
+      "shot": "shot_007_05"
+    },
+    {
+      "t_start": 19.0,
+      "t_end": 23.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Her sharp eyes scan the messy ink on the missive, which details a strongman's ruin through poison and deception.",
+      "expression": {
+        "lyra_blade_of_conviction": "disgusted, eyes narrowing"
+      },
+      "camera": "Medium close-up on Lyra's face, then cut to an insert shot of the missive's text",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "No direct challenge. No test of spirit."
+        }
+      ],
+      "shot": "shot_007_06"
+    },
+    {
+      "t_start": 23.0,
+      "t_end": 28.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra's expression fills with rising fury as she processes the report's implications.",
+      "expression": {
+        "lyra_blade_of_conviction": "rising fury, contempt"
+      },
+      "camera": "Medium close-up, slow push in on Lyra's face",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "They whisper his name as if he achieved something grand. Kaelen. A parasite cloaked in the guise of a victor."
+        }
+      ],
+      "shot": "shot_007_07"
+    },
+    {
+      "t_start": 28.0,
+      "t_end": 31.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "She tightens her fist around the missive. A brilliant flare of pristine white qi erupts from her palm.",
+      "expression": {
+        "lyra_blade_of_conviction": "intense anger, conviction"
+      },
+      "camera": "Close-up on Lyra's hand as qi erupts",
+      "dialogue": [],
+      "shot": "shot_007_08"
+    },
+    {
+      "t_start": 31.0,
+      "t_end": 34.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [],
+      "action": "The parchment incinerates instantly. The ashes scatter into the howling wind.",
+      "expression": {},
+      "camera": "Extreme close-up on the burning parchment, then wider shot as ashes scatter",
+      "dialogue": [],
+      "shot": "shot_007_09"
+    },
+    {
+      "t_start": 34.0,
+      "t_end": 39.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra stands resolute, looking out over the gorge, her conviction unwavering.",
+      "expression": {
+        "lyra_blade_of_conviction": "resolute, unwavering, determined"
+      },
+      "camera": "Medium close-up on Lyra, slight low angle, emphasizing her resolve",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "Let him climb his mountain of schemes. The higher he rises, the further he will fall when he meets a true blade."
+        }
+      ],
+      "shot": "shot_007_10"
+    },
+    {
+      "t_start": 39.0,
+      "t_end": 43.0,
+      "location": "the_scarred_gorge",
+      "time": "Day",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra's gaze hardens, the wind whipping her robes around her.",
+      "expression": {
+        "lyra_blade_of_conviction": "stern, uncompromising"
+      },
+      "camera": "Wide shot, Lyra on the precipice, wind effects, slow zoom out",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "I will not allow this rot to fester."
+        }
+      ],
+      "shot": "shot_007_11"
+    }
+  ]
+}

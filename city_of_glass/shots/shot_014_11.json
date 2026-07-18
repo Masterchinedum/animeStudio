@@ -1,0 +1,33 @@
+{
+  "id": "shot_014_11",
+  "scene": "scene_014",
+  "order": 11,
+  "characters": [
+    "kaelen_scarred_architect",
+    "lyra_blade_of_conviction"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, 1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined, The Summit of Scars, The highest, most perilous peak in the known world, perpetually shrouded in swirling storms and rumored to be the source of immense cultivation power. It is the ultimate, almost mythical destination for those seeking true mastery, its slopes littered with the relics and fallen warriors of countless failed ascensions., Kaelen looks directly into Lyra's eyes, his expression flat., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen looks directly into Lyra's eyes, his expression flat.; Medium close-up, split diopter showing Kaelen in sharp focus and Lyra's reaction slightly blurred.",
+  "dialogue": [
+    "kaelen_scarred_architect: As many as are required to ensure our survival. But if we find the source, it will be the last time we are forced to make this specific trade."
+  ],
+  "seed": null,
+  "duration_s": 3.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}

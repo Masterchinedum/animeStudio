@@ -1,0 +1,30 @@
+{
+  "id": "shot_015_01",
+  "scene": "scene_015",
+  "order": 1,
+  "characters": [
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, Ironheart Citadel, A monolithic fortress city carved into a sheer mountain face, its walls layered with millennia of repairs and battle scars. It is the stronghold of one of the realm's dominant cultivation sects, a beacon of power and a harsh reminder of the hierarchy to those seeking advancement., Kaelen spreads charred iron tokens and scraps of grey parchment across a heavy oak table. Dust motes visible in shafts of cold morning light., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen spreads charred iron tokens and scraps of grey parchment across a heavy oak table. Dust motes visible in shafts of cold morning light.; Wide shot, slowly panning across the table and Kaelen's hands.",
+  "dialogue": [],
+  "seed": null,
+  "duration_s": 4.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}
