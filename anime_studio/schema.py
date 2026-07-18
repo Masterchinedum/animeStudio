@@ -22,14 +22,16 @@ from typing import Optional
 
 @dataclass
 class Resolution:
-    width: int = 832
-    height: int = 1216
+    # 16:9 landscape (YouTube), SDXL's standard wide bucket. Hi-res 1.5x -> 2016x1152.
+    width: int = 1344
+    height: int = 768
 
 
 @dataclass
 class VideoSpec:
-    width: int = 480
-    height: int = 704
+    # landscape 16:9 to match the keyframe aspect (the keyframe is the clip's first frame)
+    width: int = 832
+    height: int = 480
     fps: int = 16
     seg_frames: int = 81
 

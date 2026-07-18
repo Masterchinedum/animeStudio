@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Grey ash cascades from Kaelen's raw, trembling hand.; extreme close-up, static",
   "dialogue": [],
-  "seed": null,
+  "seed": 1828494851,
   "duration_s": 3.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_01.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null

@@ -6,12 +6,12 @@
     "quality_tags": "masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
     "negative": "worst quality, low quality, bad anatomy, bad hands, extra digits, jpeg artifacts, watermark, blurry",
     "resolution": {
-      "width": 832,
-      "height": 1216
+      "width": 1344,
+      "height": 768
     },
     "video": {
-      "width": 480,
-      "height": 704,
+      "width": 832,
+      "height": 480,
       "fps": 16,
       "seg_frames": 81
     }
