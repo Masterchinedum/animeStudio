@@ -202,6 +202,7 @@ class EpisodePlan:
 class SceneBeat:
     """Tier 8 — one entry per scene: goal / conflict / turn + entry/exit states."""
     id: str = ""
+    episode: str = ""           # source episode id — lets scene_beats resume per episode
     location: str = ""
     time: str = ""
     cast: list[str] = field(default_factory=list)
