@@ -1,0 +1,233 @@
+{
+  "scene": "scene_020",
+  "beats": [
+    {
+      "t_start": 0.0,
+      "t_end": 4.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen stands at the edge of the smoking fissure, looking down at the quiet desolation of the gorge.",
+      "expression": {
+        "kaelen_scarred_architect": "hollow, devoid of triumph, analytical"
+      },
+      "camera": "wide shot, panning slowly to reveal the smoking gorge",
+      "dialogue": [],
+      "shot": "shot_020_01"
+    },
+    {
+      "t_start": 4.0,
+      "t_end": 9.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen speaks to the horizon, his posture rigid and unyielding.",
+      "expression": {
+        "kaelen_scarred_architect": "flat, measured, cold"
+      },
+      "camera": "medium close-up, static",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "The containment is absolute. The corrupted energy has been redirected and neutralized. The sector is secure."
+        }
+      ],
+      "shot": "shot_020_02"
+    },
+    {
+      "t_start": 9.0,
+      "t_end": 13.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra stands frozen behind Kaelen, her knuckles white around the hilt of her sheathed blade.",
+      "expression": {
+        "lyra_blade_of_conviction": "shocked, pale, devastated, soot-stained"
+      },
+      "camera": "medium shot, low angle looking up at Lyra",
+      "dialogue": [],
+      "shot": "shot_020_03"
+    },
+    {
+      "t_start": 13.0,
+      "t_end": 19.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra steps forward slightly, her voice trembling with rising horror.",
+      "expression": {
+        "lyra_blade_of_conviction": "grieved, eyes wide with tears and anger"
+      },
+      "camera": "close-up, tracking her slight movement",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "Secure. Is that what we call this? After what you did to Master Valerius? After what you did to everyone who stood in that valley?"
+        }
+      ],
+      "shot": "shot_020_04"
+    },
+    {
+      "t_start": 19.0,
+      "t_end": 25.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "kaelen_scarred_architect",
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Kaelen turns slowly to face Lyra, maintaining an unbothered, clinical posture.",
+      "expression": {
+        "kaelen_scarred_architect": "clinical, detached, cold",
+        "lyra_blade_of_conviction": "recoiling in disbelief"
+      },
+      "camera": "over-the-shoulder shot looking from Lyra to Kaelen",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Their positioning was the only viable catalyst to trigger the collapse. Had I hesitated, the corruption would have expanded exponentially. I chose the path of minimum expenditure."
+        }
+      ],
+      "shot": "shot_020_05"
+    },
+    {
+      "t_start": 25.0,
+      "t_end": 29.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra takes a slow step back, staring at Kaelen as if he were an absolute stranger.",
+      "expression": {
+        "lyra_blade_of_conviction": "profound, gut-wrenching disgust"
+      },
+      "camera": "medium shot, slow push-in on Lyra",
+      "dialogue": [],
+      "shot": "shot_020_06"
+    },
+    {
+      "t_start": 29.0,
+      "t_end": 34.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra whispers, her body trembling with deep-seated revulsion.",
+      "expression": {
+        "lyra_blade_of_conviction": "shattered, disgusted, weeping"
+      },
+      "camera": "tight close-up, shallow depth of field",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "You didn't just let them die. You calculated their value as bait. You used their faith in us to line them up for the slaughter."
+        }
+      ],
+      "shot": "shot_020_07"
+    },
+    {
+      "t_start": 34.0,
+      "t_end": 39.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen responds, his voice dropping to a chillingly calm, quiet whisper.",
+      "expression": {
+        "kaelen_scarred_architect": "unmoved, logical, chillingly calm"
+      },
+      "camera": "medium close-up, low angle",
+      "dialogue": [
+        {
+          "character": "kaelen_scarred_architect",
+          "text": "Faith is a variable. It made their movements predictable, which allowed for precise timing. It saved your life, Lyra."
+        }
+      ],
+      "shot": "shot_020_08"
+    },
+    {
+      "t_start": 39.0,
+      "t_end": 43.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Lyra stares at him in absolute silence, her jaw trembling as the unspoken word 'monster' hangs in the air.",
+      "expression": {
+        "lyra_blade_of_conviction": "silent revulsion, deep devastation",
+        "kaelen_scarred_architect": "impassive, waiting"
+      },
+      "camera": "two-shot, profile, showing the physical and emotional gap between them",
+      "dialogue": [],
+      "shot": "shot_020_09"
+    },
+    {
+      "t_start": 43.0,
+      "t_end": 48.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction"
+      ],
+      "action": "Lyra delivers her final words with cold, absolute finality.",
+      "expression": {
+        "lyra_blade_of_conviction": "cold, resigned, dead inside"
+      },
+      "camera": "close-up, static",
+      "dialogue": [
+        {
+          "character": "lyra_blade_of_conviction",
+          "text": "I would rather have died in that valley. At least I would have died human."
+        }
+      ],
+      "shot": "shot_020_10"
+    },
+    {
+      "t_start": 48.0,
+      "t_end": 53.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "lyra_blade_of_conviction",
+        "kaelen_scarred_architect"
+      ],
+      "action": "Lyra turns her back on Kaelen and walks away into the blowing dust of the gorge.",
+      "expression": {
+        "lyra_blade_of_conviction": "determined, grieving",
+        "kaelen_scarred_architect": "blank, watching her leave"
+      },
+      "camera": "wide shot, tracking Lyra walking away, leaving Kaelen small in the frame",
+      "dialogue": [],
+      "shot": "shot_020_11"
+    },
+    {
+      "t_start": 53.0,
+      "t_end": 57.0,
+      "location": "the_scarred_gorge",
+      "time": "afternoon",
+      "subjects": [
+        "kaelen_scarred_architect"
+      ],
+      "action": "Kaelen stands completely alone on the edge of the smoking fissure, the silence settling over him.",
+      "expression": {
+        "kaelen_scarred_architect": "empty, isolated, stoic"
+      },
+      "camera": "extreme wide shot, crane up, Kaelen isolated against the massive, ruined gorge",
+      "dialogue": [],
+      "shot": "shot_020_12"
+    }
+  ]
+}

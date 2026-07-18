@@ -50,9 +50,10 @@
       "summary": "20 written"
     },
     "timed_transcript": {
-      "status": "empty",
+      "status": "generated",
       "approved": false,
-      "notion_approval": "Draft"
+      "notion_approval": "Draft",
+      "summary": "259 shots (1 scenes, 19 already done) → ready for the art stage"
     },
     "continuity_ledger": {
       "status": "generated",
