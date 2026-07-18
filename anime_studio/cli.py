@@ -14,6 +14,7 @@ import re
 import sys
 from pathlib import Path
 
+from . import art as art_stage
 from . import notion as notion_mod
 from . import orchestrator as orch
 from . import store
@@ -92,6 +93,27 @@ def cmd_run(args) -> int:
     generated = [k for k, v in results if v not in ("skipped",)]
     print(f"\nDone — {len(generated)} tier(s) generated. "
           "Review in Notion anytime (non-blocking); `anime status` for the summary.")
+    return 0
+
+
+# --------------------------------------------------------------------------- #
+# Art stage — shots -> keyframes (local ComfyUI)
+# --------------------------------------------------------------------------- #
+
+def cmd_art(args) -> int:
+    paths = _resolve(args)
+    if not paths.project.exists():
+        print("No project here. cd into a project or pass --project.", file=sys.stderr)
+        return 1
+    if not list(paths.shots.glob("*.json")):
+        print("No shots yet. Run `anime run` to generate the shooting script first.",
+              file=sys.stderr)
+        return 1
+    print("Anime studio — art stage (keyframes via local ComfyUI)\n")
+    r = art_stage.run_art(paths, force=args.force, only=args.only, limit=args.limit)
+    print(f"\nDone — rendered {r['rendered']}, skipped {r['skipped']}, "
+          f"failed {r['failed']} of {r['total']} shots.")
+    print("Keyframes in assets/keyframes/. Review them, then the (paid) video stage animates the approved ones.")
     return 0
 
 
@@ -268,6 +290,14 @@ def build_parser() -> argparse.ArgumentParser:
     prun.add_argument("--force", action="store_true", help="regenerate even completed tiers")
     prun.add_argument("--no-notion", action="store_true", help="skip mirroring to Notion")
     prun.set_defaults(func=cmd_run)
+
+    # art — render keyframes from shots
+    part = sub.add_parser("art", parents=[proj_parent],
+                          help="render keyframes from shots (local ComfyUI)")
+    part.add_argument("--only", help="render just one shot by id")
+    part.add_argument("--limit", type=int, help="render at most N shots (great for a quick test)")
+    part.add_argument("--force", action="store_true", help="re-render even completed keyframes")
+    part.set_defaults(func=cmd_art)
 
     # story <concept|...>
     pstory = sub.add_parser("story", help="the writers' room — generate narrative tiers")

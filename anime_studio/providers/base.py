@@ -16,6 +16,17 @@ class ProviderError(RuntimeError):
     pass
 
 
+class ImageProvider(abc.ABC):
+    """A keyframe renderer behind a common interface. Local ComfyUI now; HF/fal later."""
+
+    name: str = "image"
+
+    @abc.abstractmethod
+    def generate(self, prompt: str, *, negative: str = "", seed: int = 0,
+                 width: int = 832, height: int = 1216) -> bytes:
+        """Render one image and return its PNG bytes (caller writes it to the bank)."""
+
+
 class TextProvider(abc.ABC):
     """An LLM behind a common interface. Story agents are just TextProvider calls."""
 

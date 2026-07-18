@@ -122,6 +122,7 @@ class ShotStatus:
 @dataclass
 class ShotAssets:
     keyframe: Optional[str] = None
+    keyframe_end: Optional[str] = None   # FLF2V shots: the end-pose keyframe
     clip: Optional[str] = None
     audio: Optional[str] = None
 
@@ -140,6 +141,8 @@ class Shot:
     order: int = 0
     characters: list[str] = field(default_factory=list)
     image_prompt: str = ""
+    image_prompt_end: str = ""           # FLF2V shots: end-pose prompt (else single keyframe)
+    needs_end_frame: bool = False        # True -> art stage renders a 2nd (end) keyframe
     motion_prompt: str = ""
     dialogue: list[str] = field(default_factory=list)
     seed: Optional[int] = None
