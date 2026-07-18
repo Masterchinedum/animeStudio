@@ -1,0 +1,27 @@
+{
+  "locations": [
+    {
+      "id": "the_ashfall_wastes",
+      "name": "The Ashfall Wastes",
+      "description": "A desolate, windswept region choked by the perpetual dust and debris of ancient conflicts, marked by skeletal ruins and scarce resources. This harsh frontier serves as the lowest rung of society, a brutal proving ground where only the most determined survive."
+    },
+    {
+      "id": "the_scarred_gorge",
+      "name": "The Scarred Gorge",
+      "description": "A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles."
+    },
+    {
+      "id": "ironheart_citadel",
+      "name": "Ironheart Citadel",
+      "description": "A monolithic fortress city carved into a sheer mountain face, its walls layered with millennia of repairs and battle scars. It is the stronghold of one of the realm's dominant cultivation sects, a beacon of power and a harsh reminder of the hierarchy to those seeking advancement."
+    },
+    {
+      "id": "the_summit_of_scars",
+      "name": "The Summit of Scars",
+      "description": "The highest, most perilous peak in the known world, perpetually shrouded in swirling storms and rumored to be the source of immense cultivation power. It is the ultimate, almost mythical destination for those seeking true mastery, its slopes littered with the relics and fallen warriors of countless failed ascensions."
+    }
+  ],
+  "visual_rules": "The world of Summit of Scars employs a desaturated, gritty color palette dominated by earthy tones, cold grays, deep blues, and rusted metallics, punctuated by stark flashes of cultivation energy or blood. Architecture is brutalist and functional, often showing signs of heavy fortification, wear, and makeshift repairs, with sharp, angular lines and towering structures that defy gravity. Technology is primarily medieval, focused on expertly crafted blades and armor, with an emphasis on the practical rather than the decorative. Recurring motifs include jagged lines, fractured stone, worn metal, and the stark contrast of light and shadow, reflecting the enduring struggle and the scars of a warring world.",
+  "tone": "The world itself feels like a constant gauntlet, an unforgiving landscape permeated by an atmosphere of pervasive danger and relentless struggle. Every rustle of wind, every distant clash of steel, underscores a persistent underlying tension. Survival is a daily battle, and ambition is a dangerous, all-consuming fire that demands unwavering will and strategic adaptation in the face of brutal, often insurmountable, odds.",
+  "history": "Millennia ago, the world was shattered by a cataclysmic event known as the 'Great Sundering', leaving behind a fragmented landscape and scattering ancient knowledge. From the ashes, powerful 'cultivation' techniques emerged, allowing individuals to hone their bodies and spirits into weapons, transcending mortal limits. This new power, however, only fueled endless conflicts. Over centuries, petty lords and nascent sects rose and fell, constantly warring over scarce resources, strategic locations, and fragments of ancient lore. The current age is one of perpetual strife, where strength dictates survival, and the dream of ultimate mastery at the legendary 'Summit of Scars' drives an unending, brutal cycle of ambition and conflict."
+}

@@ -1,0 +1,55 @@
+{
+  "shots": {},
+  "tiers": {
+    "concept": {
+      "status": "generated",
+      "approved": false,
+      "notion_approval": "Draft",
+      "summary": "title \"Summit of Scars\""
+    },
+    "world_bible": {
+      "status": "generated",
+      "approved": false,
+      "notion_approval": "Draft",
+      "summary": "4 locations"
+    },
+    "character_bible": {
+      "status": "generated",
+      "approved": false,
+      "notion_approval": "Draft",
+      "summary": "4 characters: Kaelen \"The Scarred Architect\", Renna \"The Ashfall Scavenger\", Master Valerius \"The Ironheart's Price\", Lyra \"The Blade of Conviction\""
+    },
+    "series_arc": {
+      "status": "generated",
+      "approved": false,
+      "notion_approval": "Draft",
+      "summary": "4 major turns"
+    },
+    "chapter_breakdown": {
+      "status": "generated",
+      "approved": false,
+      "notion_approval": "Draft",
+      "summary": "8 chapters"
+    },
+    "episode_plan": {
+      "status": "empty",
+      "approved": false,
+      "notion_approval": "Draft"
+    },
+    "scene_beats": {
+      "status": "empty",
+      "approved": false,
+      "notion_approval": "Draft"
+    },
+    "screenplay": {
+      "status": "empty",
+      "approved": false,
+      "notion_approval": "Draft"
+    },
+    "timed_transcript": {
+      "status": "empty",
+      "approved": false,
+      "notion_approval": "Draft"
+    }
+  }
+}

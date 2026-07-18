@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Thin launcher so you can run `./anime ...` with no install, no venv.
+# Uses whatever python3 is on PATH (stdlib only — no dependencies).
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec python3 -c "import sys; sys.path.insert(0, '$here'); from anime_studio.cli import main; raise SystemExit(main())" "$@"

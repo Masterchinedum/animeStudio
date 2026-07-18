@@ -1,0 +1,26 @@
+{
+  "id": "chapter_05",
+  "synopsis": "The 'victory' against the sect feels hollow due to the devastating sacrifices. Kaelen, now more burdened but resolute, begins to investigate the sect's true origins. His relentless analysis, combined with Renna's street intelligence and Valerius's historical knowledge, uncovers disturbing clues pointing to an ancient, corrupted power or a puppet master secretly manipulating the warring factions. His investigations lead him to forbidden texts or forgotten ruins. Lyra, still reeling from the moral compromises, finds herself reluctantly following Kaelen's lead, her internal conflict escalating as the scale of the threat dwarfs her personal ideals. Valerius becomes a mentor-like figure, sharing ancient warnings about the true nature of this insidious, pervasive evil.",
+  "purpose": "To significantly elevate the stakes from regional warfare to an existential threat. Hint at the overwhelming scale of the ultimate antagonist, pushing towards the next major turn. Show Lyra's continued internal struggle and her grudging reliance on Kaelen's effectiveness. Further integrate Valerius's wisdom into the narrative.",
+  "threads_advanced": [
+    "Worldbuilding: revelation of ancient, corrupted power",
+    "Kaelen's investigation into the true enemy",
+    "Lyra's character development (growing internal conflict)",
+    "Valerius's role as a guide and purveyor of ancient knowledge"
+  ],
+  "character_states": {
+    "kaelen_scarred_architect": {
+      "start": "Consolidating gains, feeling the weight of sacrifices, but relentlessly analytical.",
+      "end": "Realizing the overwhelming scale of the true, ancient threat, focusing his analytical mind on an enemy far grander than any he's faced."
+    },
+    "lyra_blade_of_conviction": {
+      "start": "Struggling deeply with the moral compromises of the last victory.",
+      "end": "Reluctantly aligning with Kaelen due to the profound, overwhelming nature of the new threat, but still morally conflicted and seeking a 'right' path."
+    },
+    "master_valerius_ironhearts_price": {
+      "start": "Bearing the heavy weight of past sacrifices and grim wisdom.",
+      "end": "Guiding Kaelen with ancient warnings, seeing the dangerous path Kaelen is inexorably following."
+    }
+  },
+  "time_span": "Weeks"
+}

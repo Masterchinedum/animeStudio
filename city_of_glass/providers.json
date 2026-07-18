@@ -1,0 +1,39 @@
+{
+  "text": [
+    {
+      "name": "gemini",
+      "type": "gemini",
+      "model": "gemini-2.5-flash",
+      "priority": 1
+    }
+  ],
+  "image": [
+    {
+      "name": "local",
+      "type": "comfyui",
+      "endpoint": "http://127.0.0.1:8188",
+      "priority": 1
+    }
+  ],
+  "video": [
+    {
+      "name": "alibaba",
+      "type": "alibaba_wan",
+      "priority": 1,
+      "on_error": "fallback"
+    },
+    {
+      "name": "local",
+      "type": "comfyui",
+      "endpoint": "http://127.0.0.1:8188",
+      "priority": 2
+    }
+  ],
+  "audio": [
+    {
+      "name": "local_tts",
+      "type": "local_tts",
+      "priority": 1
+    }
+  ]
+}

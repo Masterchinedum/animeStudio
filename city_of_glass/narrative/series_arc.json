@@ -1,0 +1,29 @@
+{
+  "throughline": "Kaelen, through relentless pragmatism, ascends to true mastery, but in doing so, confronts the profound, isolating cost of his unwavering will.",
+  "theme_progression": [
+    "Survival by ruthless efficiency",
+    "Pragmatism vs. honor: the clash of ideals",
+    "The grim necessity of sacrifice for strategic advantage",
+    "The profound isolation of absolute power",
+    "Mastery's unending, internal toll"
+  ],
+  "major_turns": [
+    {
+      "at": "chapter_02",
+      "turn": "Kaelen’s brutal tactical victory against a superior initial opponent exposes his cold efficiency, attracting both fear and the disdain of traditionalists like Lyra, forcing him to adapt to social as well as martial challenges."
+    },
+    {
+      "at": "chapter_04",
+      "turn": "Kaelen is forced into an uneasy alliance with Lyra and Valerius against a powerful sect; his pragmatic brilliance saves them, but a crucial, heartbreaking sacrifice underscores the brutal cost of even 'victories,' deepening Kaelen’s understanding and challenging Lyra's convictions."
+    },
+    {
+      "at": "chapter_06",
+      "turn": "The revelation of an ancient, corrupted power or a puppet master behind the warring factions forces Kaelen to confront an enemy whose scale threatens to overwhelm his strategic mind, pushing his indomitable will to its breaking point and demanding an unprecedented, morally ambiguous choice."
+    },
+    {
+      "at": "chapter_07",
+      "turn": "Kaelen executes a high-stakes, ruthless plan that cripples the ancient power but necessitates betraying an uneasy truce or making a choice that irrevocably isolates him from potential allies like Lyra, leaving him on the precipice of ultimate mastery but profoundly alone."
+    }
+  ],
+  "ending": "Kaelen stands at the summit, having achieved the mastery he sought through his unyielding will and calculated brutality. Yet, the victory is stark: he is profoundly isolated, the weight of his choices and sacrifices an unending, internal burden, confirming that true mastery is achieved, but never truly paid off, only continually borne."
+}

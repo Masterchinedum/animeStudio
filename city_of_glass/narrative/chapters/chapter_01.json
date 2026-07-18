@@ -1,0 +1,22 @@
+{
+  "id": "chapter_01",
+  "synopsis": "Kaelen awakens in a brutal, sword-cultivation world, retaining his perfect memory and analytical mind. He quickly assesses his dire circumstances in the lowest depths, using his intellect to acquire initial resources and form a wary, transactional alliance with Renna, a shrewd scavenger. He begins the arduous process of cultivation, demonstrating an immediate, ruthless pragmatism focused solely on survival and efficiency.",
+  "purpose": "To establish Kaelen's character, his unique abilities, the harshness of the world, and his immediate, pragmatic approach to survival and ascent. Introduce Renna as his first contact in this new reality.",
+  "threads_advanced": [
+    "Kaelen's ascent from the lowest depths",
+    "Worldbuilding: the brutal cultivation realm",
+    "Kaelen's identity and past (as a professional)",
+    "Survival by ruthless efficiency"
+  ],
+  "character_states": {
+    "kaelen_scarred_architect": {
+      "start": "Reborn, disoriented but analytically sharp, in a perilous new world.",
+      "end": "Focused on immediate survival and initial cultivation, already demonstrating ruthless efficiency and strategic thinking."
+    },
+    "renna_ashfall_scavenger": {
+      "start": "Struggling to survive in the Ashfall, wary and opportunistic.",
+      "end": "An uneasy, transactional ally to Kaelen, intrigued by his unique methods and quick gains."
+    }
+  },
+  "time_span": "Weeks"
+}
