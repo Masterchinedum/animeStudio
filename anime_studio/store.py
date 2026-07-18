@@ -143,7 +143,11 @@ DEFAULT_PROVIDERS = {
     ],
     "image": [
         {"name": "local", "type": "comfyui",
-         "endpoint": "http://127.0.0.1:8188", "priority": 1},
+         "endpoint": "http://127.0.0.1:8188",
+         "checkpoint": "illustriousXL_v01.safetensors",
+         "steps": 26, "cfg": 6.0,
+         "hires_scale": 1.5, "hires_denoise": 0.45,  # 1.5x -> 1248x1824; set 1.0 to disable
+         "priority": 1},
     ],
     "video": [
         {"name": "alibaba", "type": "alibaba_wan", "priority": 1, "on_error": "fallback"},

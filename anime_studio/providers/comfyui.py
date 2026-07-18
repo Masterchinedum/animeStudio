@@ -21,13 +21,23 @@ class ComfyUIImageProvider(ImageProvider):
                  checkpoint: str = "illustriousXL_v01.safetensors",
                  steps: int = 26, cfg: float = 6.0,
                  sampler: str = "euler_ancestral", scheduler: str = "normal",
-                 poll_interval: int = 5, timeout: int = 600):
+                 hires_scale: float = 1.5, hires_denoise: float = 0.45,
+                 hires_steps: int = 0, hires_upscale: str = "nearest-exact",
+                 poll_interval: int = 5, timeout: int = 900):
         self.endpoint = endpoint.rstrip("/")
         self.checkpoint = checkpoint
         self.steps, self.cfg = steps, cfg
         self.sampler, self.scheduler = sampler, scheduler
+        # hi-res pass: base render -> latent upscale -> low-denoise refine at higher res.
+        # More pixels + sharper, without SDXL's high-native-res duplication artifacts.
+        # hires_scale <= 1.0 disables it (base resolution only).
+        self.hires_scale = hires_scale
+        self.hires_denoise = hires_denoise
+        self.hires_steps = hires_steps or steps
+        self.hires_upscale = hires_upscale
         self.poll_interval, self.timeout = poll_interval, timeout
-        self.name = f"comfyui:{checkpoint}"
+        res = f" @ {hires_scale}x" if hires_scale > 1.0 else ""
+        self.name = f"comfyui:{checkpoint}{res}"
 
     def generate(self, prompt, *, negative="", seed=0, width=832, height=1216) -> bytes:
         graph = self._graph(prompt, negative, seed, width, height)
@@ -38,7 +48,7 @@ class ComfyUIImageProvider(ImageProvider):
     # -- the proven Illustrious txt2img graph (from batch_render.py) -------- #
 
     def _graph(self, prompt, negative, seed, width, height) -> dict:
-        return {
+        g = {
             "4": {"class_type": "CheckpointLoaderSimple", "inputs": {"ckpt_name": self.checkpoint}},
             "6": {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["4", 1]}},
             "7": {"class_type": "CLIPTextEncode", "inputs": {"text": negative, "clip": ["4", 1]}},
@@ -49,10 +59,24 @@ class ComfyUIImageProvider(ImageProvider):
                              "sampler_name": self.sampler, "scheduler": self.scheduler,
                              "denoise": 1.0, "model": ["4", 0], "positive": ["6", 0],
                              "negative": ["7", 0], "latent_image": ["5", 0]}},
-            "8": {"class_type": "VAEDecode", "inputs": {"samples": ["3", 0], "vae": ["4", 2]}},
-            "9": {"class_type": "SaveImage",
-                  "inputs": {"filename_prefix": "anime_studio/kf", "images": ["8", 0]}},
         }
+        final_latent = ["3", 0]
+        if self.hires_scale > 1.0:
+            # upscale the latent, then a second low-denoise pass refines at the new size
+            g["10"] = {"class_type": "LatentUpscaleBy",
+                       "inputs": {"samples": ["3", 0], "upscale_method": self.hires_upscale,
+                                  "scale_by": self.hires_scale}}
+            g["11"] = {"class_type": "KSampler",
+                       "inputs": {"seed": seed, "steps": self.hires_steps, "cfg": self.cfg,
+                                  "sampler_name": self.sampler, "scheduler": self.scheduler,
+                                  "denoise": self.hires_denoise, "model": ["4", 0],
+                                  "positive": ["6", 0], "negative": ["7", 0],
+                                  "latent_image": ["10", 0]}}
+            final_latent = ["11", 0]
+        g["8"] = {"class_type": "VAEDecode", "inputs": {"samples": final_latent, "vae": ["4", 2]}}
+        g["9"] = {"class_type": "SaveImage",
+                  "inputs": {"filename_prefix": "anime_studio/kf", "images": ["8", 0]}}
+        return g
 
     # -- HTTP plumbing ----------------------------------------------------- #
 

@@ -12,6 +12,11 @@
       "name": "local",
       "type": "comfyui",
       "endpoint": "http://127.0.0.1:8188",
+      "checkpoint": "illustriousXL_v01.safetensors",
+      "steps": 26,
+      "cfg": 6.0,
+      "hires_scale": 1.5,
+      "hires_denoise": 0.45,
       "priority": 1
     }
   ],

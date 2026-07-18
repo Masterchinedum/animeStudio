@@ -19,7 +19,11 @@ IMAGE_PROVIDERS = {
     "comfyui": lambda cfg: ComfyUIImageProvider(
         endpoint=cfg.get("endpoint", "http://127.0.0.1:8188"),
         checkpoint=cfg.get("checkpoint", "illustriousXL_v01.safetensors"),
-        steps=cfg.get("steps", 26), cfg=cfg.get("cfg", 6.0)),
+        steps=cfg.get("steps", 26), cfg=cfg.get("cfg", 6.0),
+        hires_scale=cfg.get("hires_scale", 1.5),
+        hires_denoise=cfg.get("hires_denoise", 0.45),
+        hires_steps=cfg.get("hires_steps", 0),
+        hires_upscale=cfg.get("hires_upscale", "nearest-exact")),
 }
 
 
