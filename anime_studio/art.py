@@ -23,10 +23,38 @@ from .providers import build_image_provider
 from .providers.base import ImageProvider, ProviderError
 
 
-def _seed_for(shot: schema.Shot) -> int:
+def _stable_seed(s: str) -> int:
+    return int(hashlib.sha256(s.encode()).hexdigest(), 16) % (2 ** 32)
+
+
+def _seed_for_shot(paths: ProjectPaths, shot: schema.Shot, cache: dict,
+                   log: Callable[[str], None]) -> int:
+    """Seed policy for consistency: a single-character shot uses that character's
+    LOCKED seed (assigned once, saved on the character sheet, reused across all their
+    shots) so the same person renders alike. Multi/no-character shots fall back to a
+    stable per-shot seed."""
+    if len(shot.characters) == 1:
+        cid = shot.characters[0]
+        if cid not in cache:
+            f = paths.characters / f"{cid}.json"
+            cache[cid] = store.load_character(paths, cid) if f.exists() else None
+        char = cache[cid]
+        if char is not None:
+            if char.locked_seed is None:
+                char.locked_seed = _stable_seed(cid)
+                store.save_json(paths.characters / f"{cid}.json", char)
+                log(f"    locked seed {char.locked_seed} for {cid}")
+            return char.locked_seed
     if shot.seed is not None:
         return int(shot.seed)
-    return int(hashlib.sha256(shot.id.encode()).hexdigest(), 16) % (2 ** 32)
+    return _stable_seed(shot.id)
+
+
+def _positive_prompt(shot: schema.Shot, prompt: str) -> str:
+    """Prepend `solo` for single-character shots so SDXL stops inventing extra people."""
+    if len(shot.characters) == 1 and "solo" not in prompt.lower():
+        return "solo, " + prompt
+    return prompt
 
 
 def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
@@ -39,6 +67,7 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     shot_files = sorted(paths.shots.glob("*.json"))
     provider = provider or build_image_provider(paths)
 
+    char_cache: dict = {}
     rendered = skipped = failed = 0
     for sf in shot_files:
         shot = serde.from_dict(schema.Shot, store.load_json(sf))
@@ -50,18 +79,19 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
             skipped += 1
             continue
 
-        seed = _seed_for(shot)
+        seed = _seed_for_shot(paths, shot, char_cache, log)
+        prompt = _positive_prompt(shot, shot.image_prompt)
         try:
             log(f"  > {shot.id}: rendering (seed {seed}) ...")
-            _render(provider, shot.image_prompt, style.negative, seed, w, h,
+            _render(provider, prompt, style.negative, seed, w, h,
                     paths.keyframes / f"{shot.id}.png")
             shot.seed = seed
             shot.assets.keyframe = f"assets/keyframes/{shot.id}.png"
             shot.status.keyframe = "done"
 
             if shot.needs_end_frame and shot.image_prompt_end:
-                _render(provider, shot.image_prompt_end, style.negative, seed, w, h,
-                        paths.keyframes / f"{shot.id}_end.png")
+                _render(provider, _positive_prompt(shot, shot.image_prompt_end),
+                        style.negative, seed, w, h, paths.keyframes / f"{shot.id}_end.png")
                 shot.assets.keyframe_end = f"assets/keyframes/{shot.id}_end.png"
 
             store.save_json(sf, shot)                 # checkpoint per shot

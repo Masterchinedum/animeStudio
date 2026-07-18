@@ -8,15 +8,15 @@
   "needs_end_frame": false,
   "motion_prompt": "The bloated, copper sun struggles to pierce a heavy canopy of shifting soot overhead.; wide shot, low angle looking up at the sky",
   "dialogue": [],
-  "seed": null,
+  "seed": 1025253067,
   "duration_s": 3.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_03.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null

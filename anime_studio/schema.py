@@ -45,7 +45,9 @@ class StyleGuide:
     )
     negative: str = (
         "worst quality, low quality, bad anatomy, bad hands, extra digits, "
-        "jpeg artifacts, watermark, blurry"
+        "jpeg artifacts, watermark, blurry, subtitles, text, english text, "
+        "signature, logo, border, letterboxed, multiple people, crowd, "
+        "extra person, extra limbs"
     )
     resolution: Resolution = field(default_factory=Resolution)
     video: VideoSpec = field(default_factory=VideoSpec)

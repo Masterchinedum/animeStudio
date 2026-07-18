@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Kaelen rolls onto his back, gasping heavily as the freezing dawn air hits his lungs.; medium shot, high angle looking down",
   "dialogue": [],
-  "seed": null,
+  "seed": 705617372,
   "duration_s": 4.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_02.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null
