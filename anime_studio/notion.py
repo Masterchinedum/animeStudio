@@ -55,7 +55,8 @@ def token_from_env() -> str:
     if not tok:
         raise NotionError(
             f"{TOKEN_ENV} is not set. Create an internal integration at "
-            f"notion.so/my-integrations, then: export {TOKEN_ENV}=\"secret_...\""
+            f"notion.so/my-integrations, then put it in studio/.env "
+            f"({TOKEN_ENV}=ntn_...) or export it in your shell."
         )
     return tok
 

@@ -51,8 +51,8 @@ class GeminiTextProvider(TextProvider):
         self.api_key = (api_key or os.environ.get(KEY_ENV, "")).strip()
         if not self.api_key:
             raise ProviderError(
-                f"{KEY_ENV} is not set. Get a key at aistudio.google.com/apikey, "
-                f'then: export {KEY_ENV}="..."'
+                f"{KEY_ENV} is not set. Get a key at aistudio.google.com/apikey, then put "
+                f"it in studio/.env  ({KEY_ENV}=...)  or export it in your shell."
             )
         self.model = model
         self.name = f"gemini:{model}"

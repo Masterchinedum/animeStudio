@@ -26,6 +26,19 @@ Also built:
 
 Not built yet (later steps): provider layer, story stage, art/animate/sound/assemble.
 
+## Secrets (`.env`)
+
+Keys live in `studio/.env` (gitignored) — one place to edit, easy to swap:
+
+```
+GEMINI_API_KEY=your-google-ai-studio-key
+ANIME_NOTION_TOKEN=ntn_your-notion-token
+```
+
+A **filled** value overrides your shell (`~/.zshrc`), so editing `.env` always takes
+effect. A **blank** value falls back to the shell, so you only manage what you want
+here. See `.env.example` for the template.
+
 ## Notion (approval surface)
 
 One-time setup (see `../HANDOFF.md` for the fuller note):

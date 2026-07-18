@@ -329,6 +329,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv=None) -> int:
+    from .env import load_dotenv
+    load_dotenv()                    # secrets from studio/.env before anything reads them
     args = build_parser().parse_args(argv)
     try:
         return args.func(args)

@@ -1,0 +1,32 @@
+{
+  "id": "shot_019_06",
+  "scene": "scene_019",
+  "order": 6,
+  "characters": [
+    "kaelen_scarred_architect"
+  ],
+  "image_prompt": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn, The Scarred Gorge, A treacherous chasm riddled with jagged cliffs and hidden passages, constantly contested by minor cultivator factions and roaming beasts. It's a key strategic bottleneck and a notorious crucible where new talents are forged through relentless skirmishes and desperate battles., Kaelen stands up, turning his back on Lyra and walking toward a bubbling black fissure nearby., masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+  "image_prompt_end": "",
+  "needs_end_frame": false,
+  "motion_prompt": "Kaelen stands up, turning his back on Lyra and walking toward a bubbling black fissure nearby.; medium tracking shot following Kaelen",
+  "dialogue": [
+    "kaelen_scarred_architect: Purification is a slow, inefficient lie. To stop a flood, you do not build a dam of paper vows. You open the sluice gates."
+  ],
+  "seed": null,
+  "duration_s": 5.0,
+  "status": {
+    "keyframe": "pending",
+    "clip": "pending",
+    "audio": "pending"
+  },
+  "assets": {
+    "keyframe": null,
+    "keyframe_end": null,
+    "clip": null,
+    "audio": null
+  },
+  "provider": {
+    "art": null,
+    "animate": null
+  }
+}
