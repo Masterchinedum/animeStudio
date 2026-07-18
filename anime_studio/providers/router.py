@@ -23,7 +23,11 @@ IMAGE_PROVIDERS = {
         hires_scale=cfg.get("hires_scale", 1.5),
         hires_denoise=cfg.get("hires_denoise", 0.45),
         hires_steps=cfg.get("hires_steps", 0),
-        hires_upscale=cfg.get("hires_upscale", "nearest-exact")),
+        hires_upscale=cfg.get("hires_upscale", "nearest-exact"),
+        ipadapter_model=cfg.get("ipadapter_model", "ip-adapter-plus_sdxl_vit-h.safetensors"),
+        clipvision_model=cfg.get("clipvision_model", "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"),
+        ip_weight=cfg.get("ip_weight", 0.8),
+        ip_weight_type=cfg.get("ip_weight_type", "linear")),
 }
 
 

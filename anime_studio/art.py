@@ -27,6 +27,45 @@ def _stable_seed(s: str) -> int:
     return int(hashlib.sha256(s.encode()).hexdigest(), 16) % (2 ** 32)
 
 
+# A clean, plain-background portrait makes the strongest IP-adapter anchor.
+REF_PROMPT = ("solo, {tags}, upper body, looking at viewer, neutral expression, "
+              "plain grey background, character reference, {quality}")
+
+
+def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
+             force: bool = False, only: Optional[str] = None,
+             log: Callable[[str], None] = print) -> dict:
+    """Render one canonical portrait per character -> their locked reference_keyframe.
+    These anchor every later shot via IP-adapter. Resumable; review + re-roll before
+    the big batch (only a handful of images)."""
+    project = store.load_project(paths)
+    style = project.style_guide
+    w, h = style.resolution.width, style.resolution.height
+    provider = provider or build_image_provider(paths)
+
+    rendered = skipped = 0
+    for char in store.load_characters(paths):
+        if only and char.id != only:
+            continue
+        if char.reference_keyframe and not force:
+            skipped += 1
+            continue
+        seed = char.locked_seed if char.locked_seed is not None else _stable_seed(char.id)
+        prompt = REF_PROMPT.format(tags=char.danbooru_tags, quality=style.quality_tags)
+        log(f"  > {char.id}: reference portrait (seed {seed}) ...")
+        data = provider.generate(prompt, negative=style.negative, seed=seed, width=w, height=h)
+        out = paths.refs / f"{char.id}.png"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(data)
+        char.locked_seed = seed
+        char.reference_keyframe = f"assets/refs/{char.id}.png"
+        store.save_json(paths.characters / f"{char.id}.json", char)
+        rendered += 1
+        log(f"  + {char.id}: {char.name} reference locked")
+    return {"rendered": rendered, "skipped": skipped,
+            "total": len(list(paths.characters.glob('*.json')))}
+
+
 def _seed_for_shot(paths: ProjectPaths, shot: schema.Shot, cache: dict,
                    log: Callable[[str], None]) -> int:
     """Seed policy for consistency: a single-character shot uses that character's
@@ -81,17 +120,20 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
 
         seed = _seed_for_shot(paths, shot, char_cache, log)
         prompt = _positive_prompt(shot, shot.image_prompt)
+        refs = _references(paths, shot, char_cache)     # IP-adapter anchor, if available
         try:
-            log(f"  > {shot.id}: rendering (seed {seed}) ...")
+            lock = " [locked]" if refs else ""
+            log(f"  > {shot.id}: rendering (seed {seed}){lock} ...")
             _render(provider, prompt, style.negative, seed, w, h,
-                    paths.keyframes / f"{shot.id}.png")
+                    paths.keyframes / f"{shot.id}.png", references=refs)
             shot.seed = seed
             shot.assets.keyframe = f"assets/keyframes/{shot.id}.png"
             shot.status.keyframe = "done"
 
             if shot.needs_end_frame and shot.image_prompt_end:
                 _render(provider, _positive_prompt(shot, shot.image_prompt_end),
-                        style.negative, seed, w, h, paths.keyframes / f"{shot.id}_end.png")
+                        style.negative, seed, w, h, paths.keyframes / f"{shot.id}_end.png",
+                        references=refs)
                 shot.assets.keyframe_end = f"assets/keyframes/{shot.id}_end.png"
 
             store.save_json(sf, shot)                 # checkpoint per shot
@@ -106,8 +148,21 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     return {"rendered": rendered, "skipped": skipped, "failed": failed, "total": len(shot_files)}
 
 
+def _references(paths: ProjectPaths, shot: schema.Shot, cache: dict) -> Optional[list]:
+    """Reference-image bytes to anchor this shot, if its single character has a locked
+    reference. Multi/no-character shots get none (fall back to seed+tags)."""
+    if len(shot.characters) != 1:
+        return None
+    char = cache.get(shot.characters[0])
+    if char is None or not char.reference_keyframe:
+        return None
+    ref = paths.root / char.reference_keyframe
+    return [ref.read_bytes()] if ref.exists() else None
+
+
 def _render(provider: ImageProvider, prompt: str, negative: str, seed: int,
-            w: int, h: int, out_path) -> None:
-    data = provider.generate(prompt, negative=negative, seed=seed, width=w, height=h)
+            w: int, h: int, out_path, references: Optional[list] = None) -> None:
+    data = provider.generate(prompt, negative=negative, seed=seed, width=w, height=h,
+                             references=references)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(data)

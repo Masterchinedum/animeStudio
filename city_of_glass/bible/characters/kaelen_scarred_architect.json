@@ -4,7 +4,7 @@
   "appearance": "A lean, sharp-featured man with short, unruly black hair and cold, grey eyes that seem to constantly analyze his surroundings. His body is covered in a network of faded scars, testaments to past battles. He wears practical, worn dark leather armor over simple, utilitarian clothing, complete with sturdy gauntlets and reinforced boots, all designed for function over aesthetics.",
   "danbooru_tags": "1boy, short black hair, sharp grey eyes, lean muscular build, multiple scars, worn dark leather armor, practical clothing, gauntlets, cold expression, battle-worn",
   "reference_keyframe": null,
-  "locked_seed": null,
+  "locked_seed": 1896664487,
   "voice": {
     "provider": "local_tts",
     "voice_id": "",

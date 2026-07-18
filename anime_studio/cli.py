@@ -100,6 +100,23 @@ def cmd_run(args) -> int:
 # Art stage — shots -> keyframes (local ComfyUI)
 # --------------------------------------------------------------------------- #
 
+def cmd_refs(args) -> int:
+    paths = _resolve(args)
+    if not paths.project.exists():
+        print("No project here. cd into a project or pass --project.", file=sys.stderr)
+        return 1
+    if not list(paths.characters.glob("*.json")):
+        print("No characters yet. Run `anime run` to generate the cast first.", file=sys.stderr)
+        return 1
+    print("Anime studio — character reference portraits (locks each character's look)\n")
+    r = art_stage.run_refs(paths, force=args.force, only=args.only)
+    print(f"\nDone — {r['rendered']} references rendered, {r['skipped']} already locked "
+          f"({r['total']} characters).")
+    print("Review assets/refs/. Re-roll any with `anime refs --force --only <char_id>`.\n"
+          "Then `anime art` locks every shot of each character to their reference.")
+    return 0
+
+
 def cmd_art(args) -> int:
     paths = _resolve(args)
     if not paths.project.exists():
@@ -290,6 +307,13 @@ def build_parser() -> argparse.ArgumentParser:
     prun.add_argument("--force", action="store_true", help="regenerate even completed tiers")
     prun.add_argument("--no-notion", action="store_true", help="skip mirroring to Notion")
     prun.set_defaults(func=cmd_run)
+
+    # refs — lock each character's look with a reference portrait
+    pref = sub.add_parser("refs", parents=[proj_parent],
+                          help="render a locked reference portrait per character (IP-adapter)")
+    pref.add_argument("--only", help="just one character by id")
+    pref.add_argument("--force", action="store_true", help="re-roll even locked references")
+    pref.set_defaults(func=cmd_refs)
 
     # art — render keyframes from shots
     part = sub.add_parser("art", parents=[proj_parent],

@@ -17,6 +17,9 @@
       "cfg": 6.0,
       "hires_scale": 1.5,
       "hires_denoise": 0.45,
+      "ipadapter_model": "ip-adapter-plus_sdxl_vit-h.safetensors",
+      "clipvision_model": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors",
+      "ip_weight": 0.8,
       "priority": 1
     }
   ],

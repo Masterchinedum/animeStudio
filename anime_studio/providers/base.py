@@ -23,8 +23,12 @@ class ImageProvider(abc.ABC):
 
     @abc.abstractmethod
     def generate(self, prompt: str, *, negative: str = "", seed: int = 0,
-                 width: int = 832, height: int = 1216) -> bytes:
-        """Render one image and return its PNG bytes (caller writes it to the bank)."""
+                 width: int = 832, height: int = 1216,
+                 references: "list[bytes] | None" = None) -> bytes:
+        """Render one image and return its PNG bytes (caller writes it to the bank).
+
+        `references`, if given, are reference-image bytes to anchor the generation to
+        (IP-adapter character locking). Providers that don't support it ignore it."""
 
 
 class TextProvider(abc.ABC):
