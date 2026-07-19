@@ -14,20 +14,6 @@
       "model": "gemini-3.1-flash-lite-image",
       "aspect_ratio": "16:9",
       "priority": 1
-    },
-    {
-      "name": "local",
-      "type": "comfyui",
-      "endpoint": "http://127.0.0.1:8188",
-      "checkpoint": "illustriousXL_v01.safetensors",
-      "steps": 26,
-      "cfg": 6.0,
-      "hires_scale": 1.5,
-      "hires_denoise": 0.45,
-      "ipadapter_model": "ip-adapter-plus_sdxl_vit-h.safetensors",
-      "clipvision_model": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors",
-      "ip_weight": 0.8,
-      "priority": 2
     }
   ],
   "video": [
@@ -36,12 +22,6 @@
       "type": "alibaba_wan",
       "priority": 1,
       "on_error": "fallback"
-    },
-    {
-      "name": "local",
-      "type": "comfyui",
-      "endpoint": "http://127.0.0.1:8188",
-      "priority": 2
     }
   ],
   "audio": [

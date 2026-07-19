@@ -142,17 +142,11 @@ DEFAULT_PROVIDERS = {
         {"name": "gemini", "type": "gemini", "model": "gemini-2.5-flash", "priority": 1},
     ],
     "image": [
-        {"name": "local", "type": "comfyui",
-         "endpoint": "http://127.0.0.1:8188",
-         "checkpoint": "illustriousXL_v01.safetensors",
-         "steps": 26, "cfg": 6.0,
-         "hires_scale": 1.5, "hires_denoise": 0.45,  # 1.5x -> 1248x1824; set 1.0 to disable
-         "priority": 1},
+        {"name": "gemini", "type": "gemini_image",
+         "model": "gemini-3.1-flash-lite-image", "aspect_ratio": "16:9", "priority": 1},
     ],
     "video": [
         {"name": "alibaba", "type": "alibaba_wan", "priority": 1, "on_error": "fallback"},
-        {"name": "local", "type": "comfyui",
-         "endpoint": "http://127.0.0.1:8188", "priority": 2},
     ],
     "audio": [
         {"name": "local_tts", "type": "local_tts", "priority": 1},
