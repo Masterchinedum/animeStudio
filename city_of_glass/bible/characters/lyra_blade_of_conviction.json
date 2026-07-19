@@ -3,8 +3,8 @@
   "name": "Lyra \"The Blade of Conviction\"",
   "appearance": "A fiercely determined young woman with a long, impeccably maintained black ponytail that swings with her agile movements. Her intense green eyes are constantly focused, reflecting a burning conviction. She wears light, agile combat armor designed for speed and precision, accented with muted blues. Her stance is confident and proud, and she wields a gleaming, well-cared-for katana-like sword.",
   "danbooru_tags": "1girl, long black ponytail, intense green eyes, determined expression, agile combat armor, katana, light blue accents, confident stance, proud, youthful, disciplined",
-  "reference_keyframe": null,
-  "locked_seed": null,
+  "reference_keyframe": "assets/refs/lyra_blade_of_conviction.png",
+  "locked_seed": 2133644834,
   "voice": {
     "provider": "local_tts",
     "voice_id": "",

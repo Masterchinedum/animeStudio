@@ -9,6 +9,7 @@ from ..paths import ProjectPaths
 from .base import FailoverTextProvider, ImageProvider, ProviderError, TextProvider
 from .comfyui import ComfyUIImageProvider
 from .gemini import GeminiTextProvider
+from .gemini_image import GeminiImageProvider
 
 # type string in providers.json -> constructor
 TEXT_PROVIDERS = {
@@ -16,6 +17,9 @@ TEXT_PROVIDERS = {
 }
 
 IMAGE_PROVIDERS = {
+    "gemini_image": lambda cfg: GeminiImageProvider(
+        model=cfg.get("model", "gemini-3-pro-image"),
+        aspect_ratio=cfg.get("aspect_ratio", "16:9")),
     "comfyui": lambda cfg: ComfyUIImageProvider(
         endpoint=cfg.get("endpoint", "http://127.0.0.1:8188"),
         checkpoint=cfg.get("checkpoint", "illustriousXL_v01.safetensors"),

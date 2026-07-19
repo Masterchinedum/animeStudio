@@ -3,8 +3,8 @@
   "name": "Renna \"The Ashfall Scavenger\"",
   "appearance": "A wiry, agile young woman with messy, short brown hair and shrewd, wary amber eyes that miss nothing. She blends into the desaturated landscape with her ragged, multi-layered clothing in earthy tones, often obscured by a tattered cloak. Her body is adorned with small, practical tools, utility pouches, and leather bracers, and she frequently has dirt smudges on her face, a testament to her constant struggle.",
   "danbooru_tags": "1girl, short messy brown hair, wary amber eyes, wiry build, ragged cloak, fingerless gloves, leather bracers, multiple utility pouches, scavenging tools, dirt on face, survivalist",
-  "reference_keyframe": null,
-  "locked_seed": null,
+  "reference_keyframe": "assets/refs/renna_ashfall_scavenger.png",
+  "locked_seed": 20247279,
   "voice": {
     "provider": "local_tts",
     "voice_id": "",

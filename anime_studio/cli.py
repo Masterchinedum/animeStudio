@@ -109,7 +109,7 @@ def cmd_refs(args) -> int:
         print("No characters yet. Run `anime run` to generate the cast first.", file=sys.stderr)
         return 1
     print("Anime studio — character reference portraits (locks each character's look)\n")
-    r = art_stage.run_refs(paths, force=args.force, only=args.only)
+    r = art_stage.run_refs(paths, force=args.force, only=args.only, concurrency=args.concurrency)
     print(f"\nDone — {r['rendered']} references rendered, {r['skipped']} already locked "
           f"({r['total']} characters).")
     print("Review assets/refs/. Re-roll any with `anime refs --force --only <char_id>`.\n"
@@ -126,8 +126,9 @@ def cmd_art(args) -> int:
         print("No shots yet. Run `anime run` to generate the shooting script first.",
               file=sys.stderr)
         return 1
-    print("Anime studio — art stage (keyframes via local ComfyUI)\n")
-    r = art_stage.run_art(paths, force=args.force, only=args.only, limit=args.limit)
+    print("Anime studio — art stage (keyframes)\n")
+    r = art_stage.run_art(paths, force=args.force, only=args.only, limit=args.limit,
+                          concurrency=args.concurrency)
     print(f"\nDone — rendered {r['rendered']}, skipped {r['skipped']}, "
           f"failed {r['failed']} of {r['total']} shots.")
     print("Keyframes in assets/keyframes/. Review them, then the (paid) video stage animates the approved ones.")
@@ -313,6 +314,8 @@ def build_parser() -> argparse.ArgumentParser:
                           help="render a locked reference portrait per character (IP-adapter)")
     pref.add_argument("--only", help="just one character by id")
     pref.add_argument("--force", action="store_true", help="re-roll even locked references")
+    pref.add_argument("--concurrency", type=int, default=art_stage.DEFAULT_CONCURRENCY,
+                      help="how many images to generate in parallel (default 4)")
     pref.set_defaults(func=cmd_refs)
 
     # art — render keyframes from shots
@@ -321,6 +324,8 @@ def build_parser() -> argparse.ArgumentParser:
     part.add_argument("--only", help="render just one shot by id")
     part.add_argument("--limit", type=int, help="render at most N shots (great for a quick test)")
     part.add_argument("--force", action="store_true", help="re-render even completed keyframes")
+    part.add_argument("--concurrency", type=int, default=art_stage.DEFAULT_CONCURRENCY,
+                      help="how many images to generate in parallel (default 4)")
     part.set_defaults(func=cmd_art)
 
     # story <concept|...>

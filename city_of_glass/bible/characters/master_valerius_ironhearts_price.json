@@ -3,8 +3,8 @@
   "name": "Master Valerius \"The Ironheart's Price\"",
   "appearance": "An imposing, aged man whose tall frame still suggests formidable strength, though he carries a slight hunch from years of battle and burden. His long, silver-white hair frames a face deeply etched with lines of sorrow and experience, with one solemn grey eye and the other clouded by an ancient scar. He wears heavy, muted blue and grey cultivation robes that are formal yet practical, and wields a massive, scarred greatsword that seems a part of him.",
   "danbooru_tags": "1boy, aged man, long white hair, solemn grey eyes, scarred face, heavy cultivation robes, ancient greatsword, imposing posture, stoic expression, slight hunch, wise",
-  "reference_keyframe": null,
-  "locked_seed": null,
+  "reference_keyframe": "assets/refs/master_valerius_ironhearts_price.png",
+  "locked_seed": 2305635663,
   "voice": {
     "provider": "local_tts",
     "voice_id": "",

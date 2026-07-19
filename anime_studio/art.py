@@ -15,6 +15,7 @@ trigger and let run unattended — resumable, so Ctrl+C / crash just continues.
 from __future__ import annotations
 
 import hashlib
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Callable, Optional
 
 from . import schema, serde, store
@@ -22,9 +23,41 @@ from .paths import ProjectPaths
 from .providers import build_image_provider
 from .providers.base import ImageProvider, ProviderError
 
+DEFAULT_CONCURRENCY = 4
+
 
 def _stable_seed(s: str) -> int:
     return int(hashlib.sha256(s.encode()).hexdigest(), 16) % (2 ** 32)
+
+
+def _run_jobs(jobs: list, worker: Callable, concurrency: int,
+              log: Callable[[str], None]) -> tuple[int, int]:
+    """Run `worker(payload)` over jobs (label, payload) with a thread pool. Each
+    worker writes its own files, so there's no shared mutable state. Returns
+    (done, failed). Completion is logged from the main thread to keep lines clean."""
+    done = failed = 0
+    if concurrency > 1 and len(jobs) > 1:
+        with ThreadPoolExecutor(max_workers=concurrency) as ex:
+            futures = {ex.submit(worker, payload): label for label, payload in jobs}
+            for fut in as_completed(futures):
+                label = futures[fut]
+                try:
+                    fut.result()
+                    done += 1
+                    log(f"  + {label}")
+                except ProviderError as e:
+                    failed += 1
+                    log(f"  ! {label.split(':')[0]}: {e}")
+    else:
+        for label, payload in jobs:
+            try:
+                worker(payload)
+                done += 1
+                log(f"  + {label}")
+            except ProviderError as e:
+                failed += 1
+                log(f"  ! {label.split(':')[0]}: {e}")
+    return done, failed
 
 
 # A clean, plain-background portrait makes the strongest IP-adapter anchor.
@@ -34,25 +67,27 @@ REF_PROMPT = ("solo, {tags}, upper body, looking at viewer, neutral expression, 
 
 def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
              force: bool = False, only: Optional[str] = None,
+             concurrency: int = DEFAULT_CONCURRENCY,
              log: Callable[[str], None] = print) -> dict:
     """Render one canonical portrait per character -> their locked reference_keyframe.
-    These anchor every later shot via IP-adapter. Resumable; review + re-roll before
-    the big batch (only a handful of images)."""
+    These anchor every later shot. Resumable; review + re-roll before the big batch."""
     project = store.load_project(paths)
     style = project.style_guide
     w, h = style.resolution.width, style.resolution.height
     provider = provider or build_image_provider(paths)
 
-    rendered = skipped = 0
+    jobs, skipped = [], 0
     for char in store.load_characters(paths):
         if only and char.id != only:
             continue
         if char.reference_keyframe and not force:
             skipped += 1
             continue
+        jobs.append((f"{char.id}: {char.name} reference locked", char))
+
+    def worker(char: schema.Character) -> None:
         seed = char.locked_seed if char.locked_seed is not None else _stable_seed(char.id)
         prompt = REF_PROMPT.format(tags=char.danbooru_tags, quality=style.quality_tags)
-        log(f"  > {char.id}: reference portrait (seed {seed}) ...")
         data = provider.generate(prompt, negative=style.negative, seed=seed, width=w, height=h)
         out = paths.refs / f"{char.id}.png"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -60,9 +95,12 @@ def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
         char.locked_seed = seed
         char.reference_keyframe = f"assets/refs/{char.id}.png"
         store.save_json(paths.characters / f"{char.id}.json", char)
-        rendered += 1
-        log(f"  + {char.id}: {char.name} reference locked")
-    return {"rendered": rendered, "skipped": skipped,
+
+    if jobs:
+        log(f"  rendering {len(jobs)} reference portrait(s), {provider.name}, "
+            f"concurrency {concurrency} ...")
+    rendered, failed = _run_jobs(jobs, worker, concurrency, log)
+    return {"rendered": rendered, "skipped": skipped, "failed": failed,
             "total": len(list(paths.characters.glob('*.json')))}
 
 
@@ -98,6 +136,7 @@ def _positive_prompt(shot: schema.Shot, prompt: str) -> str:
 
 def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
             force: bool = False, only: Optional[str] = None, limit: Optional[int] = None,
+            concurrency: int = DEFAULT_CONCURRENCY,
             log: Callable[[str], None] = print) -> dict:
     project = store.load_project(paths)
     style = project.style_guide
@@ -106,45 +145,43 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     shot_files = sorted(paths.shots.glob("*.json"))
     provider = provider or build_image_provider(paths)
 
+    # Phase 1 (serial): select shots, lock character seeds, load references. Doing this
+    # up front keeps the character-sheet writes race-free before we fan out.
     char_cache: dict = {}
-    rendered = skipped = failed = 0
+    jobs, skipped = [], 0
     for sf in shot_files:
         shot = serde.from_dict(schema.Shot, store.load_json(sf))
         if only and shot.id != only:
             continue
-        if limit is not None and rendered >= limit:
+        if limit is not None and len(jobs) >= limit:
             break
         if shot.status.keyframe == "done" and not force and not only:
             skipped += 1
             continue
-
         seed = _seed_for_shot(paths, shot, char_cache, log)
         prompt = _positive_prompt(shot, shot.image_prompt)
-        refs = _references(paths, shot, char_cache)     # IP-adapter anchor, if available
-        try:
-            lock = " [locked]" if refs else ""
-            log(f"  > {shot.id}: rendering (seed {seed}){lock} ...")
-            _render(provider, prompt, style.negative, seed, w, h,
-                    paths.keyframes / f"{shot.id}.png", references=refs)
-            shot.seed = seed
-            shot.assets.keyframe = f"assets/keyframes/{shot.id}.png"
-            shot.status.keyframe = "done"
+        refs = _references(paths, shot, char_cache)
+        label = f"{shot.id}: keyframe done" + (" [locked]" if refs else "")
+        jobs.append((label, (sf, shot, seed, prompt, refs)))
 
-            if shot.needs_end_frame and shot.image_prompt_end:
-                _render(provider, _positive_prompt(shot, shot.image_prompt_end),
-                        style.negative, seed, w, h, paths.keyframes / f"{shot.id}_end.png",
-                        references=refs)
-                shot.assets.keyframe_end = f"assets/keyframes/{shot.id}_end.png"
+    # Phase 2 (parallel): render. Each job writes its own keyframe + shot file.
+    def worker(item) -> None:
+        sf, shot, seed, prompt, refs = item
+        _render(provider, prompt, style.negative, seed, w, h,
+                paths.keyframes / f"{shot.id}.png", references=refs)
+        shot.seed = seed
+        shot.assets.keyframe = f"assets/keyframes/{shot.id}.png"
+        shot.status.keyframe = "done"
+        if shot.needs_end_frame and shot.image_prompt_end:
+            _render(provider, _positive_prompt(shot, shot.image_prompt_end),
+                    style.negative, seed, w, h, paths.keyframes / f"{shot.id}_end.png",
+                    references=refs)
+            shot.assets.keyframe_end = f"assets/keyframes/{shot.id}_end.png"
+        store.save_json(sf, shot)                     # checkpoint per shot
 
-            store.save_json(sf, shot)                 # checkpoint per shot
-            rendered += 1
-            log(f"  + {shot.id}: keyframe done")
-        except ProviderError as e:
-            failed += 1
-            log(f"  ! {shot.id}: {e}")
-            if "not reachable" in str(e):             # server down: stop, don't hammer
-                log("  ComfyUI is unreachable — stopping the run.")
-                raise
+    if jobs:
+        log(f"  rendering {len(jobs)} shot(s), {provider.name}, concurrency {concurrency} ...")
+    rendered, failed = _run_jobs(jobs, worker, concurrency, log)
     return {"rendered": rendered, "skipped": skipped, "failed": failed, "total": len(shot_files)}
 
 

@@ -9,6 +9,13 @@
   ],
   "image": [
     {
+      "name": "gemini",
+      "type": "gemini_image",
+      "model": "gemini-3.1-flash-lite-image",
+      "aspect_ratio": "16:9",
+      "priority": 1
+    },
+    {
       "name": "local",
       "type": "comfyui",
       "endpoint": "http://127.0.0.1:8188",
@@ -20,7 +27,7 @@
       "ipadapter_model": "ip-adapter-plus_sdxl_vit-h.safetensors",
       "clipvision_model": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors",
       "ip_weight": 0.8,
-      "priority": 1
+      "priority": 2
     }
   ],
   "video": [
