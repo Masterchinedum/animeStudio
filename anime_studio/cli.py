@@ -15,6 +15,7 @@ import re
 import sys
 from pathlib import Path
 
+from . import animate as animate_stage
 from . import art as art_stage
 from . import notion as notion_mod
 from . import orchestrator as orch
@@ -137,6 +138,23 @@ def cmd_art(args) -> int:
     print(f"\nDone — rendered {r['rendered']}, skipped {r['skipped']}, "
           f"failed {r['failed']} of {r['total']} shots.")
     print("Keyframes in assets/keyframes/. Review them, then the (paid) video stage animates the approved ones.")
+    return 0
+
+
+def cmd_animate(args) -> int:
+    paths = _resolve(args)
+    if not paths.project.exists():
+        print("No project here. cd into a project or pass --project.", file=sys.stderr)
+        return 1
+    if not list(paths.shots.glob("*.json")):
+        print("No shots yet. Run `anime run` then `anime art` first.", file=sys.stderr)
+        return 1
+    print("Anime studio — animate stage (Veo clips — PAID)\n")
+    r = animate_stage.run_animate(paths, force=args.force, only=args.only, limit=args.limit,
+                                  concurrency=args.concurrency)
+    print(f"\nDone — {r['rendered']} clip(s), {r['skipped']} skipped, {r['failed']} failed, "
+          f"{r['no_keyframe']} without keyframe, of {r['total']} shots.")
+    print("Clips in assets/clips/. Next: sound + assemble (ffmpeg) into episodes.")
     return 0
 
 
@@ -400,6 +418,16 @@ def build_parser() -> argparse.ArgumentParser:
     part.add_argument("--concurrency", type=int, default=art_stage.DEFAULT_CONCURRENCY,
                       help="how many images to generate in parallel (default 4)")
     part.set_defaults(func=cmd_art)
+
+    # animate — keyframes -> Veo clips (PAID)
+    pan = sub.add_parser("animate", parents=[proj_parent],
+                         help="animate keyframes into video clips (Veo — PAID)")
+    pan.add_argument("--only", help="animate just one shot by id")
+    pan.add_argument("--limit", type=int, help="animate at most N shots (great for a test)")
+    pan.add_argument("--force", action="store_true", help="re-animate even completed clips")
+    pan.add_argument("--concurrency", type=int, default=animate_stage.DEFAULT_CONCURRENCY,
+                     help="how many clips to generate in parallel (default 3)")
+    pan.set_defaults(func=cmd_animate)
 
     # story <concept|...>
     pstory = sub.add_parser("story", help="the writers' room — generate narrative tiers")

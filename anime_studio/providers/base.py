@@ -66,6 +66,18 @@ class ImageProvider(abc.ABC):
         """
 
 
+class VideoProvider(abc.ABC):
+    """A clip renderer behind a common interface. Image-to-video: a keyframe + a
+    motion prompt -> a short clip. Vertex Veo now; fal/Alibaba later."""
+
+    name: str = "video"
+
+    @abc.abstractmethod
+    def generate(self, prompt: str, *, image: bytes, duration: int = 8,
+                 seed: int = 0) -> bytes:
+        """Animate `image` (keyframe bytes) per the motion `prompt`; return mp4 bytes."""
+
+
 class TextProvider(abc.ABC):
     """An LLM behind a common interface. Story agents are just TextProvider calls."""
 

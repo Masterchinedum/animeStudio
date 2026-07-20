@@ -13,12 +13,41 @@ from __future__ import annotations
 
 import base64
 import json
+import os
 import subprocess
+import tempfile
 import time
 import urllib.error
 import urllib.request
 
 from .base import ImageProvider, ProviderError
+
+REFERENCE_MAX_PX = 768   # a reference only needs to convey identity; full 2K refs time out
+
+
+def _shrink_reference(data: bytes, max_px: int = REFERENCE_MAX_PX) -> bytes:
+    """Downscale a reference PNG so the largest side is <= max_px, keeping the upload
+    small (a 2K reference makes the request time out; 768px conveys identity fine).
+    Uses macOS `sips`; if unavailable, returns the bytes unchanged."""
+    src = dst = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as f:
+            f.write(data)
+            src = f.name
+        dst = src + ".small.png"
+        subprocess.run(["sips", "--resampleHeightWidthMax", str(max_px), src, "--out", dst],
+                       capture_output=True, timeout=30, check=True)
+        with open(dst, "rb") as f:
+            return f.read()
+    except Exception:
+        return data
+    finally:
+        for p in (src, dst):
+            if p and os.path.exists(p):
+                try:
+                    os.unlink(p)
+                except OSError:
+                    pass
 
 
 class VertexImageProvider(ImageProvider):
@@ -41,8 +70,9 @@ class VertexImageProvider(ImageProvider):
         text = prompt + (f"\n\nAvoid: {negative}." if negative else "")
         parts: list[dict] = [{"text": text}]
         for b in references or []:
+            small = _shrink_reference(b)     # keep the upload light so it doesn't time out
             parts.append({"inline_data": {"mime_type": "image/png",
-                                          "data": base64.b64encode(b).decode("ascii")}})
+                                          "data": base64.b64encode(small).decode("ascii")}})
         image_cfg: dict = {"aspectRatio": self.aspect_ratio}
         if self.image_size:
             image_cfg["imageSize"] = self.image_size

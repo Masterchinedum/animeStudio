@@ -16,6 +16,7 @@ resilient at the provider layer, and resumes after interruption.
 from __future__ import annotations
 
 import hashlib
+import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Callable, Optional
 
@@ -241,8 +242,22 @@ def _references(paths: ProjectPaths, shot: schema.Shot, cache: dict) -> Optional
             continue
         ref = paths.root / char.reference_keyframe
         if ref.exists():
-            refs.append(ref.read_bytes())
+            refs.append(_downscaled_ref(ref))
     return refs or None
+
+
+def _downscaled_ref(ref_path) -> bytes:
+    """A reference only needs modest size for identity conditioning. Sending a full 2K
+    portrait as an input part makes the request huge and can time the model out (that
+    was the ~180s hang). Cache a ~768px copy alongside the original and send that."""
+    small = ref_path.with_name(ref_path.stem + ".small.png")
+    try:
+        if not small.exists() or small.stat().st_mtime < ref_path.stat().st_mtime:
+            subprocess.run(["sips", "--resampleWidth", "768", str(ref_path),
+                            "--out", str(small)], capture_output=True, timeout=30, check=True)
+        return small.read_bytes()
+    except Exception:
+        return ref_path.read_bytes()   # sips unavailable etc. -> send original
 
 
 def _render(provider: ImageProvider, prompt: str, negative: str, seed: int,

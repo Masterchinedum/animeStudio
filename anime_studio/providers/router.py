@@ -6,11 +6,13 @@ from __future__ import annotations
 
 from .. import store
 from ..paths import ProjectPaths
-from .base import FailoverTextProvider, ImageProvider, ProviderError, TextProvider
+from .base import (FailoverTextProvider, ImageProvider, ProviderError, TextProvider,
+                   VideoProvider)
 from .gemini import GeminiTextProvider
 from .gemini_image import GeminiImageProvider
 from .openai_compatible import OpenAICompatibleImageProvider, OpenAICompatibleTextProvider
 from .vertex_image import VertexImageProvider
+from .vertex_video import VertexVideoProvider
 
 # type string in providers.json -> constructor
 TEXT_PROVIDERS = {
@@ -41,6 +43,30 @@ IMAGE_PROVIDERS = {
         aspect_ratio=cfg.get("aspect_ratio"), resolution=cfg.get("resolution"),
         max_references=cfg.get("max_references")),
 }
+
+
+VIDEO_PROVIDERS = {
+    "vertex_video": lambda cfg: VertexVideoProvider(
+        project=cfg.get("project", ""), location=cfg.get("location", "us-central1"),
+        model=cfg.get("model", "veo-3.1-generate-preview"),
+        aspect_ratio=cfg.get("aspect_ratio", "16:9"), audio=cfg.get("audio", False)),
+}
+
+
+def build_video_provider(paths: ProjectPaths) -> VideoProvider:
+    """Instantiate the highest-priority usable video provider from providers.json."""
+    skipped: list[str] = []
+    for cfg in _routes(paths, "video"):
+        ctor = VIDEO_PROVIDERS.get(cfg.get("type"))
+        if not ctor:
+            skipped.append(f"{cfg.get('name')} (unknown type '{cfg.get('type')}')")
+            continue
+        try:
+            return ctor(cfg)
+        except ProviderError as e:
+            skipped.append(f"{cfg.get('name')}: {e}")
+    raise ProviderError(
+        "No usable video provider. Tried:\n  " + "\n  ".join(skipped or ["(none enabled)"]))
 
 
 def build_text_provider(paths: ProjectPaths) -> TextProvider:
