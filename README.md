@@ -2,7 +2,8 @@
 
 A provider-agnostic anime studio system. The durable asset is the **project state**
 (the *memory bank*, a folder of human-readable JSON), not any model. Models (local
-ComfyUI, Alibaba video API, an LLM writers' room) are swappable contractors plugged
+Google Nano Banana image generation, Alibaba video API, and an LLM writers' room are
+swappable contractors plugged
 in behind common provider interfaces.
 
 Design docs live one level up: `../anime_studio_architecture.md` (the system) and

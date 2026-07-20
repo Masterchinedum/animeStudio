@@ -17,7 +17,7 @@ class ProviderError(RuntimeError):
 
 
 class ImageProvider(abc.ABC):
-    """A keyframe renderer behind a common interface. Local ComfyUI now; HF/fal later."""
+    """A cloud keyframe renderer behind a common interface."""
 
     name: str = "image"
 
@@ -28,7 +28,12 @@ class ImageProvider(abc.ABC):
         """Render one image and return its PNG bytes (caller writes it to the bank).
 
         `references`, if given, are reference-image bytes to anchor the generation to
-        (IP-adapter character locking). Providers that don't support it ignore it."""
+        (for character locking). Providers that don't support it ignore it.
+
+        ``seed`` remains in the interface as a stable shot identifier for pipeline
+        bookkeeping. Cloud Gemini image models do not expose deterministic seed
+        control; reference images are the continuity mechanism.
+        """
 
 
 class TextProvider(abc.ABC):

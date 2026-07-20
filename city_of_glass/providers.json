@@ -9,10 +9,11 @@
   ],
   "image": [
     {
-      "name": "gemini",
+      "name": "nano-banana-2",
       "type": "gemini_image",
-      "model": "gemini-3.1-flash-lite-image",
+      "model": "gemini-3.1-flash-image",
       "aspect_ratio": "16:9",
+      "image_size": "2K",
       "priority": 1
     }
   ],

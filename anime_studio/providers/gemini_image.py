@@ -1,11 +1,12 @@
-"""Gemini image ImageProvider — "Nano Banana" character-consistent rendering.
+"""Gemini ImageProvider — cloud-native Nano Banana rendering.
 
-Renders via the Gemini image models (default gemini-3-pro-image / "Nano Banana Pro")
-over the generateContent REST API with urllib. Character consistency comes from
-passing the character's reference image(s) as input parts alongside the prompt —
-the same refs/art flow as the local provider, just a consistency-first backbone.
+The studio calls Gemini's Interactions API directly, with no local image model,
+GPU server, or self-hosted runtime.  Antigravity is the *operator* that can run
+this resumable batch workflow; Nano Banana is the image model that renders it.
 
-Key from the GEMINI_API_KEY environment variable (same as the text provider).
+Character consistency comes from sending the approved character portrait as an
+image input for each shot.  Gemini 3.1 Flash Image supports this directly.
+The API key is read from ``GEMINI_API_KEY`` (the same key as the story provider).
 """
 from __future__ import annotations
 
@@ -20,33 +21,41 @@ from .base import ImageProvider, ProviderError
 
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 KEY_ENV = "GEMINI_API_KEY"
-DEFAULT_MODEL = "gemini-3-pro-image"        # Nano Banana Pro; "gemini-2.5-flash-image" is cheaper
+DEFAULT_MODEL = "gemini-3.1-flash-image"    # Nano Banana 2: quality + character references
+DEFAULT_IMAGE_SIZE = "2K"
 
 
 class GeminiImageProvider(ImageProvider):
     def __init__(self, api_key: str | None = None, model: str = DEFAULT_MODEL,
-                 aspect_ratio: str = "16:9"):
+                 aspect_ratio: str = "16:9", image_size: str = DEFAULT_IMAGE_SIZE):
         self.api_key = (api_key or os.environ.get(KEY_ENV, "")).strip()
         if not self.api_key:
             raise ProviderError(f"{KEY_ENV} is not set (needed for Gemini image).")
         self.model = model
         self.aspect_ratio = aspect_ratio
-        self.name = f"gemini-image:{model}"
+        self.image_size = image_size
+        self.name = f"nano-banana:{model}:{image_size}"
 
     def generate(self, prompt, *, negative="", seed=0, width=1344, height=768,
                  references=None) -> bytes:
-        parts: list[dict] = [{"text": self._compose(prompt, negative)}]
+        # The Interactions API uses a portable multimodal input shape.  We keep
+        # images inline so a project is fully portable and does not depend on a
+        # temporary upload or local inference server.
+        parts: list[dict] = [{"type": "text", "text": self._compose(prompt, negative)}]
         for b in references or []:
-            parts.append({"inline_data": {"mime_type": "image/png",
-                                          "data": base64.b64encode(b).decode("ascii")}})
+            parts.append({"type": "image", "mime_type": "image/png",
+                          "data": base64.b64encode(b).decode("ascii")})
         body = {
-            "contents": [{"role": "user", "parts": parts}],
-            "generationConfig": {
-                "responseModalities": ["IMAGE"],
-                "imageConfig": {"aspectRatio": self.aspect_ratio},
+            "model": self.model,
+            "input": parts,
+            "response_format": {
+                "type": "image",
+                "mime_type": "image/png",
+                "aspect_ratio": self.aspect_ratio,
+                "image_size": self.image_size,
             },
         }
-        data = self._call(f"/models/{self.model}:generateContent", body)
+        data = self._call("/interactions", body)
         return self._extract_image(data)
 
     def _compose(self, prompt: str, negative: str) -> str:
@@ -82,14 +91,18 @@ class GeminiImageProvider(ImageProvider):
 
     @staticmethod
     def _extract_image(data: dict) -> bytes:
-        for cand in data.get("candidates", []):
-            for part in cand.get("content", {}).get("parts", []):
-                inline = part.get("inlineData") or part.get("inline_data")
-                if inline and inline.get("data"):
-                    return base64.b64decode(inline["data"])
-        # no image came back — surface the reason (safety block, text-only, etc.)
-        fb = data.get("promptFeedback", {})
-        texts = [p.get("text", "") for c in data.get("candidates", [])
-                 for p in c.get("content", {}).get("parts", []) if p.get("text")]
-        raise ProviderError(f"Gemini image returned no image. "
-                            f"Feedback: {fb}; text: {' '.join(texts)[:300]}")
+        # ``output_image`` is a convenience property in Google's SDK.  REST
+        # responses expose the same content under completed model-output steps.
+        # Iterate backwards so an interleaved response returns the final image.
+        texts: list[str] = []
+        for step in reversed(data.get("steps", [])):
+            if step.get("type") != "model_output":
+                continue
+            for part in reversed(step.get("content", [])):
+                if part.get("type") == "image" and part.get("data"):
+                    return base64.b64decode(part["data"])
+                if part.get("text"):
+                    texts.append(part["text"])
+        status = data.get("status", "unknown")
+        raise ProviderError("Gemini image returned no image "
+                            f"(status: {status}; detail: {' '.join(texts)[:300]})")

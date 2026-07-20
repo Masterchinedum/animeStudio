@@ -97,7 +97,7 @@ def cmd_run(args) -> int:
 
 
 # --------------------------------------------------------------------------- #
-# Art stage — shots -> keyframes (local ComfyUI)
+# Art stage — shots -> cloud keyframes (Nano Banana, operated by Antigravity)
 # --------------------------------------------------------------------------- #
 
 def cmd_refs(args) -> int:
@@ -128,7 +128,11 @@ def cmd_art(args) -> int:
         return 1
     print("Anime studio — art stage (keyframes)\n")
     r = art_stage.run_art(paths, force=args.force, only=args.only, limit=args.limit,
-                          concurrency=args.concurrency)
+                          dry_run=args.dry_run, concurrency=args.concurrency)
+    if args.dry_run:
+        print(f"\nPlan — {r['queued']} keyframe(s) would render; "
+              f"{r['skipped']} already complete; {r['total']} total shots.")
+        return 0
     print(f"\nDone — rendered {r['rendered']}, skipped {r['skipped']}, "
           f"failed {r['failed']} of {r['total']} shots.")
     print("Keyframes in assets/keyframes/. Review them, then the (paid) video stage animates the approved ones.")
@@ -311,7 +315,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     # refs — lock each character's look with a reference portrait
     pref = sub.add_parser("refs", parents=[proj_parent],
-                          help="render a locked reference portrait per character (IP-adapter)")
+                          help="render a locked cloud reference portrait per character")
     pref.add_argument("--only", help="just one character by id")
     pref.add_argument("--force", action="store_true", help="re-roll even locked references")
     pref.add_argument("--concurrency", type=int, default=art_stage.DEFAULT_CONCURRENCY,
@@ -320,10 +324,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     # art — render keyframes from shots
     part = sub.add_parser("art", parents=[proj_parent],
-                          help="render keyframes from shots (local ComfyUI)")
+                          help="render keyframes from shots (cloud Nano Banana)")
     part.add_argument("--only", help="render just one shot by id")
     part.add_argument("--limit", type=int, help="render at most N shots (great for a quick test)")
     part.add_argument("--force", action="store_true", help="re-render even completed keyframes")
+    part.add_argument("--dry-run", action="store_true",
+                      help="show the pending batch without calling the image API")
     part.add_argument("--concurrency", type=int, default=art_stage.DEFAULT_CONCURRENCY,
                       help="how many images to generate in parallel (default 4)")
     part.set_defaults(func=cmd_art)

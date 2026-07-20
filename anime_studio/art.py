@@ -1,16 +1,16 @@
-"""The art stage — shots -> keyframes.
+"""The art stage — shot prompts -> cloud keyframes.
 
-A resumable pass over shots/*.json (the same skip-done / checkpoint pattern as the
-narrative run): for each shot it renders the keyframe locally via the ImageProvider
-from the shot's already-composed image_prompt, writes assets/keyframes/<id>.png, and
-marks the shot done. FLF2V shots (needs_end_frame) also get an end-pose keyframe.
+A resumable pass over ``shots/*.json``.  Each job sends the already-composed prompt
+and its approved character reference(s) to the configured cloud image provider,
+writes ``assets/keyframes/<id>.png``, and checkpoints the shot immediately.
+FLF2V shots also receive an end-pose keyframe.
 
-Seeds are locked deterministically per shot (stable hash of the id) so a re-render
-reproduces the same image — the seed is written back onto the shot, which is how a
-character's look stays reproducible across the film.
+The stable per-shot number is retained in project state for traceability and later
+video providers, but Gemini image generation is not seed-deterministic. Character
+continuity comes from the approved reference portraits sent with every eligible shot.
 
-This is the expensive local stage (~50-60s/keyframe), so it's its own command you
-trigger and let run unattended — resumable, so Ctrl+C / crash just continues.
+This command is designed for Antigravity to operate unattended: it is idempotent,
+rate-limit resilient at the provider layer, and resumes after interruption.
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ from .paths import ProjectPaths
 from .providers import build_image_provider
 from .providers.base import ImageProvider, ProviderError
 
-DEFAULT_CONCURRENCY = 4
+DEFAULT_CONCURRENCY = 2
 
 
 def _stable_seed(s: str) -> int:
@@ -60,9 +60,11 @@ def _run_jobs(jobs: list, worker: Callable, concurrency: int,
     return done, failed
 
 
-# A clean, plain-background portrait makes the strongest IP-adapter anchor.
-REF_PROMPT = ("solo, {tags}, upper body, looking at viewer, neutral expression, "
-              "plain grey background, character reference, {quality}")
+# A clean portrait is the strongest reference input for the cloud image model.
+REF_PROMPT = ("Create a canonical anime character-model-sheet reference portrait. "
+              "One character only: {tags}. Upper body, looking at the viewer, neutral "
+              "expression, centred composition, plain neutral-grey background. No text, "
+              "logos, watermark, props, or other people. {quality}")
 
 
 def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
@@ -80,7 +82,8 @@ def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     for char in store.load_characters(paths):
         if only and char.id != only:
             continue
-        if char.reference_keyframe and not force:
+        existing_ref = (paths.root / char.reference_keyframe) if char.reference_keyframe else None
+        if existing_ref and existing_ref.exists() and not force:
             skipped += 1
             continue
         jobs.append((f"{char.id}: {char.name} reference locked", char))
@@ -105,11 +108,13 @@ def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
 
 
 def _seed_for_shot(paths: ProjectPaths, shot: schema.Shot, cache: dict,
-                   log: Callable[[str], None]) -> int:
-    """Seed policy for consistency: a single-character shot uses that character's
-    LOCKED seed (assigned once, saved on the character sheet, reused across all their
-    shots) so the same person renders alike. Multi/no-character shots fall back to a
-    stable per-shot seed."""
+                   log: Callable[[str], None], *, persist: bool = True) -> int:
+    """Return a stable trace identifier for the shot.
+
+    Gemini's cloud image API does not provide deterministic seed control.  We keep
+    the existing field for traceability and future providers, while character
+    reference images—not the seed—carry visual consistency.
+    """
     if len(shot.characters) == 1:
         cid = shot.characters[0]
         if cid not in cache:
@@ -119,8 +124,9 @@ def _seed_for_shot(paths: ProjectPaths, shot: schema.Shot, cache: dict,
         if char is not None:
             if char.locked_seed is None:
                 char.locked_seed = _stable_seed(cid)
-                store.save_json(paths.characters / f"{cid}.json", char)
-                log(f"    locked seed {char.locked_seed} for {cid}")
+                if persist:
+                    store.save_json(paths.characters / f"{cid}.json", char)
+                    log(f"    locked seed {char.locked_seed} for {cid}")
             return char.locked_seed
     if shot.seed is not None:
         return int(shot.seed)
@@ -128,14 +134,15 @@ def _seed_for_shot(paths: ProjectPaths, shot: schema.Shot, cache: dict,
 
 
 def _positive_prompt(shot: schema.Shot, prompt: str) -> str:
-    """Prepend `solo` for single-character shots so SDXL stops inventing extra people."""
-    if len(shot.characters) == 1 and "solo" not in prompt.lower():
-        return "solo, " + prompt
+    """Make the one-character constraint explicit in natural language."""
+    if len(shot.characters) == 1 and "single character" not in prompt.lower():
+        return "Single character only. " + prompt
     return prompt
 
 
 def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
             force: bool = False, only: Optional[str] = None, limit: Optional[int] = None,
+            dry_run: bool = False,
             concurrency: int = DEFAULT_CONCURRENCY,
             log: Callable[[str], None] = print) -> dict:
     project = store.load_project(paths)
@@ -143,8 +150,6 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     w, h = style.resolution.width, style.resolution.height
 
     shot_files = sorted(paths.shots.glob("*.json"))
-    provider = provider or build_image_provider(paths)
-
     # Phase 1 (serial): select shots, lock character seeds, load references. Doing this
     # up front keeps the character-sheet writes race-free before we fan out.
     char_cache: dict = {}
@@ -155,14 +160,21 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
             continue
         if limit is not None and len(jobs) >= limit:
             break
-        if shot.status.keyframe == "done" and not force and not only:
+        if _keyframes_exist(paths, shot) and not force and not only:
             skipped += 1
             continue
-        seed = _seed_for_shot(paths, shot, char_cache, log)
+        seed = _seed_for_shot(paths, shot, char_cache, log, persist=not dry_run)
         prompt = _positive_prompt(shot, shot.image_prompt)
         refs = _references(paths, shot, char_cache)
         label = f"{shot.id}: keyframe done" + (" [locked]" if refs else "")
         jobs.append((label, (sf, shot, seed, prompt, refs)))
+
+    if dry_run:
+        log(f"  plan: {len(jobs)} keyframe(s) to render, {skipped} already complete.")
+        return {"rendered": 0, "skipped": skipped, "failed": 0,
+                "queued": len(jobs), "total": len(shot_files)}
+
+    provider = provider or build_image_provider(paths)
 
     # Phase 2 (parallel): render. Each job writes its own keyframe + shot file.
     def worker(item) -> None:
@@ -185,16 +197,45 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     return {"rendered": rendered, "skipped": skipped, "failed": failed, "total": len(shot_files)}
 
 
+def _keyframes_exist(paths: ProjectPaths, shot: schema.Shot) -> bool:
+    """Whether both state and the assets agree that this render is complete.
+
+    A project folder can be moved, restored selectively, or have obsolete local
+    outputs removed.  Treating an old ``done`` flag as sufficient would then make
+    a resumable batch permanently skip a missing image.
+    """
+    if shot.status.keyframe != "done":
+        return False
+    keyframe = paths.keyframes / f"{shot.id}.png"
+    if not keyframe.exists():
+        return False
+    if shot.needs_end_frame and not (paths.keyframes / f"{shot.id}_end.png").exists():
+        return False
+    return True
+
+
 def _references(paths: ProjectPaths, shot: schema.Shot, cache: dict) -> Optional[list]:
-    """Reference-image bytes to anchor this shot, if its single character has a locked
-    reference. Multi/no-character shots get none (fall back to seed+tags)."""
-    if len(shot.characters) != 1:
+    """Return approved character portraits for this shot, up to Gemini's limit.
+
+    Nano Banana 2 can preserve the likeness of up to four characters in one image.
+    Loading references during the serial setup phase keeps the later render workers
+    independent and lets two-to-four-character shots retain the same continuity as
+    single-character shots.
+    """
+    if not 1 <= len(shot.characters) <= 4:
         return None
-    char = cache.get(shot.characters[0])
-    if char is None or not char.reference_keyframe:
-        return None
-    ref = paths.root / char.reference_keyframe
-    return [ref.read_bytes()] if ref.exists() else None
+    refs: list[bytes] = []
+    for cid in shot.characters:
+        if cid not in cache:
+            char_file = paths.characters / f"{cid}.json"
+            cache[cid] = store.load_character(paths, cid) if char_file.exists() else None
+        char = cache[cid]
+        if char is None or not char.reference_keyframe:
+            continue
+        ref = paths.root / char.reference_keyframe
+        if ref.exists():
+            refs.append(ref.read_bytes())
+    return refs or None
 
 
 def _render(provider: ImageProvider, prompt: str, negative: str, seed: int,

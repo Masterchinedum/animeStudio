@@ -7,7 +7,6 @@ from __future__ import annotations
 from .. import store
 from ..paths import ProjectPaths
 from .base import FailoverTextProvider, ImageProvider, ProviderError, TextProvider
-from .comfyui import ComfyUIImageProvider
 from .gemini import GeminiTextProvider
 from .gemini_image import GeminiImageProvider
 
@@ -18,20 +17,9 @@ TEXT_PROVIDERS = {
 
 IMAGE_PROVIDERS = {
     "gemini_image": lambda cfg: GeminiImageProvider(
-        model=cfg.get("model", "gemini-3-pro-image"),
-        aspect_ratio=cfg.get("aspect_ratio", "16:9")),
-    "comfyui": lambda cfg: ComfyUIImageProvider(
-        endpoint=cfg.get("endpoint", "http://127.0.0.1:8188"),
-        checkpoint=cfg.get("checkpoint", "illustriousXL_v01.safetensors"),
-        steps=cfg.get("steps", 26), cfg=cfg.get("cfg", 6.0),
-        hires_scale=cfg.get("hires_scale", 1.5),
-        hires_denoise=cfg.get("hires_denoise", 0.45),
-        hires_steps=cfg.get("hires_steps", 0),
-        hires_upscale=cfg.get("hires_upscale", "nearest-exact"),
-        ipadapter_model=cfg.get("ipadapter_model", "ip-adapter-plus_sdxl_vit-h.safetensors"),
-        clipvision_model=cfg.get("clipvision_model", "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"),
-        ip_weight=cfg.get("ip_weight", 0.8),
-        ip_weight_type=cfg.get("ip_weight_type", "linear")),
+        model=cfg.get("model", "gemini-3.1-flash-image"),
+        aspect_ratio=cfg.get("aspect_ratio", "16:9"),
+        image_size=cfg.get("image_size", "2K")),
 }
 
 
