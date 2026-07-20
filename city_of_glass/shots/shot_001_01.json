@@ -14,13 +14,13 @@
   "duration_s": 3.0,
   "status": {
     "keyframe": "done",
-    "clip": "pending",
+    "clip": "done",
     "audio": "pending"
   },
   "assets": {
     "keyframe": "assets/keyframes/shot_001_01.png",
     "keyframe_end": null,
-    "clip": null,
+    "clip": "assets/clips/shot_001_01.mp4",
     "audio": null
   },
   "provider": {

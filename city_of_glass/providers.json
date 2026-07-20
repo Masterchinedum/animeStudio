@@ -27,7 +27,7 @@
       "type": "vertex_video",
       "project": "animeproduction",
       "location": "us-central1",
-      "model": "veo-3.1-generate-preview",
+      "model": "veo-3.1-generate-001",
       "aspect_ratio": "16:9",
       "audio": false,
       "priority": 1,
