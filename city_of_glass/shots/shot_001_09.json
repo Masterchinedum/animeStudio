@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Kaelen reacts to a faint, razor-sharp residue of energy humming against his skin from the shard.; medium close-up, low angle",
   "dialogue": [],
-  "seed": null,
+  "seed": 1896664487,
   "duration_s": 4.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_09.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null

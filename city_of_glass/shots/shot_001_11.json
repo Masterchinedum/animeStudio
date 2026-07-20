@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Kaelen forces himself to stand, swaying momentarily before locking his knees and hardening his posture.; medium wide shot, tilting up with his rise",
   "dialogue": [],
-  "seed": null,
+  "seed": 1896664487,
   "duration_s": 5.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_11.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null

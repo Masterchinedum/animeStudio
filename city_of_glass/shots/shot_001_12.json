@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Kaelen wipes the black soot from his lips with the back of his hand, staring into the ash-choked wastes.; close-up, static",
   "dialogue": [],
-  "seed": null,
+  "seed": 1896664487,
   "duration_s": 3.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_12.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null
