@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Kaelen kneels in the warm ash, his fingers tracing the thermal vent patterns beneath a cracked shale shelf.; wide shot, slow tilt down to Kaelen's hands on the shale",
   "dialogue": [],
-  "seed": null,
+  "seed": 1896664487,
   "duration_s": 4.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_002_01.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null

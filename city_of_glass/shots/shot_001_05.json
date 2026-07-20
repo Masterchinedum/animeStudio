@@ -10,15 +10,15 @@
   "needs_end_frame": false,
   "motion_prompt": "Kaelen struggles to a sitting position, his thin limbs shaking beneath his coarse, dirt-caked tunic.; medium shot, tracking his movement upward",
   "dialogue": [],
-  "seed": null,
+  "seed": 1896664487,
   "duration_s": 4.0,
   "status": {
-    "keyframe": "pending",
+    "keyframe": "done",
     "clip": "pending",
     "audio": "pending"
   },
   "assets": {
-    "keyframe": null,
+    "keyframe": "assets/keyframes/shot_001_05.png",
     "keyframe_end": null,
     "clip": null,
     "audio": null
