@@ -2,15 +2,16 @@
 
 A resumable pass over ``shots/*.json``.  Each job sends the already-composed prompt
 and its approved character reference(s) to the configured cloud image provider,
-writes ``assets/keyframes/<id>.png``, and checkpoints the shot immediately.
+writes an accurately named image under ``assets/keyframes/``, and checkpoints the
+shot immediately.
 FLF2V shots also receive an end-pose keyframe.
 
 The stable per-shot number is retained in project state for traceability and later
 video providers, but Gemini image generation is not seed-deterministic. Character
 continuity comes from the approved reference portraits sent with every eligible shot.
 
-This command is designed for Antigravity to operate unattended: it is idempotent,
-rate-limit resilient at the provider layer, and resumes after interruption.
+This command is designed to operate unattended: it is idempotent, rate-limit
+resilient at the provider layer, and resumes after interruption.
 """
 from __future__ import annotations
 
@@ -21,7 +22,7 @@ from typing import Callable, Optional
 from . import schema, serde, store
 from .paths import ProjectPaths
 from .providers import build_image_provider
-from .providers.base import ImageProvider, ProviderError
+from .providers.base import ImageProvider, ProviderError, image_file_extension
 
 DEFAULT_CONCURRENCY = 2
 
@@ -62,7 +63,7 @@ def _run_jobs(jobs: list, worker: Callable, concurrency: int,
 
 # A clean portrait is the strongest reference input for the cloud image model.
 REF_PROMPT = ("Create a canonical anime character-model-sheet reference portrait. "
-              "One character only: {tags}. Upper body, looking at the viewer, neutral "
+              "One character only: {appearance} Upper body, looking at the viewer, neutral "
               "expression, centred composition, plain neutral-grey background. No text, "
               "logos, watermark, props, or other people. {quality}")
 
@@ -90,13 +91,15 @@ def run_refs(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
 
     def worker(char: schema.Character) -> None:
         seed = char.locked_seed if char.locked_seed is not None else _stable_seed(char.id)
-        prompt = REF_PROMPT.format(tags=char.danbooru_tags, quality=style.quality_tags)
+        prompt = REF_PROMPT.format(appearance=char.appearance or char.danbooru_tags,
+                                   quality=style.quality_tags)
         data = provider.generate(prompt, negative=style.negative, seed=seed, width=w, height=h)
-        out = paths.refs / f"{char.id}.png"
+        ext = image_file_extension(data)
+        out = paths.refs / f"{char.id}{ext}"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_bytes(data)
         char.locked_seed = seed
-        char.reference_keyframe = f"assets/refs/{char.id}.png"
+        char.reference_keyframe = f"assets/refs/{char.id}{ext}"
         store.save_json(paths.characters / f"{char.id}.json", char)
 
     if jobs:
@@ -111,9 +114,9 @@ def _seed_for_shot(paths: ProjectPaths, shot: schema.Shot, cache: dict,
                    log: Callable[[str], None], *, persist: bool = True) -> int:
     """Return a stable trace identifier for the shot.
 
-    Gemini's cloud image API does not provide deterministic seed control.  We keep
-    the existing field for traceability and future providers, while character
-    reference images—not the seed—carry visual consistency.
+    Cloud image APIs do not guarantee deterministic seed control. We keep the
+    existing field for traceability and future providers, while character reference
+    images—not the seed—carry visual consistency.
     """
     if len(shot.characters) == 1:
         cid = shot.characters[0]
@@ -179,16 +182,16 @@ def run_art(paths: ProjectPaths, *, provider: Optional[ImageProvider] = None,
     # Phase 2 (parallel): render. Each job writes its own keyframe + shot file.
     def worker(item) -> None:
         sf, shot, seed, prompt, refs = item
-        _render(provider, prompt, style.negative, seed, w, h,
-                paths.keyframes / f"{shot.id}.png", references=refs)
+        image_path = _render(provider, prompt, style.negative, seed, w, h,
+                             paths.keyframes / shot.id, references=refs)
         shot.seed = seed
-        shot.assets.keyframe = f"assets/keyframes/{shot.id}.png"
+        shot.assets.keyframe = str(image_path.relative_to(paths.root))
         shot.status.keyframe = "done"
         if shot.needs_end_frame and shot.image_prompt_end:
-            _render(provider, _positive_prompt(shot, shot.image_prompt_end),
-                    style.negative, seed, w, h, paths.keyframes / f"{shot.id}_end.png",
-                    references=refs)
-            shot.assets.keyframe_end = f"assets/keyframes/{shot.id}_end.png"
+            end_path = _render(provider, _positive_prompt(shot, shot.image_prompt_end),
+                               style.negative, seed, w, h,
+                               paths.keyframes / f"{shot.id}_end", references=refs)
+            shot.assets.keyframe_end = str(end_path.relative_to(paths.root))
         store.save_json(sf, shot)                     # checkpoint per shot
 
     if jobs:
@@ -206,21 +209,25 @@ def _keyframes_exist(paths: ProjectPaths, shot: schema.Shot) -> bool:
     """
     if shot.status.keyframe != "done":
         return False
-    keyframe = paths.keyframes / f"{shot.id}.png"
+    keyframe = paths.root / shot.assets.keyframe if shot.assets.keyframe else (
+        paths.keyframes / f"{shot.id}.png"
+    )
     if not keyframe.exists():
         return False
-    if shot.needs_end_frame and not (paths.keyframes / f"{shot.id}_end.png").exists():
+    end_keyframe = paths.root / shot.assets.keyframe_end if shot.assets.keyframe_end else (
+        paths.keyframes / f"{shot.id}_end.png"
+    )
+    if shot.needs_end_frame and not end_keyframe.exists():
         return False
     return True
 
 
 def _references(paths: ProjectPaths, shot: schema.Shot, cache: dict) -> Optional[list]:
-    """Return approved character portraits for this shot, up to Gemini's limit.
+    """Return approved portraits for this shot, up to the common four-reference cap.
 
-    Nano Banana 2 can preserve the likeness of up to four characters in one image.
-    Loading references during the serial setup phase keeps the later render workers
-    independent and lets two-to-four-character shots retain the same continuity as
-    single-character shots.
+    The selected provider applies its own lower limit if necessary. Loading references
+    during serial setup keeps later render workers independent and protects continuity
+    in one-to-four-character shots.
     """
     if not 1 <= len(shot.characters) <= 4:
         return None
@@ -239,8 +246,12 @@ def _references(paths: ProjectPaths, shot: schema.Shot, cache: dict) -> Optional
 
 
 def _render(provider: ImageProvider, prompt: str, negative: str, seed: int,
-            w: int, h: int, out_path, references: Optional[list] = None) -> None:
+            w: int, h: int, out_stem, references: Optional[list] = None):
+    if references and provider.max_references is not None:
+        references = references[:provider.max_references]
     data = provider.generate(prompt, negative=negative, seed=seed, width=w, height=h,
                              references=references)
+    out_path = out_stem.with_suffix(image_file_extension(data))
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_bytes(data)
+    return out_path

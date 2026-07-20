@@ -1,7 +1,8 @@
 """.env loading — one place for secrets, easy to swap.
 
 Reads KEY=VALUE pairs from a .env file into the process environment so the engine
-can pick up GEMINI_API_KEY / ANIME_NOTION_TOKEN without editing your shell profile.
+can pick up GEMINI_API_KEY / OPENAI_API_KEY / XAI_API_KEY / ANIME_NOTION_TOKEN
+without editing your shell profile.
 Stdlib-only (no python-dotenv).
 
 Semantics chosen for easy key-swapping:

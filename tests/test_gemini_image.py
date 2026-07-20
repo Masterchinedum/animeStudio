@@ -34,7 +34,7 @@ class GeminiImageProviderTests(unittest.TestCase):
         self.assertEqual("/interactions", seen["path"])
         self.assertEqual("gemini-3.1-flash-image", seen["body"]["model"])
         self.assertEqual(
-            {"type": "image", "mime_type": "image/png", "aspect_ratio": "16:9", "image_size": "2K"},
+            {"type": "image", "mime_type": "image/jpeg", "aspect_ratio": "16:9", "image_size": "2K"},
             seen["body"]["response_format"],
         )
         self.assertEqual("image", seen["body"]["input"][1]["type"])

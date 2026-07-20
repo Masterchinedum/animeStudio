@@ -9,10 +9,17 @@ from ..paths import ProjectPaths
 from .base import FailoverTextProvider, ImageProvider, ProviderError, TextProvider
 from .gemini import GeminiTextProvider
 from .gemini_image import GeminiImageProvider
+from .openai_compatible import OpenAICompatibleImageProvider, OpenAICompatibleTextProvider
+from .vertex_image import VertexImageProvider
 
 # type string in providers.json -> constructor
 TEXT_PROVIDERS = {
     "gemini": lambda cfg: GeminiTextProvider(model=cfg.get("model", "gemini-2.5-flash")),
+    "openai_compatible_text": lambda cfg: OpenAICompatibleTextProvider(
+        provider_name=cfg.get("name", "openai-compatible"),
+        base_url=cfg.get("base_url", "https://api.openai.com/v1"),
+        api_key_env=cfg.get("api_key_env", "OPENAI_API_KEY"),
+        model=cfg["model"], temperature=cfg.get("temperature")),
 }
 
 IMAGE_PROVIDERS = {
@@ -20,6 +27,19 @@ IMAGE_PROVIDERS = {
         model=cfg.get("model", "gemini-3.1-flash-image"),
         aspect_ratio=cfg.get("aspect_ratio", "16:9"),
         image_size=cfg.get("image_size", "2K")),
+    "vertex_image": lambda cfg: VertexImageProvider(
+        project=cfg.get("project", ""), location=cfg.get("location", "us-central1"),
+        model=cfg.get("model", "gemini-2.5-flash-image"),
+        aspect_ratio=cfg.get("aspect_ratio", "16:9"), image_size=cfg.get("image_size", "")),
+    "openai_compatible_image": lambda cfg: OpenAICompatibleImageProvider(
+        provider_name=cfg.get("name", "openai-compatible"),
+        base_url=cfg.get("base_url", "https://api.openai.com/v1"),
+        api_key_env=cfg.get("api_key_env", "OPENAI_API_KEY"),
+        model=cfg["model"], api_style=cfg.get("api_style", "openai"),
+        size=cfg.get("size"), quality=cfg.get("quality"),
+        output_format=cfg.get("output_format", "jpeg"),
+        aspect_ratio=cfg.get("aspect_ratio"), resolution=cfg.get("resolution"),
+        max_references=cfg.get("max_references")),
 }
 
 
@@ -64,4 +84,5 @@ def build_image_provider(paths: ProjectPaths) -> ImageProvider:
 def _routes(paths: ProjectPaths, capability: str) -> list[dict]:
     providers = store.load_json(paths.providers) if paths.providers.exists() else {}
     routes = providers.get(capability, [])
-    return sorted(routes, key=lambda r: r.get("priority", 99))
+    return sorted((route for route in routes if route.get("enabled", True)),
+                  key=lambda route: route.get("priority", 99))

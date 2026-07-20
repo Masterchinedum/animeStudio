@@ -4,32 +4,40 @@
       "name": "gemini",
       "type": "gemini",
       "model": "gemini-3.5-flash",
-      "priority": 1
+      "priority": 1,
+      "enabled": true
     }
   ],
   "image": [
     {
-      "name": "nano-banana-2",
-      "type": "gemini_image",
-      "model": "gemini-3.1-flash-image",
+      "name": "vertex-nano-banana-pro",
+      "type": "vertex_image",
+      "project": "animeproduction",
+      "location": "global",
+      "model": "gemini-3-pro-image-preview",
       "aspect_ratio": "16:9",
       "image_size": "2K",
-      "priority": 1
+      "priority": 1,
+      "enabled": true
     }
   ],
   "video": [
     {
-      "name": "alibaba",
-      "type": "alibaba_wan",
+      "name": "veo-vertex",
+      "type": "vertex_video",
+      "project": "animeproduction",
+      "location": "us-central1",
+      "model": "veo-3.0-generate-preview",
       "priority": 1,
-      "on_error": "fallback"
+      "enabled": false
     }
   ],
   "audio": [
     {
       "name": "local_tts",
       "type": "local_tts",
-      "priority": 1
+      "priority": 1,
+      "enabled": false
     }
   ]
 }

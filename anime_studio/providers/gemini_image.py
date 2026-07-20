@@ -1,8 +1,8 @@
 """Gemini ImageProvider — cloud-native Nano Banana rendering.
 
 The studio calls Gemini's Interactions API directly, with no local image model,
-GPU server, or self-hosted runtime.  Antigravity is the *operator* that can run
-this resumable batch workflow; Nano Banana is the image model that renders it.
+GPU server, or self-hosted runtime. A coding agent can operate this resumable batch
+workflow; Nano Banana is the image model that renders it.
 
 Character consistency comes from sending the approved character portrait as an
 image input for each shot.  Gemini 3.1 Flash Image supports this directly.
@@ -17,7 +17,7 @@ import time
 import urllib.error
 import urllib.request
 
-from .base import ImageProvider, ProviderError
+from .base import ImageProvider, ProviderError, image_mime_type
 
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta"
 KEY_ENV = "GEMINI_API_KEY"
@@ -43,14 +43,14 @@ class GeminiImageProvider(ImageProvider):
         # temporary upload or local inference server.
         parts: list[dict] = [{"type": "text", "text": self._compose(prompt, negative)}]
         for b in references or []:
-            parts.append({"type": "image", "mime_type": "image/png",
+            parts.append({"type": "image", "mime_type": image_mime_type(b),
                           "data": base64.b64encode(b).decode("ascii")})
         body = {
             "model": self.model,
             "input": parts,
             "response_format": {
                 "type": "image",
-                "mime_type": "image/png",
+                "mime_type": "image/jpeg",
                 "aspect_ratio": self.aspect_ratio,
                 "image_size": self.image_size,
             },

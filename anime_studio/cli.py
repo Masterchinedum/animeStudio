@@ -10,6 +10,7 @@ later build steps — each an independent, resumable pass over the shot list.
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import sys
 from pathlib import Path
@@ -58,7 +59,7 @@ def cmd_status(args) -> int:
     print(f"  characters : {_count(paths.characters)}")
     print(f"  scenes     : {_count(paths.scenes)}")
     print(f"  shots      : {_count(paths.shots)}")
-    print(f"  keyframes  : {_count(paths.keyframes, '*.png')}")
+    print(f"  keyframes  : {_count_images(paths.keyframes)}")
     print(f"  clips      : {_count(paths.clips, '*.mp4')}\n")
 
     print("Story cascade (tier : status : approved)")
@@ -97,7 +98,7 @@ def cmd_run(args) -> int:
 
 
 # --------------------------------------------------------------------------- #
-# Art stage — shots -> cloud keyframes (Nano Banana, operated by Antigravity)
+# Art stage — shots -> cloud keyframes (the selected image provider)
 # --------------------------------------------------------------------------- #
 
 def cmd_refs(args) -> int:
@@ -136,6 +137,55 @@ def cmd_art(args) -> int:
     print(f"\nDone — rendered {r['rendered']}, skipped {r['skipped']}, "
           f"failed {r['failed']} of {r['total']} shots.")
     print("Keyframes in assets/keyframes/. Review them, then the (paid) video stage animates the approved ones.")
+    return 0
+
+
+# --------------------------------------------------------------------------- #
+# Providers — inspect and switch configured cloud workers
+# --------------------------------------------------------------------------- #
+
+def _credential_env(route: dict) -> str | None:
+    if route.get("api_key_env"):
+        return route["api_key_env"]
+    if route.get("type") in {"gemini", "gemini_image"}:
+        return "GEMINI_API_KEY"
+    return None
+
+
+def cmd_providers(args) -> int:
+    paths = _resolve(args)
+    if not paths.providers.exists():
+        print(f"No providers.json under {paths.root}.", file=sys.stderr)
+        return 1
+    config = store.load_json(paths.providers)
+    if args.providers_cmd == "use":
+        routes = config.get(args.capability, [])
+        wanted = next((route for route in routes if route.get("name") == args.name), None)
+        if wanted is None:
+            choices = ", ".join(route.get("name", "(unnamed)") for route in routes)
+            print(f"No {args.capability} provider named '{args.name}'. Choices: {choices}",
+                  file=sys.stderr)
+            return 1
+        for route in routes:
+            route["enabled"] = route is wanted
+        store.save_json(paths.providers, config)
+        key_env = _credential_env(wanted)
+        note = "" if not key_env or os.environ.get(key_env) else f" Add {key_env} to studio/.env."
+        print(f"Active {args.capability} provider: {wanted['name']} ({wanted.get('model', 'default')})."
+              f"{note}")
+        return 0
+
+    for capability in ("text", "image"):
+        print(f"{capability}:")
+        for route in config.get(capability, []):
+            marker = "*" if route.get("enabled", True) else "-"
+            key_env = _credential_env(route)
+            key_state = "key set" if key_env and os.environ.get(key_env) else (
+                f"needs {key_env}" if key_env else "no key declared"
+            )
+            print(f"  {marker} {route.get('name', '(unnamed)'):<16} "
+                  f"{route.get('model', route.get('type', 'default'))} [{key_state}]")
+    print("\nSwitch: anime providers use <text|image> <name>")
     return 0
 
 
@@ -280,6 +330,13 @@ def _count(directory: Path, pattern: str = "*.json") -> int:
     return len(list(directory.glob(pattern))) if directory.exists() else 0
 
 
+def _count_images(directory: Path) -> int:
+    if not directory.exists():
+        return 0
+    return sum(1 for path in directory.iterdir()
+               if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"})
+
+
 def _print_tree(paths: ProjectPaths) -> None:
     rel = [p.relative_to(paths.root) for p in paths.all_dirs() if p != paths.root]
     print("  memory bank:")
@@ -304,6 +361,16 @@ def build_parser() -> argparse.ArgumentParser:
     proj_parent = argparse.ArgumentParser(add_help=False)
     proj_parent.add_argument("--project", help="project directory (default: current dir)")
 
+    pproviders = sub.add_parser("providers", parents=[proj_parent],
+                                help="show or switch configured text/image providers")
+    pproviders_sub = pproviders.add_subparsers(dest="providers_cmd")
+    pproviders.set_defaults(func=cmd_providers, providers_cmd="list")
+    pproviders_use = pproviders_sub.add_parser("use", parents=[proj_parent],
+                                                help="activate one provider for a capability")
+    pproviders_use.add_argument("capability", choices=("text", "image"))
+    pproviders_use.add_argument("name", help="provider name from `anime providers`")
+    pproviders_use.set_defaults(func=cmd_providers)
+
     # run — autopilot over the whole cascade
     prun = sub.add_parser("run", parents=[proj_parent],
                           help="autopilot: generate the whole cascade end-to-end")
@@ -324,7 +391,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     # art — render keyframes from shots
     part = sub.add_parser("art", parents=[proj_parent],
-                          help="render keyframes from shots (cloud Nano Banana)")
+                          help="render keyframes from shots with the selected cloud provider")
     part.add_argument("--only", help="render just one shot by id")
     part.add_argument("--limit", type=int, help="render at most N shots (great for a quick test)")
     part.add_argument("--force", action="store_true", help="re-render even completed keyframes")

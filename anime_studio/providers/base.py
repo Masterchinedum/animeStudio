@@ -16,23 +16,53 @@ class ProviderError(RuntimeError):
     pass
 
 
+def image_file_extension(data: bytes) -> str:
+    """Return the filename suffix matching common encoded image formats."""
+    if data.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+    if data.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if data.startswith(b"RIFF") and data[8:12] == b"WEBP":
+        return ".webp"
+    # A legacy/manual reference may not have a recognizable header. Preserve the
+    # historical PNG convention rather than sending an unfamiliar filename suffix.
+    return ".png"
+
+
+def image_mime_type(data: bytes) -> str:
+    """Return the image media type for an encoded reference image.
+
+    Unknown bytes keep the historical PNG fallback. Project references are generated
+    images and should always be recognizable; this fallback keeps an older, manually
+    supplied reference from becoming an invalid provider request.
+    """
+    return {
+        ".png": "image/png",
+        ".jpg": "image/jpeg",
+        ".webp": "image/webp",
+    }.get(image_file_extension(data), "image/png")
+
+
 class ImageProvider(abc.ABC):
     """A cloud keyframe renderer behind a common interface."""
 
     name: str = "image"
+    max_references: int | None = None
 
     @abc.abstractmethod
     def generate(self, prompt: str, *, negative: str = "", seed: int = 0,
                  width: int = 832, height: int = 1216,
                  references: "list[bytes] | None" = None) -> bytes:
-        """Render one image and return its PNG bytes (caller writes it to the bank).
+        """Render one image and return its encoded bytes (caller writes it to the bank).
 
         `references`, if given, are reference-image bytes to anchor the generation to
         (for character locking). Providers that don't support it ignore it.
 
         ``seed`` remains in the interface as a stable shot identifier for pipeline
         bookkeeping. Cloud Gemini image models do not expose deterministic seed
-        control; reference images are the continuity mechanism.
+        control; reference images are the continuity mechanism. The art stage detects
+        the returned file format before naming the asset, so providers may return
+        PNG, JPEG, or WebP without corrupting the project memory bank.
         """
 
 
