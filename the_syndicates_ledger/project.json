@@ -1,0 +1,20 @@
+{
+  "id": "the_syndicates_ledger",
+  "title": "The Syndicate's Ledger",
+  "logline": "An adult psychological crime-noir anime set in a hyper-corrupt modern metropolis ruled by three corporate syndicates. The covert Executive Tier (0–10) measures credit, influence, legal immunity, and access to private enforcers. Elias Venn, a Tier-4 forensic accountant and fixer for syndicate executives, discovers that an unseen operator is blackmailing and assassinating high-tier figures with their concealed affairs and financial crimes. To survive, he enters a dangerous, non-explicit affair with Mara Vale, the spouse of a Tier-9 syndicate boss and a hidden architect of the blackmail ring. Every episode is a chess match of leverage, betrayal, political power, and intimate emotional stakes, where advancement always costs someone their freedom. Grounded, tense, morally grey, and mature; use sensual tension without explicit sexual content.",
+  "style_guide": {
+    "quality_tags": "masterpiece, best quality, cel shading, bold outlines, vibrant saturated colors, anime screencap",
+    "negative": "worst quality, low quality, bad anatomy, bad hands, extra digits, jpeg artifacts, watermark, blurry, subtitles, text, english text, signature, logo, border, letterboxed, multiple people, crowd, extra person, extra limbs",
+    "resolution": {
+      "width": 1344,
+      "height": 768
+    },
+    "video": {
+      "width": 832,
+      "height": 480,
+      "fps": 16,
+      "seg_frames": 81
+    }
+  },
+  "config": {}
+}

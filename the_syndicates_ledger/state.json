@@ -1,0 +1,41 @@
+{
+  "shots": {},
+  "tiers": {
+    "concept": {
+      "status": "empty",
+      "approved": false
+    },
+    "world_bible": {
+      "status": "empty",
+      "approved": false
+    },
+    "character_bible": {
+      "status": "empty",
+      "approved": false
+    },
+    "series_arc": {
+      "status": "empty",
+      "approved": false
+    },
+    "chapter_breakdown": {
+      "status": "empty",
+      "approved": false
+    },
+    "episode_plan": {
+      "status": "empty",
+      "approved": false
+    },
+    "scene_beats": {
+      "status": "empty",
+      "approved": false
+    },
+    "screenplay": {
+      "status": "empty",
+      "approved": false
+    },
+    "timed_transcript": {
+      "status": "empty",
+      "approved": false
+    }
+  }
+}
