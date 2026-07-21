@@ -172,3 +172,86 @@ Ren Sato successfully infiltrates Chairman Kang's private study during a tense d
 - Did Mei-Ling knowingly leak the collateral herself, or are her biometrics being harvested/cloned as she claimed in the overall outline?
 - Does Marcus Vance suspect Ren was in the study despite Mei-Ling's distraction?
 - How will Ren confront Mei-Ling with the proof of her biometric signature in the logs?
+
+## Chapter 011
+
+Ren Sato confronts Mei-Ling Vance with the terminal logs showing her biometrics authorized the leaks. Mei-Ling reveals that Chairman Kang has been drugging her to harvest her biometrics as a scapegoat mechanism, showing Ren physical scars on her wrists as proof. Deeply affected, Ren commits to their alliance to target Kang’s biometrics and activate the Erasure Protocol.
+
+### Facts
+- Mei-Ling Vance's biometric data (iris scan, dermal prints) was used to authorize the leaks of Director Han and Vice-President Choi's collateral.
+- Chairman Kang has been using a private medical team from the Sector 4 clinic to sedate Mei-Ling and harvest her biometrics without her conscious consent.
+- Mei-Ling Vance has physical scars from clinical restraint straps and needle marks on her arms from repeated sedation.
+- Ren Sato and Mei-Ling Vance solidify their alliance, shifting from transactional partners to deeply committed co-conspirators.
+- Ren Sato decides to target Chairman Kang's biometric keys next for the Erasure Protocol.
+- Captain Marcus Vance is actively auditing the security logs of Chairman Kang's study following the security breach during the dinner.
+
+### Open threads
+- How will Ren harvest Chairman Kang's biometrics without alerting his private security?
+- Will Captain Marcus Vance link the diagnostic slate footprint or the physical entry during the dinner party to Ren?
+- How will Yuki Tanaka adapt to Marcus Vance's increased surveillance over the audit department?
+
+## Chapter 012
+
+Yuki Tanaka analyzes the terminal logs copied from Chairman Kang's estate and discovers a secondary, hidden data stream routing the leaked collateral directly to Apex Infrastructure. She confesses to Ren that she was approached by an Apex recruiter offering her a Tier-4 promotion in exchange for Ren's audit files, holding her secret collateral over her. Ren decides to use the genuine Apex connection to redirect Kang's paranoia away from Mei-Ling and toward Director Victor Sterling.
+
+### Facts
+- Yuki Tanaka discovers a secondary, hidden data stream in the estate terminal logs routing directly to Apex Infrastructure.
+- Victor Sterling is a Tier-7 Director of Apex Infrastructure.
+- The Apex data tunnel was initiated from inside the Kang estate terminal three months prior to Director Han's demotion.
+- Yuki Tanaka was approached by an Apex recruiter who gave her an encrypted comm-unit and offered her a Tier-4 promotion in exchange for Ren's audit files.
+- Apex knows Yuki's secret collateral regarding her forged transcripts and stolen diagnostic software.
+- Ren Sato obtains the encrypted Apex comm-unit from Yuki and decides to incorporate the genuine Apex routing data into his final audit report for Chairman Kang.
+
+### Open threads
+- Will Yuki remain loyal to Ren now that Apex is pressuring her with her secret collateral?
+- How will Chairman Kang react to the genuine proof of Apex Infrastructure's corporate espionage?
+- Will Director Victor Sterling realize Yuki confessed to Ren when the audit report is delivered?
+
+## Chapter 013
+
+Inspector Jiro Vance corners Ren Sato in a rain-slicked alley in the Blue District, demanding Director Han's audit files in exchange for his Tier-0 brother Kenji's freedom. Ren realizes Jiro is acting on an anonymous tip that could only have come from a Kang Syndicate insider.
+
+### Facts
+- Inspector Jiro Vance is Marcus Vance's estranged brother and a VCPD detective.
+- Jiro knows Kenji Sato is a Tier-0 Erased hiding in Sector 9.
+- Jiro threatens to send Kenji to the northern extraction camps unless Ren delivers Director Han's audit files to a drop point at the old municipal library on 4th Street within twenty-four hours.
+- The anonymous tip Jiro received contained Kenji's precise coordinate registry, which could only be accessed via the Kang Syndicate's internal security nodes.
+- Ren realizes Jiro is being used as a proxy by an insider within the Kang Syndicate to force the leak of Han's files.
+
+### Open threads
+- Who inside the Kang Syndicate leaked Kenji's Sector 9 location to Jiro Vance?
+- Will Ren deliver the Han audit files to Jiro's drop point and risk Marcus Vance's immediate retaliation?
+- How will Ren protect Kenji now that his safehouse coordinate registry is compromised?
+
+## Chapter 014
+
+Marcus Vance initiates a surprise counter-audit of Ren's department, seizing Yuki's terminal and placing them under active surveillance. Ren barely manages to hide the Erasure Protocol design files on a low-frequency analog drive hidden within a mechanical clock before his terminal is seized and wiped.
+
+### Facts
+- Marcus Vance initiates an unscheduled security compliance audit of the Forensic Accounting division.
+- Yuki Tanaka's terminal is frozen, and its contents are mirrored by Kang Global Security.
+- Ren Sato and Yuki Tanaka are placed under active physical surveillance and restricted to the tower's transit lounge.
+- Ren transfers the Erasure Protocol design files to an analog magnetic cartridge hidden inside his vintage brass clock.
+- Ren's personal terminal hard drive is wiped via a local diagnostic dump, leaving no digital trace of the files.
+
+### Open threads
+- How will Ren and Yuki retrieve the clock and continue their audit under active surveillance?
+- Will Marcus Vance discover the hidden analog drive in the clock during a more thorough sweep?
+- How will Ren handle the impending deadline from Chairman Kang without his digital tools?
+
+## Chapter 015
+
+Ren Sato and Mei-Ling Vance spend the night in her luxury penthouse decrypting Chairman Kang's terminal logs. After sharing a moment of quiet intimacy that cements their partnership, they discover that every executive demoted or killed in the recent leaks was a key holder to Kang Global's primary offshore liquidity reserve.
+
+### Facts
+- Ren Sato bypasses security to meet Mei-Ling Vance at her luxury penthouse in Sector 1.
+- Mei-Ling has a private, unmonitored server rack hidden in her penthouse, masked under Vance Haute Couture apparel design traffic.
+- Ren uses the copied terminal logs to analyze the leaks, confirming that Chairman Kang harvested Mei-Ling's biometrics while she was sedated.
+- Ren and Mei-Ling share an intimate moment, shifting their relationship from transactional allies to genuine partners.
+- The decrypted logs reveal that all five targeted executives (including Han and Choi) were key holders to Kang Global's primary offshore liquidity reserve, the 'Vesper Blue' fund.
+- By demoting or killing these key holders, Chairman Kang triggers a Ledger protocol that allows him to consolidate their financial authorizations under his own master key.
+
+### Open threads
+- How will Ren and Mei-Ling prevent Chairman Kang from consolidating the remaining authorizations?
+- Will Marcus Vance discover the unauthorized server activity or Ren's presence in the penthouse?
+- How will this new financial motive change Ren's approach to the upcoming audit report for Kang?
