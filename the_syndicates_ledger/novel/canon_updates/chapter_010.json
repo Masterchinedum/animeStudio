@@ -1,0 +1,19 @@
+{
+  "summary": "Ren Sato successfully infiltrates Chairman Kang's private study during a tense dinner party, copying the physical terminal's access logs with the help of a distraction by Mei-Ling Vance. Decrypting the logs later, Ren discovers that the leaks were authorized using Mei-Ling's personal biometric signature.",
+  "facts": [
+    "Ren Sato uses a grey-market bypass shingle to enter Chairman Kang's private study.",
+    "Ren copies the physical terminal's access logs using a custom data-capture tap and diagnostic slate.",
+    "Marcus Vance attempts to enter the study but is intercepted and distracted by Mei-Ling Vance outside the door.",
+    "Marcus Vance threatens Mei-Ling with exposure of her family's shipping manifests which are on his desk.",
+    "Mei-Ling threatens Marcus with a demotion to Tier 3 if he interferes with her assets.",
+    "Ren escapes the study and the estate without detection.",
+    "Ren decrypts the access logs in a parking garage in the financial district.",
+    "The access logs reveal that the terminal was accessed to leak the collateral using Mei-Ling Vance's unique biometric signature."
+  ],
+  "open_threads": [
+    "Did Mei-Ling knowingly leak the collateral herself, or are her biometrics being harvested/cloned as she claimed in the overall outline?",
+    "Does Marcus Vance suspect Ren was in the study despite Mei-Ling's distraction?",
+    "How will Ren confront Mei-Ling with the proof of her biometric signature in the logs?"
+  ],
+  "chapter": 10
+}

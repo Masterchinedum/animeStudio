@@ -1,0 +1,18 @@
+{
+  "id": "batch_004_011_015",
+  "status": "running",
+  "submitted_at": "2026-07-21T00:40:27Z",
+  "chapters": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "job_name": "projects/671369918582/locations/global/batchPredictionJobs/3398017870775451648",
+  "input_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/inputs/batch_004_011_015.jsonl",
+  "output_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/outputs/batch_004_011_015",
+  "local_input": "novel/batches/batch_004_011_015.input.jsonl",
+  "force": false,
+  "vertex_state": "JOB_STATE_RUNNING"
+}

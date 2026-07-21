@@ -87,3 +87,88 @@ Ren Sato witnesses the sudden demotion of Vice-President Choi from Tier 5 to Tie
 - Who is 'the tailor' Choi referred to?
 - How did the blackmailer obtain Choi's biometric or cryptographic keys to leak his collateral?
 - Will Ren deliver the audit report to Marcus Vance by morning as demanded?
+
+## Chapter 006
+
+Ren Sato audits the interrogation of the demoted Vice-President Choi, discovering a financial link between Choi's blackmailer payments and Mei-Ling Vance's fashion house, V-H-C Holdings, before Choi is silenced by poison.
+
+### Facts
+- Ren Sato audits Vice-President Choi's transactions and traces the blackmail payments to shell companies cleared through V-H-C Holdings (Vance Haute Couture).
+- Choi reveals that Mei-Ling Vance instructed him to route the funds there, claiming her family's accounts were safe from Chairman Kang's audits.
+- Marcus Vance suspects Ren of hiding information during the interrogation.
+- Vice-President Choi is poisoned mid-interrogation by a toxic agent on the rim of his water cup and dies in the holding cell.
+- Ren Sato gains leverage over Mei-Ling Vance by confirming her active role in clearing the blackmail payments.
+
+### Open threads
+- Who poisoned Choi's water cup inside the secure holding cell?
+- How will Ren use his newfound leverage over Mei-Ling without Marcus Vance discovering the V-H-C Holdings link?
+- Will Marcus Vance report his suspicions about Ren's silence during the interrogation to Chairman Kang?
+
+## Chapter 007
+
+Ren Sato confronts Mei-Ling Vance at her studio regarding her company's link to Choi's demotion. Mei-Ling forces Ren into an alliance by threatening to expose his Erasure Protocol design files to the Ledger Custodians if she falls, while offering to help smuggle Kenji out of Vesper City in exchange for Ren protecting her brother-in-law, Inspector Jiro Vance, from Chairman Kang's shipping audit.
+
+### Facts
+- VHC Enterprises, a holding company owned by Vance Haute Couture, was used to route the blackmail payment that triggered Vice-President Choi's demotion.
+- Mei-Ling Vance knows about Ren's brother Kenji and his status as a Tier-0 Erased.
+- Inspector Jiro Vance is Mei-Ling's brother-in-law and a detective investigating Chairman Kang's shipping networks.
+- Mei-Ling possesses partial fragments of Ren's Erasure Protocol bypass code found on Director Han's servers.
+- Mei-Ling threatens to leak Ren's design files to the Ledger Custodians, which would result in his immediate execution.
+- Ren and Mei-Ling form a reluctant, highly leveraged alliance.
+
+### Open threads
+- How will Ren alter the audit to protect Inspector Jiro Vance without alerting Chairman Kang or Marcus Vance?
+- Will Mei-Ling keep her promise to help relocate Kenji once Jiro is safe?
+- Who originally leaked the fragment of Ren's Erasure Protocol code to Director Han?
+
+## Chapter 008
+
+Ren Sato meets Sophia Thorne, a Tier-5 Ledger Custodian, at a high-security tea house. Sophia rejects Ren's corporate bonds and demands he bypass Chairman Kang's firewalls to audit a ghost directory discrepancy in the Ledger's local node. In exchange, she provides a hardware security token and reveals that the blackmailer is using a physical terminal inside Chairman Kang's personal residence.
+
+### Facts
+- Sophia Thorne is a Tier-5 Senior Ledger Custodian who values system continuity over corporate currency.
+- Sophia detects a ghost directory discrepancy in the Ledger's local node, which is blocked by Kang Global's firewalls.
+- Sophia gives Ren a physical hardware security token that can mask his administrative signature for exactly three minutes.
+- Sophia reveals that the physical terminal used for the executive leaks is located inside Chairman Kang's personal residence.
+- Ren leaves three high-yield Kang Global corporate bearer bonds worth half a million credits on the table as a retainer.
+
+### Open threads
+- Who is using the physical terminal inside Chairman Kang's private residence?
+- Can Ren bypass Chairman Kang's firewalls within the three-minute window without being detected?
+- How will Mei-Ling Vance's involvement change now that the terminal has been traced to her husband's home?
+
+## Chapter 009
+
+Ren Sato attends a high-security dinner at Chairman Kang’s estate, where he receives a hidden clue from Mei-Ling about the physical terminal's location. The chapter ends with Kang promoting Captain Marcus Vance to oversee Ren's audit, stripping Ren of his operational independence.
+
+### Facts
+- Ren Sato attended a private dinner at Chairman Kang's Ridge estate with Kang and Mei-Ling Vance.
+- Mei-Ling Vance used a silent physical hand gesture to communicate a coordinate code (three, zero, one) to Ren beneath the dinner table.
+- Sophia Thorne's information that the leaks originate from a terminal inside Kang's estate is known to Ren, but kept secret during the dinner.
+- Chairman Kang promoted Captain Marcus Vance to directly oversee Ren's audit department, stripping Ren of his operational independence.
+- Marcus Vance is given authority over Ren's security clearance, communications, and junior analyst Yuki Tanaka's operational limits.
+- Ren is given a thirty-six-hour deadline by Chairman Kang to deliver the final audit report implicating Apex Infrastructure.
+
+### Open threads
+- How will Ren bypass Marcus Vance's direct oversight to search for the physical terminal at coordinate 301?
+- Will Yuki Tanaka remain safe now that Marcus Vance has direct authority over her security and movements?
+- How will Ren reconcile the fraudulent Apex report within the thirty-six-hour deadline while under Marcus's surveillance?
+
+## Chapter 010
+
+Ren Sato successfully infiltrates Chairman Kang's private study during a tense dinner party, copying the physical terminal's access logs with the help of a distraction by Mei-Ling Vance. Decrypting the logs later, Ren discovers that the leaks were authorized using Mei-Ling's personal biometric signature.
+
+### Facts
+- Ren Sato uses a grey-market bypass shingle to enter Chairman Kang's private study.
+- Ren copies the physical terminal's access logs using a custom data-capture tap and diagnostic slate.
+- Marcus Vance attempts to enter the study but is intercepted and distracted by Mei-Ling Vance outside the door.
+- Marcus Vance threatens Mei-Ling with exposure of her family's shipping manifests which are on his desk.
+- Mei-Ling threatens Marcus with a demotion to Tier 3 if he interferes with her assets.
+- Ren escapes the study and the estate without detection.
+- Ren decrypts the access logs in a parking garage in the financial district.
+- The access logs reveal that the terminal was accessed to leak the collateral using Mei-Ling Vance's unique biometric signature.
+
+### Open threads
+- Did Mei-Ling knowingly leak the collateral herself, or are her biometrics being harvested/cloned as she claimed in the overall outline?
+- Does Marcus Vance suspect Ren was in the study despite Mei-Ling's distraction?
+- How will Ren confront Mei-Ling with the proof of her biometric signature in the logs?

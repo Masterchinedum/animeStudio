@@ -51,7 +51,7 @@
     },
     "batch_003_006_010": {
       "id": "batch_003_006_010",
-      "status": "running",
+      "status": "collected",
       "submitted_at": "2026-07-21T00:37:11Z",
       "chapters": [
         6,
@@ -65,7 +65,34 @@
       "output_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/outputs/batch_003_006_010",
       "local_input": "novel/batches/batch_003_006_010.input.jsonl",
       "force": false,
-      "vertex_state": "JOB_STATE_PENDING"
+      "vertex_state": "JOB_STATE_SUCCEEDED",
+      "collected_at": "2026-07-21T00:40:24Z",
+      "written": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "failures": []
+    },
+    "batch_004_011_015": {
+      "id": "batch_004_011_015",
+      "status": "running",
+      "submitted_at": "2026-07-21T00:40:27Z",
+      "chapters": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "job_name": "projects/671369918582/locations/global/batchPredictionJobs/3398017870775451648",
+      "input_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/inputs/batch_004_011_015.jsonl",
+      "output_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/outputs/batch_004_011_015",
+      "local_input": "novel/batches/batch_004_011_015.input.jsonl",
+      "force": false,
+      "vertex_state": "JOB_STATE_RUNNING"
     }
   }
 }

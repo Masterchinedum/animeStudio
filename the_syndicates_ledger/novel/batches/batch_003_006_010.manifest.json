@@ -1,6 +1,6 @@
 {
   "id": "batch_003_006_010",
-  "status": "running",
+  "status": "collected",
   "submitted_at": "2026-07-21T00:37:11Z",
   "chapters": [
     6,
@@ -14,5 +14,14 @@
   "output_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/outputs/batch_003_006_010",
   "local_input": "novel/batches/batch_003_006_010.input.jsonl",
   "force": false,
-  "vertex_state": "JOB_STATE_PENDING"
+  "vertex_state": "JOB_STATE_SUCCEEDED",
+  "collected_at": "2026-07-21T00:40:24Z",
+  "written": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "failures": []
 }
