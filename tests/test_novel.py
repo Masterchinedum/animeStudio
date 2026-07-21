@@ -36,6 +36,9 @@ class NovelTests(unittest.TestCase):
             self.assertEqual(2, len(rows))
             self.assertIn("NOVEL_CHAPTER_ID: 001", rows[0]["request"]["contents"][0]["parts"][0]["text"])
             self.assertIn("NOVEL_CHAPTER_ID: 002", rows[1]["request"]["contents"][0]["parts"][0]["text"])
+            config = rows[0]["request"]["generationConfig"]
+            self.assertEqual("low", config["thinkingConfig"]["thinkingLevel"])
+            self.assertNotIn("temperature", config)
 
     def test_canon_trailer_is_removed_from_saved_prose(self):
         prose, canon = novel._split_canon_trailer(

@@ -1,5 +1,23 @@
 # Novel Canon Ledger
 
+## Chapter 001
+
+Ren Sato is summoned by Chairman Kang to audit the death of Director Han. Ren is granted temporary Tier-5 access to investigate the Ledger, under the strict surveillance of Captain Marcus Vance, and discovers that Han's collateral was stolen using code containing his own secret Erasure Protocol signature.
+
+### Facts
+- Director Han was a Tier-6 executive who was demoted to Tier 2 and died in an apparent suicide.
+- Chairman Kang Dae-Jung is a Tier-8 regional syndicate boss.
+- Captain Marcus Vance is a Tier-5 head of private security for Kang Global.
+- Ren Sato is given temporary Tier-5 administrative auditor access for seventy-two hours, mirrored directly to Marcus Vance's terminal.
+- Director Han's collateral consisted of unredacted manifests of Sector 4 pharmaceutical distribution networks (narcotics).
+- The collateral was not leaked but moved to a ghost directory inside the Kang Global local node.
+- Ren finds his own unique Erasure Protocol compiler signature within the unauthorized system bypass code of Han's account.
+
+### Open threads
+- Who obtained Ren's secret Erasure Protocol code to execute the bypass?
+- Where is Han's stolen collateral currently being held within the tower?
+- How will Ren complete the audit without Marcus Vance discovering the true nature of the code?
+
 ## Chapter 002
 
 Ren Sato attends a high-society charity gala hosted by Mei-Ling Vance to observe Director Han's former associates. Mei-Ling corners Ren in her private showroom, showing intimate knowledge of his personal routines and grey-market purchases, establishing leverage before slipping him a micro-drive containing evidence that Han's death was an execution ordered from within Kang's inner circle.

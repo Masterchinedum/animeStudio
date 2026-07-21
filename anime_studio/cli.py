@@ -13,6 +13,7 @@ import argparse
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 from . import animate as animate_stage
@@ -322,6 +323,49 @@ def cmd_novel_collect(args) -> int:
     return 0
 
 
+def cmd_novel_draft(args) -> int:
+    """Run small sequential Vertex windows until the requested chapter count exists."""
+    paths = _resolve(args)
+    if args.until < 1 or args.until > 100:
+        print("`--until` must be between 1 and 100.", file=sys.stderr)
+        return 2
+    if args.poll_seconds < 5:
+        print("`--poll-seconds` must be at least 5.", file=sys.stderr)
+        return 2
+
+    while True:
+        progress = novel_stage.status(paths)
+        if progress["chapters"] >= args.until and not progress["outstanding"]:
+            print(f"Novel drafting complete: {progress['chapters']} chapter(s) saved.")
+            return 0
+        if progress["outstanding"]:
+            # The active job owns these chapter numbers. Replacing an earlier
+            # malformed chapter is intentional and cannot affect other chapters.
+            result = novel_stage.collect_chapter_batch(paths, force=True)
+            if result["status"] == "running":
+                print(f"{result['batch_id']} is {result['vertex_state']}; "
+                      f"checking again in {args.poll_seconds}s.", flush=True)
+                time.sleep(args.poll_seconds)
+                continue
+            if result["status"] != "collected":
+                print(f"{result['batch_id']} finished with {result['status']}; stopping safely.",
+                      file=sys.stderr)
+                for failure in result.get("failures", []):
+                    print(f"  ! {failure}", file=sys.stderr)
+                return 2
+            print(f"{result['batch_id']} collected: {len(result['written'])} chapter(s).",
+                  flush=True)
+            continue
+
+        remaining = args.until - progress["chapters"]
+        result = novel_stage.submit_chapter_batch(paths, start=None,
+                                                  count=min(args.window, remaining))
+        if result["status"] == "skipped":
+            print("No pending chapters were found; stopping safely.", file=sys.stderr)
+            return 2
+        print(f"Submitted {result['batch_id']} for chapter(s): {result['chapters']}.", flush=True)
+
+
 # --------------------------------------------------------------------------- #
 # Notion — the approval/review surface
 # --------------------------------------------------------------------------- #
@@ -515,7 +559,7 @@ def build_parser() -> argparse.ArgumentParser:
     psc.add_argument("premise", nargs="?", help="one-line premise (default: project logline)")
     psc.set_defaults(func=cmd_story_concept)
 
-    # novel <status|step1|approve-step1|use-bucket|batch|collect>
+    # novel <status|step1|approve-step1|use-bucket|batch|collect|draft>
     pnovel = sub.add_parser("novel", help="long-form novel planning and Vertex Batch drafting")
     pnovelsub = pnovel.add_subparsers(dest="novel_cmd", required=True)
     pnovelsub.add_parser("status", parents=[proj_parent],
@@ -545,6 +589,15 @@ def build_parser() -> argparse.ArgumentParser:
                                      help="poll the active batch and save completed chapters as Markdown")
     pncollect.add_argument("--force", action="store_true", help="overwrite existing chapter files")
     pncollect.set_defaults(func=cmd_novel_collect)
+    pndraft = pnovelsub.add_parser("draft", parents=[proj_parent],
+                                   help="collect and submit sequential Vertex windows through a chapter target")
+    pndraft.add_argument("--until", type=int, default=100,
+                         help="last chapter to draft (default: 100)")
+    pndraft.add_argument("--window", type=int, default=5,
+                         help="chapters per continuity window (default: 5; project cap applies)")
+    pndraft.add_argument("--poll-seconds", type=int, default=30,
+                         help="seconds between checks while a Vertex job runs (default: 30)")
+    pndraft.set_defaults(func=cmd_novel_draft)
 
     # notion <verify|init|push|pull>
 

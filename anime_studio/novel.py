@@ -164,6 +164,7 @@ def submit_chapter_batch(paths: ProjectPaths, *, start: int | None, count: int,
         "input_uri": input_uri,
         "output_uri": output_uri,
         "local_input": str(local_input.relative_to(paths.root)),
+        "force": force,
     }
     if not manifest["job_name"]:
         raise NovelError(f"Vertex returned no batch job name: {job}")
@@ -193,7 +194,8 @@ def collect_chapter_batch(paths: ProjectPaths, *, force: bool = False) -> dict:
         return {"status": "running", "batch_id": manifest["id"], "vertex_state": job_state,
                 "written": []}
 
-    written, failures = _collect_outputs(paths, config, manifest, force=force)
+    written, failures = _collect_outputs(paths, config, manifest,
+                                         force=force or bool(manifest.get("force")))
     manifest["status"] = "collected" if not failures else "partial"
     manifest["collected_at"] = _now()
     manifest["vertex_state"] = job_state
@@ -212,14 +214,16 @@ def _chapter_requests(paths: ProjectPaths, chapter_numbers: Iterable[int], confi
     system = (
         "You are the prose author for a continuous adult neo-noir novel. Write mature but "
         "non-explicit fiction. Maintain causal continuity, do not add unplanned major characters, "
-        "and follow the exact approved outline for the requested chapter."
+        "and follow the exact approved outline for the requested chapter. Finish every scene and "
+        "reserve room for the required canon trailer."
     )
     rows = []
     for number in chapter_numbers:
         prompt = "\n\n".join([
             f"NOVEL_CHAPTER_ID: {number:03d}",
             "Write this chapter only. The complete output must be Markdown prose beginning with "
-            f"`# Chapter {number}:` and contain no planning commentary.",
+            f"`# Chapter {number}:`, contain no planning commentary, and be 1,600–1,900 words. "
+            "End the prose on a complete sentence before the canon trailer.",
             "After the prose, append exactly one hidden HTML comment in this form: "
             "`<!-- NOVEL_CANON {\"summary\":\"...\",\"facts\":[\"...\"],\"open_threads\":[\"...\"]} -->`. "
             "The JSON must be valid, compact, and describe only canon established in this chapter.",
@@ -231,8 +235,8 @@ def _chapter_requests(paths: ProjectPaths, chapter_numbers: Iterable[int], confi
             "systemInstruction": {"parts": [{"text": system}]},
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {
-                "temperature": 0.75,
                 "maxOutputTokens": int(config.get("max_output_tokens", DEFAULT_MAX_OUTPUT_TOKENS)),
+                "thinkingConfig": {"thinkingLevel": "low"},
             },
         }})
     return rows
@@ -271,10 +275,12 @@ def _collect_outputs(paths: ProjectPaths, config: dict, manifest: dict, *, force
             if chapter_path.exists() and not force:
                 continue
             prose, update = _split_canon_trailer(text)
+            if not update:
+                failures.append(f"chapter_{chapter:03d}: missing required canon trailer; output not saved")
+                continue
             chapter_path.write_text(prose.rstrip() + "\n", encoding="utf-8")
-            if update:
-                update["chapter"] = chapter
-                store.save_json(paths.novel_canon_updates / f"chapter_{chapter:03d}.json", update)
+            update["chapter"] = chapter
+            store.save_json(paths.novel_canon_updates / f"chapter_{chapter:03d}.json", update)
             written.append(chapter)
     _rebuild_canon(paths)
     return sorted(set(written)), failures
