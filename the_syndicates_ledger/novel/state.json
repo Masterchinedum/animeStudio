@@ -1,8 +1,8 @@
 {
   "step_1": {
-    "status": "generated",
-    "approved": false,
-    "generated_at": "2026-07-21T00:08:30Z"
+    "status": "approved",
+    "approved": true,
+    "approved_at": "2026-07-21T00:14:19Z"
   },
   "batches": {}
 }
