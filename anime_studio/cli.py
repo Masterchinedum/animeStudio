@@ -284,6 +284,13 @@ def cmd_novel_approve_step1(args) -> int:
     return 0
 
 
+def cmd_novel_use_bucket(args) -> int:
+    paths = _resolve(args)
+    bucket = novel_stage.configure_bucket(paths, args.bucket)
+    print(f"Novel batch storage configured: gs://{bucket}")
+    return 0
+
+
 def cmd_novel_batch(args) -> int:
     paths = _resolve(args)
     r = novel_stage.submit_chapter_batch(paths, start=args.start, count=args.count,
@@ -508,7 +515,7 @@ def build_parser() -> argparse.ArgumentParser:
     psc.add_argument("premise", nargs="?", help="one-line premise (default: project logline)")
     psc.set_defaults(func=cmd_story_concept)
 
-    # novel <status|step1|approve-step1|batch|collect>
+    # novel <status|step1|approve-step1|use-bucket|batch|collect>
     pnovel = sub.add_parser("novel", help="long-form novel planning and Vertex Batch drafting")
     pnovelsub = pnovel.add_subparsers(dest="novel_cmd", required=True)
     pnovelsub.add_parser("status", parents=[proj_parent],
@@ -521,6 +528,10 @@ def build_parser() -> argparse.ArgumentParser:
     pnovelsub.add_parser("approve-step1", parents=[proj_parent],
                          help="approve Step 1 and enable paid chapter batches").set_defaults(
                              func=cmd_novel_approve_step1)
+    pnbucket = pnovelsub.add_parser("use-bucket", parents=[proj_parent],
+                                    help="set the Cloud Storage bucket for Vertex batch staging")
+    pnbucket.add_argument("bucket", help="bucket name, with or without gs://")
+    pnbucket.set_defaults(func=cmd_novel_use_bucket)
     pnbatch = pnovelsub.add_parser("batch", parents=[proj_parent],
                                    help="submit one small Vertex Batch continuity window")
     pnbatch.add_argument("--start", type=int, help="first chapter number (default: first missing)")

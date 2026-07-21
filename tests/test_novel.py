@@ -52,6 +52,14 @@ class NovelTests(unittest.TestCase):
         }
         self.assertEqual(42, novel._chapter_from_output(item))
 
+    def test_configure_bucket_updates_only_novel_batch_storage(self):
+        temporary, paths = self._paths()
+        with temporary:
+            bucket = novel.configure_bucket(paths, "gs://fresh-novel-bucket/")
+            self.assertEqual("fresh-novel-bucket", bucket)
+            self.assertEqual("fresh-novel-bucket",
+                             store.load_json(paths.providers)["novel"]["gcs_bucket"])
+
 
 if __name__ == "__main__":
     unittest.main()

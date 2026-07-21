@@ -46,7 +46,7 @@
     "project": "animeproduction",
     "location": "global",
     "model": "gemini-3.5-flash",
-    "gcs_bucket": "",
+    "gcs_bucket": "animeproduction-syndicates-ledger-20260721",
     "gcs_prefix": "anime-studio/the-syndicates-ledger/novel",
     "max_batch_chapters": 5,
     "max_output_tokens": 5200

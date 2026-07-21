@@ -102,6 +102,17 @@ def approve_step_1(paths: ProjectPaths) -> None:
     store.save_json(paths.novel_state, state)
 
 
+def configure_bucket(paths: ProjectPaths, bucket: str) -> str:
+    """Record the author-selected Cloud Storage bucket for Vertex batch staging."""
+    name = _bucket_name(bucket)
+    if not name:
+        raise NovelError("Provide a Cloud Storage bucket name, without `gs://`.")
+    providers = store.load_json(paths.providers)
+    providers.setdefault("novel", {})["gcs_bucket"] = name
+    store.save_json(paths.providers, providers)
+    return name
+
+
 def submit_chapter_batch(paths: ProjectPaths, *, start: int | None, count: int,
                          force: bool = False, dry_run: bool = False) -> dict:
     """Submit one resumable Vertex batch window and persist its local manifest."""
