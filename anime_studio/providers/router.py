@@ -9,6 +9,7 @@ from ..paths import ProjectPaths
 from .base import (FailoverTextProvider, ImageProvider, ProviderError, TextProvider,
                    VideoProvider)
 from .gemini import GeminiTextProvider
+from .vertex_text import VertexTextProvider
 from .gemini_image import GeminiImageProvider
 from .openai_compatible import OpenAICompatibleImageProvider, OpenAICompatibleTextProvider
 from .vertex_image import VertexImageProvider
@@ -17,6 +18,9 @@ from .vertex_video import VertexVideoProvider
 # type string in providers.json -> constructor
 TEXT_PROVIDERS = {
     "gemini": lambda cfg: GeminiTextProvider(model=cfg.get("model", "gemini-2.5-flash")),
+    "vertex_text": lambda cfg: VertexTextProvider(
+        project=cfg.get("project", ""), location=cfg.get("location", "global"),
+        model=cfg.get("model", "gemini-3.5-flash")),
     "openai_compatible_text": lambda cfg: OpenAICompatibleTextProvider(
         provider_name=cfg.get("name", "openai-compatible"),
         base_url=cfg.get("base_url", "https://api.openai.com/v1"),

@@ -41,5 +41,14 @@
       "priority": 1,
       "enabled": false
     }
-  ]
+  ],
+  "novel": {
+    "project": "animeproduction",
+    "location": "global",
+    "model": "gemini-3.5-flash",
+    "gcs_bucket": "",
+    "gcs_prefix": "anime-studio/the-syndicates-ledger/novel",
+    "max_batch_chapters": 5,
+    "max_output_tokens": 5200
+  }
 }

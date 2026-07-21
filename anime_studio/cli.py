@@ -18,6 +18,7 @@ from pathlib import Path
 from . import animate as animate_stage
 from . import art as art_stage
 from . import notion as notion_mod
+from . import novel as novel_stage
 from . import orchestrator as orch
 from . import store
 from . import story as story_mod
@@ -245,6 +246,76 @@ def cmd_story_concept(args) -> int:
 
 
 # --------------------------------------------------------------------------- #
+# Novel stage — long-form prose with review gates + Vertex Batch
+# --------------------------------------------------------------------------- #
+
+def cmd_novel_status(args) -> int:
+    paths = _resolve(args)
+    r = novel_stage.status(paths)
+    step = r["step_1"]
+    print("Novel production")
+    print(f"  Step 1 : {step.get('status', 'empty')}"
+          + (" [approved]" if step.get("approved") else ""))
+    print(f"  chapters: {r['chapters']}")
+    if r["outstanding"]:
+        for batch in r["outstanding"]:
+            print(f"  active : {batch.get('id')} ({batch.get('vertex_state', 'submitted')})")
+    else:
+        print("  active : none")
+    print(f"  brief  : {paths.novel_brief}")
+    return 0
+
+
+def cmd_novel_step1(args) -> int:
+    paths = _resolve(args)
+    r = novel_stage.run_step_1(paths, force=args.force)
+    if r["status"] == "skipped":
+        print(f"Step 1 already exists: {r['path']}")
+    else:
+        print(f"Step 1 generated with Vertex Gemini: {r['path']}")
+        print("Review it, then run `anime novel approve-step1` before drafting chapters.")
+    return 0
+
+
+def cmd_novel_approve_step1(args) -> int:
+    paths = _resolve(args)
+    novel_stage.approve_step_1(paths)
+    print("Step 1 approved. Chapter batch jobs are now enabled.")
+    return 0
+
+
+def cmd_novel_batch(args) -> int:
+    paths = _resolve(args)
+    r = novel_stage.submit_chapter_batch(paths, start=args.start, count=args.count,
+                                         force=args.force, dry_run=args.dry_run)
+    if r["status"] == "planned":
+        print(f"Plan — {len(r['chapters'])} chapter request(s): {r['chapters']}")
+        print(f"Local JSONL: {r['input']}")
+    elif r["status"] == "skipped":
+        print("No pending chapters in the requested range.")
+    else:
+        print(f"Submitted {r['batch_id']} for chapter(s): {r['chapters']}")
+        print(f"Vertex job: {r['job_name']}")
+        print("Run `anime novel collect` later to materialize Markdown chapter files.")
+    return 0
+
+
+def cmd_novel_collect(args) -> int:
+    paths = _resolve(args)
+    r = novel_stage.collect_chapter_batch(paths, force=args.force)
+    if r["status"] == "running":
+        print(f"{r['batch_id']} is still {r['vertex_state']}; no files written yet.")
+    elif r["status"] == "skipped":
+        print("No active novel batch to collect.")
+    else:
+        print(f"{r['batch_id']} {r['status']}: wrote {len(r['written'])} chapter(s) "
+              f"to {paths.novel_chapters}.")
+        for failure in r["failures"]:
+            print(f"  ! {failure}")
+    return 0
+
+
+# --------------------------------------------------------------------------- #
 # Notion — the approval/review surface
 # --------------------------------------------------------------------------- #
 
@@ -436,6 +507,33 @@ def build_parser() -> argparse.ArgumentParser:
                                help="tier 1 — premise -> structured concept")
     psc.add_argument("premise", nargs="?", help="one-line premise (default: project logline)")
     psc.set_defaults(func=cmd_story_concept)
+
+    # novel <status|step1|approve-step1|batch|collect>
+    pnovel = sub.add_parser("novel", help="long-form novel planning and Vertex Batch drafting")
+    pnovelsub = pnovel.add_subparsers(dest="novel_cmd", required=True)
+    pnovelsub.add_parser("status", parents=[proj_parent],
+                         help="show Step 1 approval, batches, and completed chapters").set_defaults(
+                             func=cmd_novel_status)
+    pnstep = pnovelsub.add_parser("step1", parents=[proj_parent],
+                                  help="generate the reviewable series foundation with Vertex Gemini")
+    pnstep.add_argument("--force", action="store_true", help="replace the existing unapproved Step 1")
+    pnstep.set_defaults(func=cmd_novel_step1)
+    pnovelsub.add_parser("approve-step1", parents=[proj_parent],
+                         help="approve Step 1 and enable paid chapter batches").set_defaults(
+                             func=cmd_novel_approve_step1)
+    pnbatch = pnovelsub.add_parser("batch", parents=[proj_parent],
+                                   help="submit one small Vertex Batch continuity window")
+    pnbatch.add_argument("--start", type=int, help="first chapter number (default: first missing)")
+    pnbatch.add_argument("--count", type=int, default=5,
+                         help="chapters in this batch window (default: 5; project cap applies)")
+    pnbatch.add_argument("--force", action="store_true", help="replace existing chapter files on collection")
+    pnbatch.add_argument("--dry-run", action="store_true",
+                         help="write local JSONL only; do not upload or submit Vertex work")
+    pnbatch.set_defaults(func=cmd_novel_batch)
+    pncollect = pnovelsub.add_parser("collect", parents=[proj_parent],
+                                     help="poll the active batch and save completed chapters as Markdown")
+    pncollect.add_argument("--force", action="store_true", help="overwrite existing chapter files")
+    pncollect.set_defaults(func=cmd_novel_collect)
 
     # notion <verify|init|push|pull>
 

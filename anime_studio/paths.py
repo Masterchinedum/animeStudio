@@ -46,6 +46,26 @@ class ProjectPaths:
     @property
     def notion(self) -> Path: return self.root / "notion.json"
 
+    # long-form novel production
+    @property
+    def novel(self) -> Path: return self.root / "novel"
+    @property
+    def novel_brief(self) -> Path: return self.novel / "brief.md"
+    @property
+    def novel_state(self) -> Path: return self.novel / "state.json"
+    @property
+    def novel_planning(self) -> Path: return self.novel / "planning"
+    @property
+    def novel_step1(self) -> Path: return self.novel_planning / "step_1.md"
+    @property
+    def novel_canon(self) -> Path: return self.novel / "canon.md"
+    @property
+    def novel_chapters(self) -> Path: return self.novel / "chapters"
+    @property
+    def novel_batches(self) -> Path: return self.novel / "batches"
+    @property
+    def novel_canon_updates(self) -> Path: return self.novel / "canon_updates"
+
     # bible
     @property
     def bible(self) -> Path: return self.root / "bible"
@@ -103,4 +123,6 @@ class ProjectPaths:
             self.screenplay, self.transcript,
             self.script, self.scenes,
             self.shots, self.assets, self.keyframes, self.refs, self.clips, self.audio,
+            self.novel, self.novel_planning, self.novel_chapters, self.novel_batches,
+            self.novel_canon_updates,
         ]

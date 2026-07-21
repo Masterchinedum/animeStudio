@@ -6,17 +6,42 @@ from __future__ import annotations
 
 import subprocess
 import time
+from pathlib import Path
+import shutil
 
 from .base import ProviderError
 
 _cache: dict = {"token": "", "exp": 0.0}
 
 
+def _gcloud_command() -> str:
+    """Find an existing Google Cloud SDK without assuming it is on PATH.
+
+    The macOS SDK installer commonly places it under ``~/google-cloud-sdk``.  This
+    keeps every Vertex-backed provider on the same existing login rather than
+    requiring a duplicate installation just because an automation shell has a
+    narrower PATH than the user's interactive terminal.
+    """
+    found = shutil.which("gcloud")
+    if found:
+        return found
+    candidates = (
+        Path.home() / "google-cloud-sdk" / "bin" / "gcloud",
+        Path("/Library/Google/Cloud SDK/google-cloud-sdk/bin/gcloud"),
+        Path("/opt/homebrew/bin/gcloud"),
+        Path("/usr/local/bin/gcloud"),
+    )
+    for candidate in candidates:
+        if candidate.is_file() and candidate.stat().st_mode & 0o111:
+            return str(candidate)
+    raise FileNotFoundError("gcloud")
+
+
 def access_token() -> str:
     if _cache["token"] and time.time() < _cache["exp"]:
         return _cache["token"]
     try:
-        r = subprocess.run(["gcloud", "auth", "print-access-token"],
+        r = subprocess.run([_gcloud_command(), "auth", "print-access-token"],
                            capture_output=True, text=True, timeout=30, check=True)
     except FileNotFoundError:
         raise ProviderError("gcloud CLI not found. Install it and run `gcloud auth login`.") from None
