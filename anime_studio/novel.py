@@ -383,11 +383,19 @@ def _get_batch_job(config: dict, name: str) -> dict:
     return _vertex_request(config, "GET", name)
 
 
-def _vertex_request(config: dict, method: str, suffix: str, body: dict | None = None) -> dict:
+def _vertex_url(config: dict, suffix: str) -> str:
     location = config["location"]
     host = "aiplatform.googleapis.com" if location == "global" else f"{location}-aiplatform.googleapis.com"
     suffix = urllib.parse.quote(suffix, safe="/")
-    url = f"https://{host}/v1/projects/{config['project']}/locations/{location}/{suffix}"
+    if suffix.startswith("projects/"):
+        # Batch API responses return a fully-qualified resource name.  GET requests
+        # must use it directly rather than nesting it below the configured parent.
+        return f"https://{host}/v1/{suffix}"
+    return f"https://{host}/v1/projects/{config['project']}/locations/{location}/{suffix}"
+
+
+def _vertex_request(config: dict, method: str, suffix: str, body: dict | None = None) -> dict:
+    url = _vertex_url(config, suffix)
     data = json.dumps(body).encode("utf-8") if body is not None else None
     request = urllib.request.Request(url, data=data, method=method)
     request.add_header("Authorization", f"Bearer {gcloud_auth.access_token()}")

@@ -60,6 +60,14 @@ class NovelTests(unittest.TestCase):
             self.assertEqual("fresh-novel-bucket",
                              store.load_json(paths.providers)["novel"]["gcs_bucket"])
 
+    def test_vertex_job_name_is_not_nested_below_the_parent_path(self):
+        config = {"project": "example", "location": "global"}
+        url = novel._vertex_url(config, "projects/123/locations/global/batchPredictionJobs/456")
+        self.assertEqual(
+            "https://aiplatform.googleapis.com/v1/projects/123/locations/global/batchPredictionJobs/456",
+            url,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
