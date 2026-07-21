@@ -1,0 +1,18 @@
+{
+  "summary": "Ren and Yuki decrypt Mei-Ling's micro-drive in Ren's secure apartment. The drive reveals a target list of Kang Syndicate executives linked to a blackmailer known as 'The Tailor.' The decryption triggers a silent network sweep by Marcus Vance's security forces, forcing Ren to physically destroy his secondary server and flee.",
+  "facts": [
+    "Mei-Ling's drive was decrypted using Ren's secondary, air-gapped server.",
+    "The drive contained a target list including Director Han (deceased), Vice-President Choi, Director Sterling, and Director Vance.",
+    "The blackmailer's cryptographic signature is 'The Tailor.'",
+    "Vice-President Choi's collateral is scheduled to leak in forty-eight hours.",
+    "The micro-drive contained a passive transponder that alerted Marcus Vance's security division to its location upon decryption.",
+    "Ren physically destroyed his secondary server with a ceramic spike and set fire to the chassis to prevent data retrieval.",
+    "Yuki escaped via the service elevator, while Ren fled into the night."
+  ],
+  "open_threads": [
+    "How will Marcus Vance react to the destroyed server and the brief transponder signal?",
+    "Where will Ren and Yuki hide now that Ren's apartment is compromised?",
+    "How will Ren use his forty-eight-hour predictive advantage regarding Vice-President Choi?"
+  ],
+  "chapter": 3
+}

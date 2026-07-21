@@ -7,7 +7,7 @@
   "batches": {
     "batch_001_001_005": {
       "id": "batch_001_001_005",
-      "status": "running",
+      "status": "collected",
       "submitted_at": "2026-07-21T00:20:30Z",
       "chapters": [
         1,
@@ -20,7 +20,16 @@
       "input_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/inputs/batch_001_001_005.jsonl",
       "output_uri": "gs://animeproduction-syndicates-ledger-20260721/anime-studio/the-syndicates-ledger/novel/outputs/batch_001_001_005",
       "local_input": "novel/batches/batch_001_001_005.input.jsonl",
-      "vertex_state": "JOB_STATE_RUNNING"
+      "vertex_state": "JOB_STATE_SUCCEEDED",
+      "collected_at": "2026-07-21T00:27:13Z",
+      "written": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "failures": []
     }
   }
 }
